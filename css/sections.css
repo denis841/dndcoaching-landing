@@ -470,6 +470,16 @@ header .logo {
 
 .application h2 {
   text-align: center;
+  margin-bottom: var(--space-md);
+}
+
+.online-note {
+  text-align: center;
+  font-size: var(--text-sm);
+  color: var(--color-grey-dark);
+  background-color: var(--color-grey-light);
+  border-radius: var(--radius-md);
+  padding: var(--space-sm) var(--space-md);
   margin-bottom: var(--space-xl);
 }
 
