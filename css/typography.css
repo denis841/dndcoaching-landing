@@ -1,0 +1,98 @@
+/* Typography Styles */
+
+body {
+  font-family: var(--font-base);
+  font-size: var(--text-sm);
+  line-height: var(--leading-normal);
+  color: var(--color-grey-darkest);
+  background-color: var(--color-white);
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: var(--weight-bold);
+  line-height: var(--leading-tight);
+  color: var(--color-black);
+  margin-bottom: var(--space-md);
+}
+
+h1 {
+  font-size: var(--text-3xl);
+}
+
+h2 {
+  font-size: var(--text-2xl);
+}
+
+h3 {
+  font-size: var(--text-xl);
+}
+
+h4 {
+  font-size: var(--text-lg);
+}
+
+/* Paragraphs */
+p {
+  margin-bottom: var(--space-md);
+  line-height: var(--leading-relaxed);
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+/* Links */
+a {
+  color: var(--color-black);
+  transition: color var(--transition-base);
+}
+
+a:hover {
+  color: var(--color-grey-dark);
+}
+
+/* Text Utilities */
+.text-center {
+  text-align: center;
+}
+
+.text-grey {
+  color: var(--color-grey-medium);
+}
+
+.text-bold {
+  font-weight: var(--weight-bold);
+}
+
+.text-semibold {
+  font-weight: var(--weight-semibold);
+}
+
+.eyebrow {
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: var(--weight-semibold);
+  color: var(--color-grey-medium);
+  margin-bottom: var(--space-xs);
+}
+
+/* Desktop Typography */
+@media (min-width: 768px) {
+  h1 {
+    font-size: var(--text-4xl);
+  }
+
+  h2 {
+    font-size: var(--text-3xl);
+  }
+
+  h3 {
+    font-size: var(--text-2xl);
+  }
+
+  body {
+    font-size: var(--text-base);
+  }
+}

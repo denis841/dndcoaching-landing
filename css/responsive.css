@@ -1,0 +1,78 @@
+/* Responsive Media Queries */
+
+/* Mobile (default) - Already defined in base styles */
+
+/* Tablet (768px and up) */
+@media (min-width: 768px) {
+  .container {
+    padding-left: var(--space-lg);
+    padding-right: var(--space-lg);
+  }
+
+  .hero {
+    padding: var(--space-3xl) 0;
+  }
+
+  .btn {
+    min-width: 160px;
+  }
+
+  .radio-group {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md);
+  }
+}
+
+/* Desktop (1024px and up) */
+@media (min-width: 1024px) {
+  header .logo {
+    max-width: 150px;
+  }
+
+  .hero h1 {
+    font-size: var(--text-4xl);
+  }
+
+  .hero .subheadline {
+    font-size: var(--text-xl);
+  }
+
+  section {
+    padding: var(--space-3xl) 0 var(--space-3xl) 0;
+  }
+}
+
+/* Large Desktop (1440px and up) */
+@media (min-width: 1440px) {
+  .container {
+    padding-left: var(--space-2xl);
+    padding-right: var(--space-2xl);
+  }
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 767px) {
+  h1 {
+    font-size: var(--text-3xl);
+  }
+
+  h2 {
+    font-size: var(--text-2xl);
+  }
+
+  .btn-large {
+    padding: var(--space-md) var(--space-lg);
+    font-size: var(--text-base);
+  }
+
+  .timeline-item {
+    padding-left: var(--space-xl);
+  }
+
+  .timeline-item::before {
+    width: 24px;
+    height: 24px;
+    font-size: var(--text-xs);
+  }
+}
