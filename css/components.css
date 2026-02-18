@@ -160,6 +160,16 @@ select.error {
   background-color: var(--color-grey-lightest);
 }
 
+/* Commitment radio grid layout */
+.radio-group-commitment {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.radio-option-full {
+  grid-column: 1 / -1;
+}
+
 /* Badge/Seal */
 .badge {
   display: inline-block;
