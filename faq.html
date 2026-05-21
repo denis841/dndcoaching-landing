@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="format-detection" content="telephone=no">
+  <title>Frequently asked questions — DND Coaching</title>
+  <meta name="description" content="Methodology, logistics, investment + guarantee. Every common question, answered.">
+  <link rel="icon" type="image/png" href="/assets/favicon-32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            bone: '#FAFAF7',
+            ink: '#0E0E0E',
+            slate: '#4A5568',
+            paper: '#FFFFFF',
+            'status-green': '#16a34a',
+            rule: 'rgba(14,14,14,0.12)'
+          },
+          fontFamily: {
+            serif: ['"Source Serif 4"', 'ui-serif', 'Georgia', 'serif'],
+            mono: ['"IBM Plex Mono"', 'ui-monospace', 'monospace'],
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif']
+          },
+          letterSpacing: {
+            mw: '0.22em',
+            mn: '0.16em',
+            st: '-0.025em',
+            sx: '-0.038em'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    body { font-family: 'Inter', sans-serif; background: #FAFAF7; color: #0E0E0E; -webkit-font-smoothing: antialiased; -webkit-tap-highlight-color: transparent; }
+    /* Respect notched-device safe areas */
+    #site-nav { padding-left: env(safe-area-inset-left); padding-right: env(safe-area-inset-right); }
+    /* Touch targets: ≥44px on mobile per Apple HIG / Material */
+    @media (max-width: 767px) { .pill { min-height: 44px; padding-top: 0.9rem; padding-bottom: 0.9rem; } }
+    /* Inputs at ≥16px so iOS Safari doesn't auto-zoom on focus */
+    input, select, textarea { font-size: 16px; }
+    .eyebrow { font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: #4A5568; }
+    .hairline { height: 1px; background: rgba(14,14,14,0.12); }
+    .pill { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.25rem; border-radius: 9999px; background: #0E0E0E; color: #FAFAF7; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; transition: transform 0.2s ease-out, background-color 0.2s ease-out; }
+    .pill:hover { transform: translateY(-1px); background: #1a1a1a; }
+    .pill:focus-visible { outline: 2px solid #16a34a; outline-offset: 3px; }
+    .pill-outline { background: transparent; color: #0E0E0E; border: 1px solid rgba(14,14,14,0.18); }
+    .pill-outline:hover { background: rgba(14,14,14,0.05); }
+    @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+    .marquee-track { animation: marquee 45s linear infinite; }
+    @media (prefers-reduced-motion: reduce) {
+      .marquee-track { animation: none; }
+      html { scroll-behavior: auto; }
+    }
+  </style>
+</head>
+<body>
+
+<header id="site-nav" class="sticky top-0 z-50 bg-bone/85 backdrop-blur-md border-b border-rule">
+  <nav class="max-w-7xl mx-auto px-6 lg:px-10 h-16 flex items-center justify-between">
+    <a href="/" class="flex items-center gap-2.5 text-ink no-underline">
+      <img src="/assets/logo.svg" alt="" class="w-7 h-7" aria-hidden="true">
+      <span class="font-serif text-lg leading-none tracking-st">DND<span class="italic font-normal text-slate">/Coaching</span></span>
+      <span class="hidden md:inline-block ml-3 pl-3 border-l border-rule font-mono text-[10px] tracking-mn uppercase text-slate">Online · 1:1</span>
+    </a>
+
+    <ul class="hidden md:flex items-center gap-8 font-mono text-[11px] tracking-mn uppercase text-slate">
+      <li><a href="/method" class="hover:text-ink transition-colors">Method</a></li>
+      <li><a href="/coaches" class="hover:text-ink transition-colors">Coaches</a></li>
+      <li><a href="/results" class="hover:text-ink transition-colors">Results</a></li>
+      <li><a href="/faq" class="text-ink transition-colors" aria-current="page">FAQ</a></li>
+    </ul>
+
+    <div class="flex items-center gap-3">
+      <a href="/apply" class="pill text-[11px] py-2 px-4">Apply <span aria-hidden="true">→</span></a>
+      <button id="nav-toggle" class="md:hidden w-11 h-11 -mr-2 flex items-center justify-center" aria-label="Open menu" aria-expanded="false" aria-controls="nav-mobile">
+        <span class="block w-5 h-px bg-ink relative before:absolute before:left-0 before:-top-1.5 before:w-5 before:h-px before:bg-ink after:absolute after:left-0 after:top-1.5 after:w-5 after:h-px after:bg-ink"></span>
+      </button>
+    </div>
+  </nav>
+
+  <div id="nav-mobile" class="md:hidden hidden border-t border-rule bg-bone">
+    <ul class="px-6 py-4 font-mono text-xs tracking-mn uppercase text-slate space-y-3">
+      <li><a href="/method" class="block py-3 min-h-[44px] flex items-center">Method</a></li>
+      <li><a href="/coaches" class="block py-3 min-h-[44px] flex items-center">Coaches</a></li>
+      <li><a href="/results" class="block py-3 min-h-[44px] flex items-center">Results</a></li>
+      <li><a href="/faq" class="block py-3 min-h-[44px] flex items-center text-ink" aria-current="page">FAQ</a></li>
+      <li><a href="/apply" class="block py-3 min-h-[44px] flex items-center text-ink font-semibold">Apply →</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+
+<!-- 1. Hero -->
+<section class="border-b border-rule">
+  <div class="max-w-4xl mx-auto px-6 lg:px-10 pt-20 pb-12 lg:pt-28 lg:pb-16">
+    <div class="eyebrow mb-6">Fig. 00 — FAQ</div>
+    <h1 class="font-serif font-normal tracking-st text-5xl md:text-6xl lg:text-7xl leading-[1.02]">Frequently asked.</h1>
+    <p class="mt-7 text-lg leading-relaxed text-slate max-w-2xl">If your question isn't here, ask it on the application — we read every one.</p>
+  </div>
+</section>
+
+<!-- 2. Methodology -->
+<section class="border-b border-rule">
+  <div class="max-w-3xl mx-auto px-6 lg:px-10 py-20 lg:py-24">
+    <div class="eyebrow mb-8">Methodology</div>
+    <div class="border-t border-rule">
+
+      <div data-accordion>
+        <button class="accordion-item w-full flex items-center justify-between text-left py-6 border-b border-rule" type="button" aria-expanded="false">
+          <span class="font-serif text-xl md:text-2xl tracking-st pr-4">How is this different from free programs online?</span>
+          <span class="accordion-chevron w-5 h-5 flex-none transition-transform"><svg viewBox="0 0 20 20" fill="none" class="w-full h-full"><path d="M5 8l5 5 5-5" stroke="#0E0E0E" stroke-width="1.5"/></svg></span>
+        </button>
+        <div class="accordion-panel grid grid-rows-[0fr] transition-[grid-template-rows] duration-300 ease-out border-b border-rule"><div class="overflow-hidden"><p class="py-5 text-slate leading-relaxed">Free programs are templates designed for nobody in particular. Our method starts with a 60-minute diagnosis call where we map your specific state, history, blockers, and goals before writing anything. The plan is built from the diagnosis — not pulled off a shelf.</p></div></div>
+      </div>
+
+      <div data-accordion>
+        <button class="accordion-item w-full flex items-center justify-between text-left py-6 border-b border-rule" type="button" aria-expanded="false">
+          <span class="font-serif text-xl md:text-2xl tracking-st pr-4">What if I've tried coaching before and it didn't work?</span>
+          <span class="accordion-chevron w-5 h-5 flex-none transition-transform"><svg viewBox="0 0 20 20" fill="none" class="w-full h-full"><path d="M5 8l5 5 5-5" stroke="#0E0E0E" stroke-width="1.5"/></svg></span>
+        </button>
+        <div class="accordion-panel grid grid-rows-[0fr] transition-[grid-template-rows] duration-300 ease-out border-b border-rule"><div class="overflow-hidden"><p class="py-5 text-slate leading-relaxed">Then you're exactly the person this is built for. Most coaching fails because nobody diagnosed the actual blocker. We open with the diagnosis specifically because everyone we work with has been here before.</p></div></div>
+      </div>
+
+      <div data-accordion>
+        <button class="accordion-item w-full flex items-center justify-between text-left py-6 border-b border-rule" type="button" aria-expanded="false">
+          <span class="font-serif text-xl md:text-2xl tracking-st pr-4">Do I have to meal prep and eat chicken and broccoli?</span>
+          <span class="accordion-chevron w-5 h-5 flex-none transition-transform"><svg viewBox="0 0 20 20" fill="none" class="w-full h-full"><path d="M5 8l5 5 5-5" stroke="#0E0E0E" stroke-width="1.5"/></svg></span>
+        </button>
+        <div class="accordion-panel grid grid-rows-[0fr] transition-[grid-template-rows] duration-300 ease-out border-b border-rule"><div class="overflow-hidden"><p class="py-5 text-slate leading-relaxed">No. We build a flexible macro framework around the foods you already eat. The point is sustainability — if the diet only works when you cook from a meal-prep container at home, it won't survive your real life.</p></div></div>
+      </div>
+
+      <div data-accordion>
+        <button class="accordion-item w-full flex items-center justify-between text-left py-6 border-b border-rule" type="button" aria-expanded="false">
+          <span class="font-serif text-xl md:text-2xl tracking-st pr-4">What if I miss a workout?</span>
+          <span class="accordion-chevron w-5 h-5 flex-none transition-transform"><svg viewBox="0 0 20 20" fill="none" class="w-full h-full"><path d="M5 8l5 5 5-5" stroke="#0E0E0E" stroke-width="1.5"/></svg></span>
+        </button>
+        <div class="accordion-panel grid grid-rows-[0fr] transition-[grid-template-rows] duration-300 ease-out border-b border-rule"><div class="overflow-hidden"><p class="py-5 text-slate leading-relaxed">You miss a workout. It's fine. The program is built assuming life happens. What matters is the trend over 12 weeks, not any single session. We'll tell you when something is becoming a pattern that needs addressing.</p></div></div>
+      </div>
+
+      <div data-accordion>
+        <button class="accordion-item w-full flex items-center justify-between text-left py-6 border-b border-rule" type="button" aria-expanded="false">
+          <span class="font-serif text-xl md:text-2xl tracking-st pr-4">What happens after the 12 weeks?</span>
+          <span class="accordion-chevron w-5 h-5 flex-none transition-transform"><svg viewBox="0 0 20 20" fill="none" class="w-full h-full"><path d="M5 8l5 5 5-5" stroke="#0E0E0E" stroke-width="1.5"/></svg></span>
+        </button>
+        <div class="accordion-panel grid grid-rows-[0fr] transition-[grid-template-rows] duration-300 ease-out border-b border-rule"><div class="overflow-hidden"><p class="py-5 text-slate leading-relaxed">You leave with a self-directed program written specifically around what worked for you. Some clients re-up for another cohort to chase a different goal; most don't need to. The point is to leave with the systems, not the dependency.</p></div></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- 3. Logistics -->
+<section class="border-b border-rule bg-paper">
+  <div class="max-w-3xl mx-auto px-6 lg:px-10 py-20 lg:py-24">
+    <div class="eyebrow mb-8">Logistics</div>
+    <div class="border-t border-rule">
+
+      <div data-accordion>
+        <button class="accordion-item w-full flex items-center justify-between text-left py-6 border-b border-rule" type="button" aria-expanded="false">
+          <span class="font-serif text-xl md:text-2xl tracking-st pr-4">How much time does this require per week?</span>
+          <span class="accordion-chevron w-5 h-5 flex-none transition-transform"><svg viewBox="0 0 20 20" fill="none" class="w-full h-full"><path d="M5 8l5 5 5-5" stroke="#0E0E0E" stroke-width="1.5"/></svg></span>
+        </button>
+        <div class="accordion-panel grid grid-rows-[0fr] transition-[grid-template-rows] duration-300 ease-out border-b border-rule"><div class="overflow-hidden"><p class="py-5 text-slate leading-relaxed">Training is 3–4 sessions of ~60–75 minutes. Add 30 minutes for a weekly check-in call and a few minutes a day for logging. That's it. The program is built for people with full-time jobs.</p></div></div>
+      </div>
+
+      <div data-accordion>
+        <button class="accordion-item w-full flex items-center justify-between text-left py-6 border-b border-rule" type="button" aria-expanded="false">
+          <span class="font-serif text-xl md:text-2xl tracking-st pr-4">Do I need a gym membership?</span>
+          <span class="accordion-chevron w-5 h-5 flex-none transition-transform"><svg viewBox="0 0 20 20" fill="none" class="w-full h-full"><path d="M5 8l5 5 5-5" stroke="#0E0E0E" stroke-width="1.5"/></svg></span>
+        </button>
+        <div class="accordion-panel grid grid-rows-[0fr] transition-[grid-template-rows] duration-300 ease-out border-b border-rule"><div class="overflow-hidden"><p class="py-5 text-slate leading-relaxed">Ideally yes — a standard commercial gym is best. We can adapt to a well-equipped home gym (adjustable dumbbells + bench + pull-up bar minimum), but the program is designed for full equipment access.</p></div></div>
+      </div>
+
+      <div data-accordion>
+        <button class="accordion-item w-full flex items-center justify-between text-left py-6 border-b border-rule" type="button" aria-expanded="false">
+          <span class="font-serif text-xl md:text-2xl tracking-st pr-4">What equipment do I need at home?</span>
+          <span class="accordion-chevron w-5 h-5 flex-none transition-transform"><svg viewBox="0 0 20 20" fill="none" class="w-full h-full"><path d="M5 8l5 5 5-5" stroke="#0E0E0E" stroke-width="1.5"/></svg></span>
+        </button>
+        <div class="accordion-panel grid grid-rows-[0fr] transition-[grid-template-rows] duration-300 ease-out border-b border-rule"><div class="overflow-hidden"><p class="py-5 text-slate leading-relaxed">Nothing — if you have a gym. If training at home, expect to need adjustable dumbbells (or barbell + plates), a bench, and a pull-up bar at minimum. We'll talk through your setup on the diagnosis call.</p></div></div>
+      </div>
+
+      <div data-accordion>
+        <button class="accordion-item w-full flex items-center justify-between text-left py-6 border-b border-rule" type="button" aria-expanded="false">
+          <span class="font-serif text-xl md:text-2xl tracking-st pr-4">How do check-ins work?</span>
+          <span class="accordion-chevron w-5 h-5 flex-none transition-transform"><svg viewBox="0 0 20 20" fill="none" class="w-full h-full"><path d="M5 8l5 5 5-5" stroke="#0E0E0E" stroke-width="1.5"/></svg></span>
+        </button>
+        <div class="accordion-panel grid grid-rows-[0fr] transition-[grid-template-rows] duration-300 ease-out border-b border-rule"><div class="overflow-hidden"><p class="py-5 text-slate leading-relaxed">A weekly 30-minute video call to review the last 7 days, plus daily access via WhatsApp for everything in between. Same-day reply guaranteed during working hours.</p></div></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- 4. Investment + guarantee -->
+<section class="border-b border-rule">
+  <div class="max-w-3xl mx-auto px-6 lg:px-10 py-20 lg:py-24">
+    <div class="eyebrow mb-8">Investment + guarantee</div>
+    <div class="border-t border-rule">
+
+      <div data-accordion>
+        <button class="accordion-item w-full flex items-center justify-between text-left py-6 border-b border-rule" type="button" aria-expanded="false">
+          <span class="font-serif text-xl md:text-2xl tracking-st pr-4">How much does it cost?</span>
+          <span class="accordion-chevron w-5 h-5 flex-none transition-transform"><svg viewBox="0 0 20 20" fill="none" class="w-full h-full"><path d="M5 8l5 5 5-5" stroke="#0E0E0E" stroke-width="1.5"/></svg></span>
+        </button>
+        <div class="accordion-panel grid grid-rows-[0fr] transition-[grid-template-rows] duration-300 ease-out border-b border-rule"><div class="overflow-hidden"><p class="py-5 text-slate leading-relaxed">We share pricing on the diagnosis call once we know the fit. We've found that "post a price tag publicly" attracts the wrong applicants — people who decide before they understand what they're buying. If you'd rather see a number before applying, this probably isn't the right service for you.</p></div></div>
+      </div>
+
+      <div data-accordion>
+        <button class="accordion-item w-full flex items-center justify-between text-left py-6 border-b border-rule" type="button" aria-expanded="false">
+          <span class="font-serif text-xl md:text-2xl tracking-st pr-4">What does the 90% compliance guarantee mean exactly?</span>
+          <span class="accordion-chevron w-5 h-5 flex-none transition-transform"><svg viewBox="0 0 20 20" fill="none" class="w-full h-full"><path d="M5 8l5 5 5-5" stroke="#0E0E0E" stroke-width="1.5"/></svg></span>
+        </button>
+        <div class="accordion-panel grid grid-rows-[0fr] transition-[grid-template-rows] duration-300 ease-out border-b border-rule"><div class="overflow-hidden"><p class="py-5 text-slate leading-relaxed">If across 12 weeks you hit at least 90% of the prescribed training and nutrition targets, and you don't see meaningful body composition change, we refund the program in full. The bar is on both sides — you have to do the work, and we have to write the right work for you to do.</p></div></div>
+      </div>
+
+      <div data-accordion>
+        <button class="accordion-item w-full flex items-center justify-between text-left py-6 border-b border-rule" type="button" aria-expanded="false">
+          <span class="font-serif text-xl md:text-2xl tracking-st pr-4">What's the refund policy if I just want out?</span>
+          <span class="accordion-chevron w-5 h-5 flex-none transition-transform"><svg viewBox="0 0 20 20" fill="none" class="w-full h-full"><path d="M5 8l5 5 5-5" stroke="#0E0E0E" stroke-width="1.5"/></svg></span>
+        </button>
+        <div class="accordion-panel grid grid-rows-[0fr] transition-[grid-template-rows] duration-300 ease-out border-b border-rule"><div class="overflow-hidden"><p class="py-5 text-slate leading-relaxed">Inside the first 7 days, full refund, no questions. After that, the program is non-refundable except via the 90% compliance guarantee at the end of 12 weeks. We're upfront about this because we cap at 5 clients per cohort and each spot is real.</p></div></div>
+      </div>
+
+      <div data-accordion>
+        <button class="accordion-item w-full flex items-center justify-between text-left py-6 border-b border-rule" type="button" aria-expanded="false">
+          <span class="font-serif text-xl md:text-2xl tracking-st pr-4">Is there a payment plan?</span>
+          <span class="accordion-chevron w-5 h-5 flex-none transition-transform"><svg viewBox="0 0 20 20" fill="none" class="w-full h-full"><path d="M5 8l5 5 5-5" stroke="#0E0E0E" stroke-width="1.5"/></svg></span>
+        </button>
+        <div class="accordion-panel grid grid-rows-[0fr] transition-[grid-template-rows] duration-300 ease-out border-b border-rule"><div class="overflow-hidden"><p class="py-5 text-slate leading-relaxed">Yes — pay in full or in three monthly instalments. We'll walk through both on the call.</p></div></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- 5. Still have questions? -->
+<section class="border-b border-rule">
+  <div class="max-w-3xl mx-auto px-6 lg:px-10 py-24 lg:py-32 text-center">
+    <h2 class="font-serif font-normal tracking-st text-4xl md:text-5xl leading-[1.05] mb-6">Still have questions?</h2>
+    <p class="text-lg leading-relaxed text-slate mb-10 max-w-xl mx-auto">Add them to your application. We answer every one personally on the diagnosis call.</p>
+    <a href="/apply" class="pill">See if you qualify <span aria-hidden="true">→</span></a>
+  </div>
+</section>
+
+<!-- 6. Final CTA -->
+<section>
+  <div class="max-w-4xl mx-auto px-6 lg:px-10 py-28 lg:py-36 text-center">
+    <div class="eyebrow mb-6">Cohort Nº 03 · 05/10 spots taken</div>
+    <h2 class="font-serif font-normal tracking-st text-5xl md:text-6xl lg:text-7xl leading-[1.02]">Ready to apply?</h2>
+    <p class="mt-7 text-lg leading-relaxed text-slate max-w-xl mx-auto">Six minutes to fill in the qualifier. If we're a fit, you'll get a Calendly link to book the diagnosis call.</p>
+    <div class="mt-10">
+      <a href="/apply" class="pill text-sm py-3.5 px-6">See if you qualify <span aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="border-t border-rule bg-bone">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 py-16 grid grid-cols-1 md:grid-cols-12 gap-10">
+
+    <div class="md:col-span-4">
+      <a href="/" class="flex items-center gap-2.5 text-ink no-underline">
+        <img src="/assets/logo.svg" alt="" class="w-8 h-8">
+        <span class="font-serif text-xl leading-none tracking-st">DND<span class="italic font-normal text-slate">/Coaching</span></span>
+      </a>
+      <p class="mt-5 text-sm leading-relaxed text-slate max-w-xs">A 12-week diagnosis-first reset for men stuck on the same body for years. Online · worldwide.</p>
+    </div>
+
+    <div class="md:col-span-2">
+      <h3 class="eyebrow mb-4">Site</h3>
+      <ul class="font-mono text-[12px] tracking-mn uppercase text-slate space-y-2">
+        <li><a href="/method" class="hover:text-ink transition-colors">Method</a></li>
+        <li><a href="/coaches" class="hover:text-ink transition-colors">Coaches</a></li>
+        <li><a href="/results" class="hover:text-ink transition-colors">Results</a></li>
+        <li><a href="/faq" class="hover:text-ink transition-colors">FAQ</a></li>
+        <li><a href="/apply" class="hover:text-ink transition-colors">Apply</a></li>
+      </ul>
+    </div>
+
+    <div class="md:col-span-2">
+      <h3 class="eyebrow mb-4">Legal</h3>
+      <ul class="font-mono text-[12px] tracking-mn uppercase text-slate space-y-2">
+        <li><a href="/privacy" class="hover:text-ink transition-colors">Privacy</a></li>
+        <li><a href="/terms" class="hover:text-ink transition-colors">Terms</a></li>
+      </ul>
+    </div>
+
+    <div class="md:col-span-4">
+      <h3 class="eyebrow mb-4">Contact</h3>
+      <p class="font-mono text-[12px] tracking-mn uppercase text-slate">
+        <a href="mailto:hello@dndcoaching.com" class="hover:text-ink transition-colors">hello@dndcoaching.com</a>
+      </p>
+      <div class="mt-6 flex items-center gap-2 font-mono text-[10px] tracking-mn uppercase text-slate">
+        <span class="inline-block w-1.5 h-1.5 rounded-full bg-status-green"></span>
+        Intake open · Cohort Nº 03
+      </div>
+    </div>
+
+  </div>
+
+  <div class="border-t border-rule">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10 py-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-3 font-mono text-[10px] tracking-mn uppercase text-slate">
+      <span>Est. 2026 · DND Coaching Ltd.</span>
+      <span>Built in Ireland · Serving worldwide</span>
+    </div>
+  </div>
+</footer>
+
+<script src="/js/nav.js" defer></script>
+<script src="/js/accordion.js" defer></script>
+
+</body>
+</html>
