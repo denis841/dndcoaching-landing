@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="format-detection" content="telephone=no">
+  <title>Terms of service — DND Coaching</title>
+  <meta name="description" content="DND Coaching program terms.">
+  <link rel="icon" type="image/png" href="/assets/favicon-32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            bone: '#FAFAF7',
+            ink: '#0E0E0E',
+            slate: '#4A5568',
+            paper: '#FFFFFF',
+            'status-green': '#16a34a',
+            rule: 'rgba(14,14,14,0.12)'
+          },
+          fontFamily: {
+            serif: ['"Source Serif 4"', 'ui-serif', 'Georgia', 'serif'],
+            mono: ['"IBM Plex Mono"', 'ui-monospace', 'monospace'],
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif']
+          },
+          letterSpacing: {
+            mw: '0.22em',
+            mn: '0.16em',
+            st: '-0.025em',
+            sx: '-0.038em'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    body { font-family: 'Inter', sans-serif; background: #FAFAF7; color: #0E0E0E; -webkit-font-smoothing: antialiased; -webkit-tap-highlight-color: transparent; }
+    /* Respect notched-device safe areas */
+    #site-nav { padding-left: env(safe-area-inset-left); padding-right: env(safe-area-inset-right); }
+    /* Touch targets: ≥44px on mobile per Apple HIG / Material */
+    @media (max-width: 767px) { .pill { min-height: 44px; padding-top: 0.9rem; padding-bottom: 0.9rem; } }
+    /* Inputs at ≥16px so iOS Safari doesn't auto-zoom on focus */
+    input, select, textarea { font-size: 16px; }
+    .eyebrow { font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: #4A5568; }
+    .hairline { height: 1px; background: rgba(14,14,14,0.12); border: 0; }
+    .pill { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.25rem; border-radius: 9999px; background: #0E0E0E; color: #FAFAF7; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; transition: transform 0.2s ease-out, background-color 0.2s ease-out; }
+    .pill:hover { transform: translateY(-1px); background: #1a1a1a; }
+    .pill:focus-visible { outline: 2px solid #16a34a; outline-offset: 3px; }
+    .pill-outline { background: transparent; color: #0E0E0E; border: 1px solid rgba(14,14,14,0.18); }
+    .pill-outline:hover { background: rgba(14,14,14,0.05); }
+    @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+    .marquee-track { animation: marquee 45s linear infinite; }
+    @media (prefers-reduced-motion: reduce) {
+      .marquee-track { animation: none; }
+      html { scroll-behavior: auto; }
+    }
+    /* Legal page utility: make sure long URLs/emails wrap on mobile */
+    main a { word-break: break-word; }
+    /* Compliance table */
+    .legal-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+    .legal-table th, .legal-table td { text-align: left; padding: 0.75rem 0.9rem; border: 1px solid rgba(14,14,14,0.12); vertical-align: top; }
+    .legal-table th { font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: #4A5568; background: rgba(14,14,14,0.03); font-weight: 500; }
+    .legal-table td { color: #4A5568; line-height: 1.55; }
+    .table-wrap { overflow-x: auto; margin-bottom: 1.5rem; }
+    /* Callout box for emphasis */
+    .legal-callout { border-left: 2px solid #0E0E0E; padding: 1.25rem 1.5rem; background: rgba(14,14,14,0.03); margin: 1.5rem 0; }
+  </style>
+</head>
+<body>
+
+<header id="site-nav" class="sticky top-0 z-50 bg-bone/85 backdrop-blur-md border-b border-rule">
+  <nav class="max-w-7xl mx-auto px-6 lg:px-10 h-16 flex items-center justify-between">
+    <a href="/" class="flex items-center gap-2.5 text-ink no-underline">
+      <img src="/assets/logo.svg" alt="" class="w-7 h-7" aria-hidden="true">
+      <span class="font-serif text-lg leading-none tracking-st">DND<span class="italic font-normal text-slate">/Coaching</span></span>
+      <span class="hidden md:inline-block ml-3 pl-3 border-l border-rule font-mono text-[10px] tracking-mn uppercase text-slate">Online · 1:1</span>
+    </a>
+
+    <ul class="hidden md:flex items-center gap-8 font-mono text-[11px] tracking-mn uppercase text-slate">
+      <li><a href="/method" class="hover:text-ink transition-colors">Method</a></li>
+      <li><a href="/coaches" class="hover:text-ink transition-colors">Coaches</a></li>
+      <li><a href="/results" class="hover:text-ink transition-colors">Results</a></li>
+      <li><a href="/faq" class="hover:text-ink transition-colors">FAQ</a></li>
+    </ul>
+
+    <div class="flex items-center gap-3">
+      <a href="/apply" class="pill text-[11px] py-2 px-4">Apply <span aria-hidden="true">→</span></a>
+      <button id="nav-toggle" class="md:hidden w-11 h-11 -mr-2 flex items-center justify-center" aria-label="Open menu" aria-expanded="false" aria-controls="nav-mobile">
+        <span class="block w-5 h-px bg-ink relative before:absolute before:left-0 before:-top-1.5 before:w-5 before:h-px before:bg-ink after:absolute after:left-0 after:top-1.5 after:w-5 after:h-px after:bg-ink"></span>
+      </button>
+    </div>
+  </nav>
+
+  <div id="nav-mobile" class="md:hidden hidden border-t border-rule bg-bone">
+    <ul class="px-6 py-4 font-mono text-xs tracking-mn uppercase text-slate space-y-3">
+      <li><a href="/method" class="block py-3 min-h-[44px] flex items-center">Method</a></li>
+      <li><a href="/coaches" class="block py-3 min-h-[44px] flex items-center">Coaches</a></li>
+      <li><a href="/results" class="block py-3 min-h-[44px] flex items-center">Results</a></li>
+      <li><a href="/faq" class="block py-3 min-h-[44px] flex items-center">FAQ</a></li>
+      <li><a href="/apply" class="block py-3 min-h-[44px] flex items-center text-ink font-semibold">Apply →</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+
+  <!-- Page heading -->
+  <section class="border-b border-rule">
+    <div class="max-w-3xl mx-auto px-6 lg:px-10 pt-20 pb-12 lg:pt-28">
+      <div class="eyebrow mb-6">Legal</div>
+      <h1 class="font-serif font-normal tracking-st text-5xl md:text-6xl leading-[1.02]">Terms of service.</h1>
+      <p class="mt-5 font-mono text-[11px] tracking-mn uppercase text-slate">Last updated: May 21, 2026</p>
+    </div>
+  </section>
+
+  <!-- Body -->
+  <section class="border-b border-rule">
+    <div class="max-w-3xl mx-auto px-6 lg:px-10 py-16 lg:py-20">
+
+      <!-- 1 -->
+      <h2 id="section-1" class="font-serif text-2xl md:text-3xl tracking-st mt-0 mb-4">1. Acceptance of terms</h2>
+      <p class="text-slate leading-relaxed mb-5">These Terms of Service (<strong class="text-ink">"Terms"</strong>) constitute a legally binding agreement between you (<strong class="text-ink">"Client"</strong>, <strong class="text-ink">"you"</strong>, or <strong class="text-ink">"your"</strong>) and DND Coaching (<strong class="text-ink">"we"</strong>, <strong class="text-ink">"us"</strong>, or <strong class="text-ink">"our"</strong>) regarding your use of our coaching services.</p>
+      <p class="text-slate leading-relaxed mb-5">By purchasing, accessing, or using our services, you acknowledge that you have read, understood, and agree to be bound by these Terms. If you do not agree to these Terms, you must not use our services.</p>
+      <p class="text-slate leading-relaxed mb-5">We reserve the right to modify these Terms at any time. Changes will be effective immediately upon posting to our website. Your continued use of our services after any changes constitutes acceptance of the modified Terms.</p>
+
+      <!-- 2 -->
+      <h2 id="section-2" class="font-serif text-2xl md:text-3xl tracking-st mt-12 mb-4">2. Service description</h2>
+
+      <h3 class="font-serif text-xl tracking-st mt-8 mb-3">The 90-day body transformation program</h3>
+      <p class="text-slate leading-relaxed mb-5">DND Coaching provides online fitness coaching services through our 90-Day Body Transformation Program. This is a Done-With-You (DWY) coaching model where we work together throughout the program duration.</p>
+
+      <h3 class="font-serif text-xl tracking-st mt-8 mb-3">What's included</h3>
+      <ul class="text-slate leading-relaxed list-disc pl-6 mb-6 space-y-2">
+        <li>Regular 1-on-1 coaching video calls</li>
+        <li>Custom training programs delivered via Everfit</li>
+        <li>Nutrition framework and macro guidance</li>
+        <li>Direct message support with 24-hour response time</li>
+        <li>Weekly check-ins (progress photos and weigh-ins)</li>
+        <li>Progress tracking via Google Sheets dashboard</li>
+        <li>Ongoing program adjustments based on progress</li>
+      </ul>
+
+      <h3 class="font-serif text-xl tracking-st mt-8 mb-3">What's NOT included</h3>
+      <ul class="text-slate leading-relaxed list-disc pl-6 mb-6 space-y-2">
+        <li><strong class="text-ink">Medical advice or treatment:</strong> We are not doctors or medical professionals</li>
+        <li><strong class="text-ink">Nutrition prescriptions:</strong> We are not registered dietitians</li>
+        <li><strong class="text-ink">Done-For-You service:</strong> You must do the workouts and follow the program</li>
+        <li><strong class="text-ink">Gym membership or equipment:</strong> You are responsible for gym access and equipment</li>
+        <li><strong class="text-ink">Supplements or meal delivery:</strong> You purchase your own nutrition products</li>
+      </ul>
+
+      <h3 class="font-serif text-xl tracking-st mt-8 mb-3">Service delivery</h3>
+      <p class="text-slate leading-relaxed mb-5">All services are delivered online via video calls (Zoom/Google Meet), mobile apps (Everfit, MyFitnessPal, etc.), and direct messaging. You must have reliable internet access, a smartphone or computer, and be able to use the required applications.</p>
+
+      <!-- 3 -->
+      <h2 id="section-3" class="font-serif text-2xl md:text-3xl tracking-st mt-12 mb-4">3. Eligibility &amp; qualification</h2>
+
+      <h3 class="font-serif text-xl tracking-st mt-8 mb-3">Age requirement</h3>
+      <p class="text-slate leading-relaxed mb-5">You must be at least 18 years of age to use our services. By agreeing to these Terms, you represent and warrant that you are at least 18 years old.</p>
+
+      <h3 class="font-serif text-xl tracking-st mt-8 mb-3">Experience level</h3>
+      <p class="text-slate leading-relaxed mb-5">Our program is designed for individuals with gym training experience. You must have a minimum of 6 months of consistent training experience and currently train 3–5 times per week.</p>
+
+      <h3 class="font-serif text-xl tracking-st mt-8 mb-3">Commitment requirement</h3>
+      <p class="text-slate leading-relaxed mb-5">You must be willing and able to commit to the full 90-day program duration. You must also be willing to track your nutrition, workouts, and submit weekly progress check-ins.</p>
+
+      <h3 class="font-serif text-xl tracking-st mt-8 mb-3">Medical clearance</h3>
+      <p class="text-slate leading-relaxed mb-5"><strong class="text-ink">IMPORTANT:</strong> You should consult with a qualified physician before beginning any exercise or nutrition program. If you have any medical conditions, injuries, or health concerns, you must obtain medical clearance from your doctor before starting our program.</p>
+
+      <h3 class="font-serif text-xl tracking-st mt-8 mb-3">Exclusions</h3>
+      <p class="text-slate leading-relaxed mb-5">Our services are not appropriate for:</p>
+      <ul class="text-slate leading-relaxed list-disc pl-6 mb-6 space-y-2">
+        <li>Complete beginners with less than 6 months training experience</li>
+        <li>Pregnant or nursing women</li>
+        <li>Individuals with eating disorders or disordered eating patterns</li>
+        <li>Individuals with serious medical conditions requiring medical supervision</li>
+        <li>Individuals under 18 years of age</li>
+      </ul>
+      <p class="text-slate leading-relaxed mb-5">We reserve the right to refuse service to anyone who does not meet our qualification criteria or who we believe may not be a good fit for our program.</p>
+
+      <!-- 4 -->
+      <h2 id="section-4" class="font-serif text-2xl md:text-3xl tracking-st mt-12 mb-4">4. Payment terms</h2>
+
+      <h3 class="font-serif text-xl tracking-st mt-8 mb-3">Pricing</h3>
+      <p class="text-slate leading-relaxed mb-5">The 90-Day Body Transformation Program is priced between €2,000 and €5,000 depending on the specific package and payment plan selected. The exact price will be communicated to you before purchase.</p>
+
+      <h3 class="font-serif text-xl tracking-st mt-8 mb-3">Payment methods</h3>
+      <p class="text-slate leading-relaxed mb-5">We accept payment via Stripe and PayPal. All payments must be made in the currency specified at the time of purchase (EUR or USD).</p>
+
+      <h3 class="font-serif text-xl tracking-st mt-8 mb-3">Payment schedule</h3>
+      <p class="text-slate leading-relaxed mb-5">Payment is due in full at the time of enrollment unless an alternative payment plan has been agreed upon in writing. If installment payments are offered, you agree to make all scheduled payments on time.</p>
+
+      <h3 class="font-serif text-xl tracking-st mt-8 mb-3">Late payments</h3>
+      <p class="text-slate leading-relaxed mb-5">If any installment payment is more than 7 days overdue, we reserve the right to suspend access to coaching services until payment is received. Failure to complete payment may result in termination of services without refund.</p>
+
+      <h3 class="font-serif text-xl tracking-st mt-8 mb-3">No refunds (except under guarantee)</h3>
+      <p class="text-slate leading-relaxed mb-5">All payments are final and non-refundable except as explicitly stated in Section 6 (Guarantee &amp; Refund Policy). There are no refunds for dissatisfaction, changed circumstances, or early termination unless the guarantee conditions are met.</p>
+
+      <!-- 5 -->
+      <h2 id="section-5" class="font-serif text-2xl md:text-3xl tracking-st mt-12 mb-4">5. Client responsibilities &amp; obligations</h2>
+
+      <h3 class="font-serif text-xl tracking-st mt-8 mb-3">Compliance requirements</h3>
+      <p class="text-slate leading-relaxed mb-5"><strong class="text-ink">To be eligible for our guarantee (Section 6), you must maintain a minimum of 90% compliance across ALL of the following metrics:</strong></p>
+
+      <div class="table-wrap">
+        <table class="legal-table">
+          <thead>
+            <tr>
+              <th>Metric</th>
+              <th>Requirement</th>
+              <th>Minimum threshold</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Workout attendance</td>
+              <td>Complete all assigned training sessions</td>
+              <td>90% (27/30 per month)</td>
+            </tr>
+            <tr>
+              <td>Nutrition logging</td>
+              <td>Daily food/macro tracking</td>
+              <td>6 days/week (86%)</td>
+            </tr>
+            <tr>
+              <td>Cardio completion</td>
+              <td>All prescribed cardio sessions</td>
+              <td>90%</td>
+            </tr>
+            <tr>
+              <td>Weekly check-ins</td>
+              <td>Progress photos + weigh-ins</td>
+              <td>Miss no more than 1/month</td>
+            </tr>
+            <tr>
+              <td>Coaching call attendance</td>
+              <td>All scheduled 1-on-1 calls</td>
+              <td>100%</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 class="font-serif text-xl tracking-st mt-8 mb-3">Other responsibilities</h3>
+      <ul class="text-slate leading-relaxed list-disc pl-6 mb-6 space-y-2">
+        <li>Provide accurate health and fitness information</li>
+        <li>Notify coach immediately of any injuries or health changes</li>
+        <li>Use all required apps and tracking tools (MyFitnessPal, Everfit, etc.)</li>
+        <li>Follow the program as prescribed</li>
+        <li>Communicate challenges, concerns, or questions promptly</li>
+        <li>Maintain honest and accurate tracking of all activities</li>
+        <li>Treat coach and support staff with respect and professionalism</li>
+      </ul>
+
+      <!-- 6 -->
+      <h2 id="section-6" class="font-serif text-2xl md:text-3xl tracking-st mt-12 mb-4">6. Guarantee &amp; refund policy</h2>
+
+      <div class="legal-callout">
+        <h3 class="font-serif text-xl tracking-st mb-3">The 90% compliance guarantee</h3>
+        <p class="text-slate leading-relaxed"><strong class="text-ink">Here's our guarantee:</strong> If you maintain 90% or higher compliance across ALL metrics in Section 5 for the full 90 days, and you STILL don't achieve meaningful progress toward your goals, we will refund 100% of your program fee.</p>
+      </div>
+
+      <h3 class="font-serif text-xl tracking-st mt-8 mb-3">Guarantee eligibility requirements</h3>
+      <p class="text-slate leading-relaxed mb-5">To be eligible for a refund under our guarantee, you must:</p>
+      <ul class="text-slate leading-relaxed list-disc pl-6 mb-6 space-y-2">
+        <li>Achieve a minimum of 90% compliance across ALL metrics listed in Section 5</li>
+        <li>Complete the full 90-day program</li>
+        <li>Use all required tracking apps and tools consistently</li>
+        <li>Attend all scheduled coaching calls (100% attendance)</li>
+        <li>Submit all weekly check-ins (miss no more than 1 per month)</li>
+        <li>Provide accurate and honest information throughout the program</li>
+      </ul>
+
+      <h3 class="font-serif text-xl tracking-st mt-8 mb-3">Compliance review process</h3>
+      <ul class="text-slate leading-relaxed list-disc pl-6 mb-6 space-y-2">
+        <li><strong class="text-ink">Week 4:</strong> Compliance review. If below 85%, warning issued that guarantee eligibility is at risk.</li>
+        <li><strong class="text-ink">Week 8:</strong> Final compliance audit. If below 90%, you will be notified that the guarantee will not apply.</li>
+        <li><strong class="text-ink">End of program:</strong> Final compliance calculation. If ≥90% compliance AND no meaningful progress, refund approved.</li>
+      </ul>
+
+      <h3 class="font-serif text-xl tracking-st mt-8 mb-3">Refund processing</h3>
+      <p class="text-slate leading-relaxed mb-5">If your refund request is approved:</p>
+      <ul class="text-slate leading-relaxed list-disc pl-6 mb-6 space-y-2">
+        <li>Refund will be processed within 30 days of approval</li>
+        <li>Refund will be issued via the same payment method used for purchase</li>
+        <li>You must provide compliance data and documentation if requested</li>
+      </ul>
+
+      <h3 class="font-serif text-xl tracking-st mt-8 mb-3">Guarantee does NOT apply if:</h3>
+      <ul class="text-slate leading-relaxed list-disc pl-6 mb-6 space-y-2">
+        <li>Overall compliance falls below 90% threshold</li>
+        <li>You miss more than 1 weekly check-in per month</li>
+        <li>You miss any coaching calls without 24-hour advance notice</li>
+        <li>You fail to use required tracking tools consistently</li>
+        <li>You provide false, inaccurate, or misleading information</li>
+        <li>You terminate the program before 90 days</li>
+        <li>You are terminated by us for violation of these Terms</li>
+      </ul>
+
+      <h3 class="font-serif text-xl tracking-st mt-8 mb-3">No other refunds</h3>
+      <p class="text-slate leading-relaxed mb-5"><strong class="text-ink">IMPORTANT:</strong> The guarantee described above is the ONLY circumstance under which refunds are provided. There are no refunds for:</p>
+      <ul class="text-slate leading-relaxed list-disc pl-6 mb-6 space-y-2">
+        <li>Dissatisfaction without proof of compliance</li>
+        <li>Early termination (voluntary)</li>
+        <li>"Changed my mind"</li>
+        <li>Personal circumstances or life events</li>
+        <li>Failure to achieve specific weight loss numbers</li>
+      </ul>
+
+      <!-- 7 -->
+      <h2 id="section-7" class="font-serif text-2xl md:text-3xl tracking-st mt-12 mb-4">7. Results disclaimer</h2>
+
+      <div class="legal-callout">
+        <p class="text-slate leading-relaxed"><strong class="text-ink">IMPORTANT:</strong> Individual results vary. We do not guarantee specific weight loss amounts or specific physical outcomes.</p>
+      </div>
+
+      <p class="text-slate leading-relaxed mb-5">While our marketing materials may reference potential outcomes such as "lose 10–15 lbs in 90 days," these are examples of what is possible with high compliance and consistent effort. They are NOT guarantees of specific results.</p>
+
+      <h3 class="font-serif text-xl tracking-st mt-8 mb-3">Factors affecting results</h3>
+      <p class="text-slate leading-relaxed mb-5">Your results will depend on many factors including but not limited to:</p>
+      <ul class="text-slate leading-relaxed list-disc pl-6 mb-6 space-y-2">
+        <li>Your individual effort and compliance with the program</li>
+        <li>Your starting fitness level and body composition</li>
+        <li>Your genetics and metabolism</li>
+        <li>Your sleep quality and stress levels</li>
+        <li>Your adherence to nutrition and training recommendations</li>
+        <li>Your medical history and current health status</li>
+        <li>External factors beyond our control</li>
+      </ul>
+
+      <h3 class="font-serif text-xl tracking-st mt-8 mb-3">No typical results</h3>
+      <p class="text-slate leading-relaxed mb-5">Testimonials and transformation images shown in our marketing materials are from real clients who followed the program with high compliance. However, these results are not typical and do not represent what every client will achieve.</p>
+
+      <h3 class="font-serif text-xl tracking-st mt-8 mb-3">Past performance</h3>
+      <p class="text-slate leading-relaxed mb-5">Past client results do not guarantee or predict future results. Each individual's experience is unique.</p>
+
+      <!-- 8 -->
+      <h2 id="section-8" class="font-serif text-2xl md:text-3xl tracking-st mt-12 mb-4">8. Health &amp; safety disclaimers</h2>
+
+      <div class="legal-callout">
+        <h3 class="font-serif text-xl tracking-st mb-3">Medical disclaimer</h3>
+        <p class="text-slate leading-relaxed"><strong class="text-ink">DND Coaching is NOT medical advice. We are NOT doctors, physicians, dietitians, or licensed medical professionals.</strong></p>
+      </div>
+
+      <h3 class="font-serif text-xl tracking-st mt-8 mb-3">Not a substitute for medical care</h3>
+      <p class="text-slate leading-relaxed mb-5">Our coaching services are not a replacement for professional medical care, diagnosis, or treatment. You should always:</p>
+      <ul class="text-slate leading-relaxed list-disc pl-6 mb-6 space-y-2">
+        <li>Consult with a qualified physician before starting any exercise program</li>
+        <li>Obtain medical clearance if you have any health conditions</li>
+        <li>Continue to see your doctor for regular medical care</li>
+        <li>Seek medical attention immediately if you experience pain, injury, or unusual symptoms</li>
+      </ul>
+
+      <h3 class="font-serif text-xl tracking-st mt-8 mb-3">Assumption of risk</h3>
+      <p class="text-slate leading-relaxed mb-5">You understand and acknowledge that:</p>
+      <ul class="text-slate leading-relaxed list-disc pl-6 mb-6 space-y-2">
+        <li>Physical exercise carries inherent risks including but not limited to muscle strains, sprains, tears, joint injuries, cardiovascular events, and in extreme cases, serious injury or death</li>
+        <li>You are voluntarily participating in physical activities at your own risk</li>
+        <li>You are physically capable of participating in the program</li>
+        <li>You will notify us immediately of any pain, injury, or adverse effects</li>
+        <li>You will stop any exercise that causes pain or discomfort</li>
+      </ul>
+
+      <h3 class="font-serif text-xl tracking-st mt-8 mb-3">Your responsibility</h3>
+      <p class="text-slate leading-relaxed mb-5">You are solely responsible for:</p>
+      <ul class="text-slate leading-relaxed list-disc pl-6 mb-6 space-y-2">
+        <li>Ensuring you are medically cleared for physical activity</li>
+        <li>Using proper form and technique during exercises</li>
+        <li>Using appropriate weights and equipment</li>
+        <li>Training in a safe environment</li>
+        <li>Listening to your body and stopping if something feels wrong</li>
+      </ul>
+      <p class="text-slate leading-relaxed mb-5"><strong class="text-ink">BY USING OUR SERVICES, YOU ACKNOWLEDGE THAT YOU HAVE BEEN ADVISED TO CONSULT WITH A PHYSICIAN AND THAT YOU ASSUME ALL RISKS ASSOCIATED WITH PHYSICAL EXERCISE.</strong></p>
+
+      <!-- 9 -->
+      <h2 id="section-9" class="font-serif text-2xl md:text-3xl tracking-st mt-12 mb-4">9. Liability limitations</h2>
+
+      <h3 class="font-serif text-xl tracking-st mt-8 mb-3">Waiver of liability</h3>
+      <p class="text-slate leading-relaxed mb-5"><strong class="text-ink">TO THE MAXIMUM EXTENT PERMITTED BY LAW, DND COACHING, DENIS (FOUNDER), AND ALL REPRESENTATIVES ARE NOT LIABLE FOR:</strong></p>
+      <ul class="text-slate leading-relaxed list-disc pl-6 mb-6 space-y-2">
+        <li>Any injuries sustained during training or exercise</li>
+        <li>Any adverse health effects from following nutrition or training recommendations</li>
+        <li>Failure to achieve desired results or any results</li>
+        <li>Indirect, incidental, consequential, or punitive damages</li>
+        <li>Loss of income, time, opportunity, or emotional distress</li>
+        <li>Damages arising from third-party actions (gym injuries, app failures, etc.)</li>
+      </ul>
+
+      <h3 class="font-serif text-xl tracking-st mt-8 mb-3">Maximum liability</h3>
+      <p class="text-slate leading-relaxed mb-5">In no event shall our total liability to you for all damages, losses, and causes of action exceed the amount paid by you for the program.</p>
+
+      <h3 class="font-serif text-xl tracking-st mt-8 mb-3">Third-party actions</h3>
+      <p class="text-slate leading-relaxed mb-5">We are not responsible for injuries or damages that occur:</p>
+      <ul class="text-slate leading-relaxed list-disc pl-6 mb-6 space-y-2">
+        <li>At your gym or training facility</li>
+        <li>Due to equipment malfunction or improper equipment use</li>
+        <li>Due to third-party app or software failures</li>
+        <li>Due to actions of third parties</li>
+      </ul>
+
+      <!-- 10 -->
+      <h2 id="section-10" class="font-serif text-2xl md:text-3xl tracking-st mt-12 mb-4">10. Intellectual property</h2>
+
+      <h3 class="font-serif text-xl tracking-st mt-8 mb-3">Proprietary content</h3>
+      <p class="text-slate leading-relaxed mb-5">All training programs, meal plans, workout templates, content, materials, and intellectual property provided as part of our services are proprietary to DND Coaching and protected by copyright and other intellectual property laws.</p>
+
+      <h3 class="font-serif text-xl tracking-st mt-8 mb-3">Limited license</h3>
+      <p class="text-slate leading-relaxed mb-5">You receive a limited, non-exclusive, non-transferable, revocable license to use our materials solely for your personal use during your enrollment in the program.</p>
+
+      <h3 class="font-serif text-xl tracking-st mt-8 mb-3">Prohibited uses</h3>
+      <p class="text-slate leading-relaxed mb-5">You may NOT:</p>
+      <ul class="text-slate leading-relaxed list-disc pl-6 mb-6 space-y-2">
+        <li>Reproduce, distribute, or share our programs or materials with others</li>
+        <li>Resell, license, or commercialize our content</li>
+        <li>Share screenshots, videos, or content on social media without permission</li>
+        <li>Use our materials for any commercial purpose</li>
+        <li>Modify or create derivative works from our content</li>
+      </ul>
+
+      <h3 class="font-serif text-xl tracking-st mt-8 mb-3">Termination of license</h3>
+      <p class="text-slate leading-relaxed mb-5">Your license to use our materials terminates immediately upon termination of your program or violation of these Terms. You must delete all copies of our materials in your possession.</p>
+      <p class="text-slate leading-relaxed mb-5"><strong class="text-ink">Violation of this section may result in immediate termination without refund and potential legal action.</strong></p>
+
+      <!-- 11 -->
+      <h2 id="section-11" class="font-serif text-2xl md:text-3xl tracking-st mt-12 mb-4">11. Confidentiality &amp; privacy</h2>
+
+      <h3 class="font-serif text-xl tracking-st mt-8 mb-3">Privacy policy</h3>
+      <p class="text-slate leading-relaxed mb-5">Your personal data is handled in accordance with our <a href="/privacy" class="underline underline-offset-4 hover:text-ink">Privacy Policy</a>. Please review the Privacy Policy to understand how we collect, use, and protect your information.</p>
+
+      <h3 class="font-serif text-xl tracking-st mt-8 mb-3">Progress photos &amp; testimonials</h3>
+      <p class="text-slate leading-relaxed mb-5">We may request permission to use your progress photos, testimonials, or results for marketing purposes. This is always optional and requires your explicit written consent. You may withdraw consent at any time.</p>
+
+      <h3 class="font-serif text-xl tracking-st mt-8 mb-3">Confidentiality</h3>
+      <p class="text-slate leading-relaxed mb-5">All communications between you and your coach are confidential and will not be shared with third parties except as required by law or as stated in our Privacy Policy.</p>
+
+      <!-- 12 -->
+      <h2 id="section-12" class="font-serif text-2xl md:text-3xl tracking-st mt-12 mb-4">12. Termination</h2>
+
+      <h3 class="font-serif text-xl tracking-st mt-8 mb-3">Termination by you</h3>
+      <p class="text-slate leading-relaxed mb-5">You may terminate your participation in the program at any time by providing 7 days written notice to <a href="mailto:contact@dndcoaching.com" class="underline underline-offset-4 hover:text-ink">contact@dndcoaching.com</a>. However:</p>
+      <ul class="text-slate leading-relaxed list-disc pl-6 mb-6 space-y-2">
+        <li>No refund will be provided for early termination</li>
+        <li>All payment obligations remain in effect</li>
+        <li>Access to all materials and coaching will be revoked immediately</li>
+      </ul>
+
+      <h3 class="font-serif text-xl tracking-st mt-8 mb-3">Termination by us</h3>
+      <p class="text-slate leading-relaxed mb-5">We reserve the right to terminate your participation immediately if:</p>
+      <ul class="text-slate leading-relaxed list-disc pl-6 mb-6 space-y-2">
+        <li>You fail to maintain minimum compliance levels</li>
+        <li>You engage in abusive, harassing, or inappropriate behavior</li>
+        <li>You provide false or misleading information</li>
+        <li>You fail to make required payments</li>
+        <li>You violate any provision of these Terms</li>
+      </ul>
+      <p class="text-slate leading-relaxed mb-5">If we terminate your participation due to your violation of these Terms, no refund will be provided. If we terminate for reasons not related to your violation, a pro-rata refund may be provided at our discretion.</p>
+
+      <!-- 13 -->
+      <h2 id="section-13" class="font-serif text-2xl md:text-3xl tracking-st mt-12 mb-4">13. Cancellation &amp; rescheduling</h2>
+
+      <h3 class="font-serif text-xl tracking-st mt-8 mb-3">Coaching calls</h3>
+      <p class="text-slate leading-relaxed mb-5">You must provide at least 24 hours advance notice to reschedule a coaching call. Calls rescheduled with less than 24 hours notice or missed entirely will count as missed calls and negatively affect your compliance score.</p>
+
+      <h3 class="font-serif text-xl tracking-st mt-8 mb-3">Rescheduling limits</h3>
+      <p class="text-slate leading-relaxed mb-5">You may reschedule up to 2 coaching calls per month. Habitual rescheduling may result in program termination.</p>
+
+      <h3 class="font-serif text-xl tracking-st mt-8 mb-3">Coach cancellations</h3>
+      <p class="text-slate leading-relaxed mb-5">If we need to cancel or reschedule a call, we will provide as much notice as possible and work with you to find an alternative time. Coach-initiated cancellations do not count against your compliance.</p>
+
+      <!-- 14 -->
+      <h2 id="section-14" class="font-serif text-2xl md:text-3xl tracking-st mt-12 mb-4">14. Communication &amp; support</h2>
+
+      <h3 class="font-serif text-xl tracking-st mt-8 mb-3">Support availability</h3>
+      <p class="text-slate leading-relaxed mb-5">Direct message support is available Monday through Friday during business hours with a 24-hour response time. Emergency medical issues should be directed to appropriate medical professionals, not coaching staff.</p>
+
+      <h3 class="font-serif text-xl tracking-st mt-8 mb-3">Professional communication</h3>
+      <p class="text-slate leading-relaxed mb-5">All communications must be professional and respectful. Abusive, harassing, threatening, or inappropriate communication will not be tolerated and may result in immediate termination without refund.</p>
+
+      <h3 class="font-serif text-xl tracking-st mt-8 mb-3">Response times</h3>
+      <p class="text-slate leading-relaxed mb-5">We aim to respond to all messages within 24 hours during business days (Monday–Friday). Responses may take longer on weekends and holidays.</p>
+
+      <!-- 15 -->
+      <h2 id="section-15" class="font-serif text-2xl md:text-3xl tracking-st mt-12 mb-4">15. Program modifications</h2>
+      <p class="text-slate leading-relaxed mb-5">We reserve the right to modify your training program, nutrition targets, cardio prescription, or any other aspect of your program based on your progress, feedback, and our professional judgment.</p>
+      <p class="text-slate leading-relaxed mb-5">You must follow program modifications to maintain compliance. Refusal to adapt to necessary program changes may be considered non-compliance.</p>
+      <p class="text-slate leading-relaxed mb-5">All modifications are made with your best interest in mind and are based on our professional expertise and your individual progress.</p>
+
+      <!-- 16 -->
+      <h2 id="section-16" class="font-serif text-2xl md:text-3xl tracking-st mt-12 mb-4">16. Third-party services</h2>
+
+      <h3 class="font-serif text-xl tracking-st mt-8 mb-3">Required third-party apps</h3>
+      <p class="text-slate leading-relaxed mb-5">Our program requires the use of the following third-party applications and services:</p>
+      <ul class="text-slate leading-relaxed list-disc pl-6 mb-6 space-y-2">
+        <li>Calendly (scheduling)</li>
+        <li>MyFitnessPal or MacroFactor (nutrition tracking)</li>
+        <li>Strava or Apple Health (cardio verification)</li>
+        <li>Notion or HighLevel (client portal)</li>
+        <li>Zoom or Google Meet (video calls)</li>
+        <li>Everfit (training delivery)</li>
+        <li>Tally (application forms)</li>
+      </ul>
+
+      <h3 class="font-serif text-xl tracking-st mt-8 mb-3">Your responsibility</h3>
+      <p class="text-slate leading-relaxed mb-5">You are responsible for:</p>
+      <ul class="text-slate leading-relaxed list-disc pl-6 mb-6 space-y-2">
+        <li>Creating accounts with these services</li>
+        <li>Paying for any premium features if required</li>
+        <li>Complying with each service's terms of use</li>
+        <li>Maintaining access to these services throughout the program</li>
+      </ul>
+
+      <h3 class="font-serif text-xl tracking-st mt-8 mb-3">No liability for third-party failures</h3>
+      <p class="text-slate leading-relaxed mb-5">We are not responsible for failures, outages, data loss, or issues with third-party services. If a third-party service becomes unavailable, we will work with you to find alternatives but are not liable for any disruption to services.</p>
+
+      <!-- 17 -->
+      <h2 id="section-17" class="font-serif text-2xl md:text-3xl tracking-st mt-12 mb-4">17. Dispute resolution</h2>
+
+      <h3 class="font-serif text-xl tracking-st mt-8 mb-3">Governing law</h3>
+      <p class="text-slate leading-relaxed mb-5">These Terms are governed by and construed in accordance with the laws of Ireland. Any disputes arising from these Terms or our services shall be subject to the exclusive jurisdiction of the courts of County Dublin, Ireland.</p>
+
+      <h3 class="font-serif text-xl tracking-st mt-8 mb-3">Dispute resolution process</h3>
+      <p class="text-slate leading-relaxed mb-5">In the event of any dispute, claim, or controversy:</p>
+      <ol class="text-slate leading-relaxed list-decimal pl-6 mb-6 space-y-2">
+        <li><strong class="text-ink">Informal resolution:</strong> Contact us at <a href="mailto:contact@dndcoaching.com" class="underline underline-offset-4 hover:text-ink">contact@dndcoaching.com</a> within 30 days of the issue arising. We will attempt to resolve the matter informally.</li>
+        <li><strong class="text-ink">Mediation:</strong> If informal resolution fails, both parties agree to attempt mediation in good faith.</li>
+        <li><strong class="text-ink">Litigation:</strong> If mediation fails, disputes may be resolved through the courts of Ireland.</li>
+      </ol>
+
+      <h3 class="font-serif text-xl tracking-st mt-8 mb-3">Class action waiver</h3>
+      <p class="text-slate leading-relaxed mb-5">You agree that all disputes will be handled on an individual basis. You waive any right to bring claims as part of a class action or collective proceeding.</p>
+
+      <!-- 18 -->
+      <h2 id="section-18" class="font-serif text-2xl md:text-3xl tracking-st mt-12 mb-4">18. Force majeure</h2>
+      <p class="text-slate leading-relaxed mb-5">We shall not be liable for any failure or delay in performance due to circumstances beyond our reasonable control, including but not limited to:</p>
+      <ul class="text-slate leading-relaxed list-disc pl-6 mb-6 space-y-2">
+        <li>Natural disasters (earthquakes, floods, fires, etc.)</li>
+        <li>Pandemics or public health emergencies</li>
+        <li>Internet or telecommunications outages</li>
+        <li>Government restrictions or regulations</li>
+        <li>War, terrorism, or civil unrest</li>
+      </ul>
+      <p class="text-slate leading-relaxed mb-5">In the event of force majeure, we may suspend or modify services temporarily without liability. If suspension extends beyond 30 days, you may be entitled to a pro-rata refund at our discretion.</p>
+
+      <!-- 19 -->
+      <h2 id="section-19" class="font-serif text-2xl md:text-3xl tracking-st mt-12 mb-4">19. Severability</h2>
+      <p class="text-slate leading-relaxed mb-5">If any provision of these Terms is found to be invalid, illegal, or unenforceable by a court of competent jurisdiction, the remaining provisions shall continue in full force and effect. The invalid provision shall be modified to the minimum extent necessary to make it valid and enforceable.</p>
+
+      <!-- 20 -->
+      <h2 id="section-20" class="font-serif text-2xl md:text-3xl tracking-st mt-12 mb-4">20. Entire agreement</h2>
+      <p class="text-slate leading-relaxed mb-5">These Terms, together with our Privacy Policy, constitute the entire agreement between you and DND Coaching regarding our services and supersede all prior agreements, understandings, or representations.</p>
+      <p class="text-slate leading-relaxed mb-5">No modification to these Terms shall be valid unless made in writing and signed by an authorized representative of DND Coaching.</p>
+
+      <!-- 21 -->
+      <h2 id="section-21" class="font-serif text-2xl md:text-3xl tracking-st mt-12 mb-4">21. Contact information</h2>
+      <p class="text-slate leading-relaxed mb-5">For questions about these Terms of Service, to exercise your rights, or to resolve disputes, please contact us:</p>
+      <ul class="text-slate leading-relaxed list-disc pl-6 mb-6 space-y-2">
+        <li><strong class="text-ink">Email:</strong> <a href="mailto:contact@dndcoaching.com" class="underline underline-offset-4 hover:text-ink">contact@dndcoaching.com</a></li>
+        <li><strong class="text-ink">Business address:</strong> County Dublin, Ireland</li>
+      </ul>
+
+      <!-- 22 -->
+      <h2 id="section-22" class="font-serif text-2xl md:text-3xl tracking-st mt-12 mb-4">22. Acknowledgment &amp; acceptance</h2>
+
+      <div class="legal-callout">
+        <p class="text-slate leading-relaxed mb-3"><strong class="text-ink">BY PURCHASING OR USING OUR SERVICES, YOU ACKNOWLEDGE AND AGREE THAT:</strong></p>
+        <ul class="text-slate leading-relaxed list-disc pl-6 space-y-2">
+          <li>You have read and understood these entire Terms of Service</li>
+          <li>You agree to be legally bound by all provisions of these Terms</li>
+          <li>You understand the 90% compliance requirement for guarantee eligibility</li>
+          <li>You accept all risks associated with physical exercise</li>
+          <li>You understand that results are not guaranteed and vary by individual</li>
+          <li>You have been advised to consult with a physician before starting</li>
+          <li>You acknowledge all liability waivers and disclaimers</li>
+          <li>You are at least 18 years of age</li>
+          <li>You meet all eligibility requirements in Section 3</li>
+        </ul>
+        <p class="text-slate leading-relaxed mt-4"><strong class="text-ink">IF YOU DO NOT AGREE TO THESE TERMS, DO NOT USE OUR SERVICES.</strong></p>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="border-t border-rule bg-bone">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 py-16 grid grid-cols-1 md:grid-cols-12 gap-10">
+
+    <div class="md:col-span-4">
+      <a href="/" class="flex items-center gap-2.5 text-ink no-underline">
+        <img src="/assets/logo.svg" alt="" class="w-8 h-8">
+        <span class="font-serif text-xl leading-none tracking-st">DND<span class="italic font-normal text-slate">/Coaching</span></span>
+      </a>
+      <p class="mt-5 text-sm leading-relaxed text-slate max-w-xs">A 12-week diagnosis-first reset for men stuck on the same body for years. Online · worldwide.</p>
+    </div>
+
+    <div class="md:col-span-2">
+      <h3 class="eyebrow mb-4">Site</h3>
+      <ul class="font-mono text-[12px] tracking-mn uppercase text-slate space-y-2">
+        <li><a href="/method" class="hover:text-ink transition-colors">Method</a></li>
+        <li><a href="/coaches" class="hover:text-ink transition-colors">Coaches</a></li>
+        <li><a href="/results" class="hover:text-ink transition-colors">Results</a></li>
+        <li><a href="/faq" class="hover:text-ink transition-colors">FAQ</a></li>
+        <li><a href="/apply" class="hover:text-ink transition-colors">Apply</a></li>
+      </ul>
+    </div>
+
+    <div class="md:col-span-2">
+      <h3 class="eyebrow mb-4">Legal</h3>
+      <ul class="font-mono text-[12px] tracking-mn uppercase text-slate space-y-2">
+        <li><a href="/privacy" class="hover:text-ink transition-colors">Privacy</a></li>
+        <li><a href="/terms" class="hover:text-ink transition-colors">Terms</a></li>
+      </ul>
+    </div>
+
+    <div class="md:col-span-4">
+      <h3 class="eyebrow mb-4">Contact</h3>
+      <p class="font-mono text-[12px] tracking-mn uppercase text-slate">
+        <a href="mailto:hello@dndcoaching.com" class="hover:text-ink transition-colors">hello@dndcoaching.com</a>
+      </p>
+      <div class="mt-6 flex items-center gap-2 font-mono text-[10px] tracking-mn uppercase text-slate">
+        <span class="inline-block w-1.5 h-1.5 rounded-full bg-status-green"></span>
+        Intake open · Cohort Nº 03
+      </div>
+    </div>
+
+  </div>
+
+  <div class="border-t border-rule">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10 py-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-3 font-mono text-[10px] tracking-mn uppercase text-slate">
+      <span>Est. 2026 · DND Coaching Ltd.</span>
+      <span>Built in Ireland · Serving worldwide</span>
+    </div>
+  </div>
+</footer>
+
+<script src="/js/nav.js" defer></script>
+
+</body>
+</html>
