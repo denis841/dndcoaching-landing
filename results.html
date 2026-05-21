@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="format-detection" content="telephone=no">
+  <title>Results — What 12 weeks looks like</title>
+  <meta name="description" content="Transformations, testimonials, and a case study from DND Coaching clients.">
+  <link rel="icon" type="image/png" href="/assets/favicon-32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            bone: '#FAFAF7',
+            ink: '#0E0E0E',
+            slate: '#4A5568',
+            paper: '#FFFFFF',
+            'status-green': '#16a34a',
+            rule: 'rgba(14,14,14,0.12)'
+          },
+          fontFamily: {
+            serif: ['"Source Serif 4"', 'ui-serif', 'Georgia', 'serif'],
+            mono: ['"IBM Plex Mono"', 'ui-monospace', 'monospace'],
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif']
+          },
+          letterSpacing: {
+            mw: '0.22em',
+            mn: '0.16em',
+            st: '-0.025em',
+            sx: '-0.038em'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    body { font-family: 'Inter', sans-serif; background: #FAFAF7; color: #0E0E0E; -webkit-font-smoothing: antialiased; -webkit-tap-highlight-color: transparent; }
+    /* Respect notched-device safe areas */
+    #site-nav { padding-left: env(safe-area-inset-left); padding-right: env(safe-area-inset-right); }
+    /* Touch targets: ≥44px on mobile per Apple HIG / Material */
+    @media (max-width: 767px) { .pill { min-height: 44px; padding-top: 0.9rem; padding-bottom: 0.9rem; } }
+    /* Inputs at ≥16px so iOS Safari doesn't auto-zoom on focus */
+    input, select, textarea { font-size: 16px; }
+    .eyebrow { font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: #4A5568; }
+    .hairline { height: 1px; background: rgba(14,14,14,0.12); }
+    .pill { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.25rem; border-radius: 9999px; background: #0E0E0E; color: #FAFAF7; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; transition: transform 0.2s ease-out, background-color 0.2s ease-out; }
+    .pill:hover { transform: translateY(-1px); background: #1a1a1a; }
+    .pill:focus-visible { outline: 2px solid #16a34a; outline-offset: 3px; }
+    .pill-outline { background: transparent; color: #0E0E0E; border: 1px solid rgba(14,14,14,0.18); }
+    .pill-outline:hover { background: rgba(14,14,14,0.05); }
+    @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+    .marquee-track { animation: marquee 45s linear infinite; }
+    @media (prefers-reduced-motion: reduce) {
+      .marquee-track { animation: none; }
+      html { scroll-behavior: auto; }
+    }
+    /* Before/after slider */
+    .ba-slider { position: relative; width: 100%; overflow: hidden; user-select: none; background: #0E0E0E; aspect-ratio: 4/5; }
+    .ba-slider img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+    .ba-img-after { clip-path: inset(0 0 0 50%); }
+    .ba-rule { position: absolute; top: 0; bottom: 0; left: 50%; width: 1px; background: #FAFAF7; pointer-events: none; }
+    .ba-handle { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 44px; height: 44px; border-radius: 9999px; background: #FAFAF7; border: 1px solid rgba(14,14,14,0.2); cursor: ew-resize; touch-action: none; -webkit-touch-callout: none; }
+    .ba-handle::before { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, transparent 47%, #0E0E0E 47% 53%, transparent 53%); border-radius: inherit; }
+    .ba-tag { position: absolute; top: 14px; font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: #FAFAF7; mix-blend-mode: difference; }
+    .ba-tag-before { left: 14px; }
+    .ba-tag-after  { right: 14px; }
+  </style>
+</head>
+<body>
+
+<header id="site-nav" class="sticky top-0 z-50 bg-bone/85 backdrop-blur-md border-b border-rule">
+  <nav class="max-w-7xl mx-auto px-6 lg:px-10 h-16 flex items-center justify-between">
+    <a href="/" class="flex items-center gap-2.5 text-ink no-underline">
+      <img src="/assets/logo.svg" alt="" class="w-7 h-7" aria-hidden="true">
+      <span class="font-serif text-lg leading-none tracking-st">DND<span class="italic font-normal text-slate">/Coaching</span></span>
+      <span class="hidden md:inline-block ml-3 pl-3 border-l border-rule font-mono text-[10px] tracking-mn uppercase text-slate">Online · 1:1</span>
+    </a>
+
+    <ul class="hidden md:flex items-center gap-8 font-mono text-[11px] tracking-mn uppercase text-slate">
+      <li><a href="/method" class="hover:text-ink transition-colors">Method</a></li>
+      <li><a href="/coaches" class="hover:text-ink transition-colors">Coaches</a></li>
+      <li><a href="/results" class="text-ink transition-colors" aria-current="page">Results</a></li>
+      <li><a href="/faq" class="hover:text-ink transition-colors">FAQ</a></li>
+    </ul>
+
+    <div class="flex items-center gap-3">
+      <a href="/apply" class="pill text-[11px] py-2 px-4">Apply <span aria-hidden="true">→</span></a>
+      <button id="nav-toggle" class="md:hidden w-11 h-11 -mr-2 flex items-center justify-center" aria-label="Open menu" aria-expanded="false" aria-controls="nav-mobile">
+        <span class="block w-5 h-px bg-ink relative before:absolute before:left-0 before:-top-1.5 before:w-5 before:h-px before:bg-ink after:absolute after:left-0 after:top-1.5 after:w-5 after:h-px after:bg-ink"></span>
+      </button>
+    </div>
+  </nav>
+
+  <div id="nav-mobile" class="md:hidden hidden border-t border-rule bg-bone">
+    <ul class="px-6 py-4 font-mono text-xs tracking-mn uppercase text-slate space-y-3">
+      <li><a href="/method" class="block py-3 min-h-[44px] flex items-center">Method</a></li>
+      <li><a href="/coaches" class="block py-3 min-h-[44px] flex items-center">Coaches</a></li>
+      <li><a href="/results" class="block py-3 min-h-[44px] flex items-center text-ink" aria-current="page">Results</a></li>
+      <li><a href="/faq" class="block py-3 min-h-[44px] flex items-center">FAQ</a></li>
+      <li><a href="/apply" class="block py-3 min-h-[44px] flex items-center text-ink font-semibold">Apply →</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+
+<!-- 1. Hero -->
+<section class="border-b border-rule">
+  <div class="max-w-5xl mx-auto px-6 lg:px-10 pt-20 pb-16 lg:pt-28 lg:pb-24">
+    <div class="eyebrow mb-6">Fig. 00 — Results</div>
+    <h1 class="font-serif font-normal tracking-st text-5xl md:text-6xl lg:text-7xl leading-[1.02]">What 12 weeks looks like.</h1>
+    <p class="mt-7 text-lg leading-relaxed text-slate max-w-2xl">Placeholder transformations and testimonials below — Denis will swap in the real ones once the layout is locked.</p>
+  </div>
+</section>
+
+<!-- 2. Headline stat counter row -->
+<section class="border-b border-rule">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 py-28 lg:py-36">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-14 items-end">
+      <div>
+        <span class="font-serif text-6xl md:text-7xl lg:text-8xl leading-none tracking-st block" data-count-to="11.4" data-decimals="1">0.0</span>
+        <span class="eyebrow block mt-4">lbs lost avg</span>
+      </div>
+      <div>
+        <span class="font-serif text-6xl md:text-7xl lg:text-8xl leading-none tracking-st block" data-count-to="12">0</span>
+        <span class="eyebrow block mt-4">weeks</span>
+      </div>
+      <div>
+        <span class="font-serif text-6xl md:text-7xl lg:text-8xl leading-none tracking-st block" data-count-to="90">0</span>
+        <span class="eyebrow block mt-4">% compliance</span>
+      </div>
+      <div>
+        <span class="font-serif text-6xl md:text-7xl lg:text-8xl leading-none tracking-st block" data-count-to="5">0</span>
+        <span class="eyebrow block mt-4">clients per cohort</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3. Before/after gallery -->
+<section class="border-b border-rule bg-paper">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 py-24 lg:py-32">
+    <div class="eyebrow mb-6">Fig. 01 — Transformations</div>
+    <h2 class="font-serif font-normal tracking-st text-4xl md:text-5xl leading-[1.05] mb-14 max-w-2xl">Twelve weeks, four clients.</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-14">
+
+      <figure>
+        <div class="ba-slider" data-ba-slider>
+          <img class="ba-img-before" src="https://placehold.co/600x750/0E0E0E/FAFAF7?text=BEFORE" alt="">
+          <img class="ba-img-after"  src="https://placehold.co/600x750/FAFAF7/0E0E0E?text=AFTER"  alt="">
+          <div class="ba-rule" aria-hidden="true"></div>
+          <button class="ba-handle" type="button" aria-label="Drag to compare"></button>
+          <span class="ba-tag ba-tag-before">Before</span>
+          <span class="ba-tag ba-tag-after">After</span>
+        </div>
+        <figcaption class="mt-4 font-mono text-[11px] tracking-mn uppercase text-slate">M.K. · Glasgow · 13 lbs lost / 14 wks</figcaption>
+      </figure>
+
+      <figure>
+        <div class="ba-slider" data-ba-slider>
+          <img class="ba-img-before" src="https://placehold.co/600x750/0E0E0E/FAFAF7?text=BEFORE" alt="">
+          <img class="ba-img-after"  src="https://placehold.co/600x750/FAFAF7/0E0E0E?text=AFTER"  alt="">
+          <div class="ba-rule" aria-hidden="true"></div>
+          <button class="ba-handle" type="button" aria-label="Drag to compare"></button>
+          <span class="ba-tag ba-tag-before">Before</span>
+          <span class="ba-tag ba-tag-after">After</span>
+        </div>
+        <figcaption class="mt-4 font-mono text-[11px] tracking-mn uppercase text-slate">J.R. · Dublin · 9 lbs lost / 12 wks</figcaption>
+      </figure>
+
+      <figure>
+        <div class="ba-slider" data-ba-slider>
+          <img class="ba-img-before" src="https://placehold.co/600x750/0E0E0E/FAFAF7?text=BEFORE" alt="">
+          <img class="ba-img-after"  src="https://placehold.co/600x750/FAFAF7/0E0E0E?text=AFTER"  alt="">
+          <div class="ba-rule" aria-hidden="true"></div>
+          <button class="ba-handle" type="button" aria-label="Drag to compare"></button>
+          <span class="ba-tag ba-tag-before">Before</span>
+          <span class="ba-tag ba-tag-after">After</span>
+        </div>
+        <figcaption class="mt-4 font-mono text-[11px] tracking-mn uppercase text-slate">A.B. · London · 16 lbs lost / 14 wks</figcaption>
+      </figure>
+
+      <figure>
+        <div class="ba-slider" data-ba-slider>
+          <img class="ba-img-before" src="https://placehold.co/600x750/0E0E0E/FAFAF7?text=BEFORE" alt="">
+          <img class="ba-img-after"  src="https://placehold.co/600x750/FAFAF7/0E0E0E?text=AFTER"  alt="">
+          <div class="ba-rule" aria-hidden="true"></div>
+          <button class="ba-handle" type="button" aria-label="Drag to compare"></button>
+          <span class="ba-tag ba-tag-before">Before</span>
+          <span class="ba-tag ba-tag-after">After</span>
+        </div>
+        <figcaption class="mt-4 font-mono text-[11px] tracking-mn uppercase text-slate">S.W. · Manchester · 10 lbs lost / 12 wks</figcaption>
+      </figure>
+
+    </div>
+  </div>
+</section>
+
+<!-- 4. Written testimonials -->
+<section class="border-b border-rule">
+  <div class="max-w-5xl mx-auto px-6 lg:px-10 py-24 lg:py-32 space-y-16">
+    <div class="eyebrow">Fig. 02 — In their words</div>
+
+    <blockquote class="max-w-3xl">
+      <p class="font-serif italic text-3xl md:text-4xl leading-[1.2] tracking-st">"I'd been training five years and still hated how I looked. Twelve weeks later, I'm down 13 lbs and finally see the lines I used to chase."</p>
+      <footer class="mt-6 font-mono text-[11px] tracking-mn uppercase text-slate">— M.K. · 13 lbs lost / 14 wks · Glasgow</footer>
+    </blockquote>
+    <hr class="hairline">
+
+    <blockquote class="max-w-3xl ml-auto text-right">
+      <p class="font-serif italic text-3xl md:text-4xl leading-[1.2] tracking-st">"The diagnosis call alone was worth more than the last two coaches I paid combined. They actually found why I'd been stuck."</p>
+      <footer class="mt-6 font-mono text-[11px] tracking-mn uppercase text-slate">— J.R. · 9 lbs lost / 12 wks · Dublin</footer>
+    </blockquote>
+    <hr class="hairline">
+
+    <blockquote class="max-w-3xl">
+      <p class="font-serif italic text-3xl md:text-4xl leading-[1.2] tracking-st">"It wasn't the workouts. The workouts were boring on purpose. It was the sleep, the meal timing, the things nobody else had asked about."</p>
+      <footer class="mt-6 font-mono text-[11px] tracking-mn uppercase text-slate">— A.B. · 16 lbs lost / 14 wks · London</footer>
+    </blockquote>
+    <hr class="hairline">
+
+    <blockquote class="max-w-3xl ml-auto text-right">
+      <p class="font-serif italic text-3xl md:text-4xl leading-[1.2] tracking-st">"I expected a workout plan. I got someone telling me to fix my sleep first. Annoying. Correct."</p>
+      <footer class="mt-6 font-mono text-[11px] tracking-mn uppercase text-slate">— S.W. · 10 lbs lost / 12 wks · Manchester</footer>
+    </blockquote>
+    <hr class="hairline">
+
+    <blockquote class="max-w-3xl">
+      <p class="font-serif italic text-3xl md:text-4xl leading-[1.2] tracking-st">"Daily WhatsApp access sounded gimmicky. Turned out to be the thing that kept me honest on the days I'd have skipped."</p>
+      <footer class="mt-6 font-mono text-[11px] tracking-mn uppercase text-slate">— T.H. · 12 lbs lost / 13 wks · Cork</footer>
+    </blockquote>
+  </div>
+</section>
+
+<!-- 5. Featured case study -->
+<section class="border-b border-rule bg-paper">
+  <div class="max-w-6xl mx-auto px-6 lg:px-10 py-24 lg:py-32">
+    <div class="eyebrow mb-6">Fig. 03 — Case study</div>
+    <h2 class="font-serif font-normal tracking-st text-4xl md:text-5xl leading-[1.05] mb-14 max-w-2xl">M.K. · Glasgow · 13 lbs / 14 weeks.</h2>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+      <div class="lg:col-span-8 grid grid-cols-3 gap-3">
+        <img src="https://placehold.co/400x500/0E0E0E/FAFAF7?text=WK+0"  alt="Week 0"  class="w-full aspect-[4/5] object-cover" style="mix-blend-mode: multiply;">
+        <img src="https://placehold.co/400x500/0E0E0E/FAFAF7?text=WK+6"  alt="Week 6"  class="w-full aspect-[4/5] object-cover" style="mix-blend-mode: multiply;">
+        <img src="https://placehold.co/400x500/0E0E0E/FAFAF7?text=WK+14" alt="Week 14" class="w-full aspect-[4/5] object-cover" style="mix-blend-mode: multiply;">
+      </div>
+      <aside class="lg:col-span-4 lg:border-l lg:border-rule lg:pl-7">
+        <dl class="font-mono text-[11px] tracking-mn uppercase">
+          <div class="flex justify-between items-baseline py-3 border-b border-dashed border-rule"><dt class="text-slate">Starting weight</dt><dd>192 lbs</dd></div>
+          <div class="flex justify-between items-baseline py-3 border-b border-dashed border-rule"><dt class="text-slate">End weight</dt><dd>179 lbs</dd></div>
+          <div class="flex justify-between items-baseline py-3 border-b border-dashed border-rule"><dt class="text-slate">Bench 1RM</dt><dd>+15 lbs</dd></div>
+          <div class="flex justify-between items-baseline py-3 border-b border-dashed border-rule"><dt class="text-slate">Squat 1RM</dt><dd>+25 lbs</dd></div>
+          <div class="flex justify-between items-baseline py-3 border-b border-dashed border-rule"><dt class="text-slate">Sleep (avg)</dt><dd>+1.4 hrs</dd></div>
+          <div class="flex justify-between items-baseline py-3"><dt class="text-slate">Adherence</dt><dd>94%</dd></div>
+        </dl>
+      </aside>
+    </div>
+
+    <blockquote class="mt-14 max-w-3xl">
+      <p class="font-serif italic text-2xl md:text-3xl leading-[1.25] tracking-st">"I came in thinking I needed harder training. I left having fixed my sleep, my meal timing, and three exercises I'd been doing wrong for five years. The lifts came after."</p>
+      <footer class="mt-5 font-mono text-[11px] tracking-mn uppercase text-slate">— M.K.</footer>
+    </blockquote>
+  </div>
+</section>
+
+<!-- 6. What clients didn't expect -->
+<section class="border-b border-rule">
+  <div class="max-w-3xl mx-auto px-6 lg:px-10 py-24 lg:py-32">
+    <div class="eyebrow mb-6">Fig. 04 — Side benefits</div>
+    <h2 class="font-serif font-normal tracking-st text-4xl md:text-5xl leading-[1.05] mb-8">What clients didn't expect.</h2>
+    <div class="space-y-5 text-slate leading-relaxed text-lg">
+      <p>Most apply for the body composition change. The thing that surprises them is everything else: energy in the afternoons, sleeping through the night, mental capacity in their work, mood that isn't tied to whether they hit the gym that day.</p>
+      <p>The body composition is the receipt. The systems we build to get there are the actual thing.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 7. Mid CTA -->
+<section class="border-b border-rule bg-ink text-bone">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 py-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+    <div>
+      <div class="font-mono text-[10px] tracking-mn uppercase text-bone/60 mb-2">05/10 spots taken · Cohort Nº 03</div>
+      <p class="font-serif text-2xl md:text-3xl tracking-st">Five spots left. Intake closes when full.</p>
+    </div>
+    <a href="/apply" class="pill bg-bone text-ink hover:bg-white">See if you qualify <span aria-hidden="true">→</span></a>
+  </div>
+</section>
+
+<!-- 8. Final CTA -->
+<section>
+  <div class="max-w-4xl mx-auto px-6 lg:px-10 py-28 lg:py-36 text-center">
+    <div class="eyebrow mb-6">Cohort Nº 03 · 05/10 spots taken</div>
+    <h2 class="font-serif font-normal tracking-st text-5xl md:text-6xl lg:text-7xl leading-[1.02]">Ready to apply?</h2>
+    <p class="mt-7 text-lg leading-relaxed text-slate max-w-xl mx-auto">Six minutes to fill in the qualifier. If we're a fit, you'll get a Calendly link to book the diagnosis call.</p>
+    <div class="mt-10">
+      <a href="/apply" class="pill text-sm py-3.5 px-6">See if you qualify <span aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="border-t border-rule bg-bone">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 py-16 grid grid-cols-1 md:grid-cols-12 gap-10">
+
+    <div class="md:col-span-4">
+      <a href="/" class="flex items-center gap-2.5 text-ink no-underline">
+        <img src="/assets/logo.svg" alt="" class="w-8 h-8">
+        <span class="font-serif text-xl leading-none tracking-st">DND<span class="italic font-normal text-slate">/Coaching</span></span>
+      </a>
+      <p class="mt-5 text-sm leading-relaxed text-slate max-w-xs">A 12-week diagnosis-first reset for men stuck on the same body for years. Online · worldwide.</p>
+    </div>
+
+    <div class="md:col-span-2">
+      <h3 class="eyebrow mb-4">Site</h3>
+      <ul class="font-mono text-[12px] tracking-mn uppercase text-slate space-y-2">
+        <li><a href="/method" class="hover:text-ink transition-colors">Method</a></li>
+        <li><a href="/coaches" class="hover:text-ink transition-colors">Coaches</a></li>
+        <li><a href="/results" class="hover:text-ink transition-colors">Results</a></li>
+        <li><a href="/faq" class="hover:text-ink transition-colors">FAQ</a></li>
+        <li><a href="/apply" class="hover:text-ink transition-colors">Apply</a></li>
+      </ul>
+    </div>
+
+    <div class="md:col-span-2">
+      <h3 class="eyebrow mb-4">Legal</h3>
+      <ul class="font-mono text-[12px] tracking-mn uppercase text-slate space-y-2">
+        <li><a href="/privacy" class="hover:text-ink transition-colors">Privacy</a></li>
+        <li><a href="/terms" class="hover:text-ink transition-colors">Terms</a></li>
+      </ul>
+    </div>
+
+    <div class="md:col-span-4">
+      <h3 class="eyebrow mb-4">Contact</h3>
+      <p class="font-mono text-[12px] tracking-mn uppercase text-slate">
+        <a href="mailto:hello@dndcoaching.com" class="hover:text-ink transition-colors">hello@dndcoaching.com</a>
+      </p>
+      <div class="mt-6 flex items-center gap-2 font-mono text-[10px] tracking-mn uppercase text-slate">
+        <span class="inline-block w-1.5 h-1.5 rounded-full bg-status-green"></span>
+        Intake open · Cohort Nº 03
+      </div>
+    </div>
+
+  </div>
+
+  <div class="border-t border-rule">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10 py-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-3 font-mono text-[10px] tracking-mn uppercase text-slate">
+      <span>Est. 2026 · DND Coaching Ltd.</span>
+      <span>Built in Ireland · Serving worldwide</span>
+    </div>
+  </div>
+</footer>
+
+<script src="/js/nav.js" defer></script>
+<script src="/js/slider.js" defer></script>
+<script src="/js/counter.js" defer></script>
+
+</body>
+</html>
