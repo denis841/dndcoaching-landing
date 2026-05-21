@@ -2,7 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="format-detection" content="telephone=no">
   <title>Finally break through your training plateau — DND Coaching</title>
   <meta name="description" content="A 12-week diagnosis-first reset for men stuck on the same body for years. Online 1:1 coaching by Denis & Darius. Cohort Nº 03 — May 2026.">
   <link rel="icon" type="image/png" href="/assets/favicon-32.png">
@@ -38,8 +41,14 @@
     }
   </script>
   <style>
-    html { scroll-behavior: smooth; }
-    body { font-family: 'Inter', sans-serif; background: #FAFAF7; color: #0E0E0E; -webkit-font-smoothing: antialiased; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    body { font-family: 'Inter', sans-serif; background: #FAFAF7; color: #0E0E0E; -webkit-font-smoothing: antialiased; -webkit-tap-highlight-color: transparent; }
+    /* Respect notched-device safe areas */
+    #site-nav { padding-left: env(safe-area-inset-left); padding-right: env(safe-area-inset-right); }
+    /* Touch targets: ≥44px on mobile per Apple HIG / Material */
+    @media (max-width: 767px) { .pill { min-height: 44px; padding-top: 0.9rem; padding-bottom: 0.9rem; } }
+    /* Inputs at ≥16px so iOS Safari doesn't auto-zoom on focus */
+    input, select, textarea { font-size: 16px; }
     .eyebrow { font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: #4A5568; }
     .hairline { height: 1px; background: rgba(14,14,14,0.12); }
     .pill { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.25rem; border-radius: 9999px; background: #0E0E0E; color: #FAFAF7; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; transition: transform 0.2s ease-out, background-color 0.2s ease-out; }
@@ -58,7 +67,7 @@
     .ba-slider img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
     .ba-img-after { clip-path: inset(0 0 0 50%); }
     .ba-rule { position: absolute; top: 0; bottom: 0; left: 50%; width: 1px; background: #FAFAF7; pointer-events: none; }
-    .ba-handle { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 36px; height: 36px; border-radius: 9999px; background: #FAFAF7; border: 1px solid rgba(14,14,14,0.2); cursor: ew-resize; }
+    .ba-handle { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 44px; height: 44px; border-radius: 9999px; background: #FAFAF7; border: 1px solid rgba(14,14,14,0.2); cursor: ew-resize; touch-action: none; -webkit-touch-callout: none; }
     .ba-handle::before { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, transparent 47%, #0E0E0E 47% 53%, transparent 53%); border-radius: inherit; }
     .ba-tag { position: absolute; top: 14px; font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: #FAFAF7; mix-blend-mode: difference; }
     .ba-tag-before { left: 14px; }
@@ -84,7 +93,7 @@
 
     <div class="flex items-center gap-3">
       <a href="/apply" class="pill text-[11px] py-2 px-4">Apply <span aria-hidden="true">→</span></a>
-      <button id="nav-toggle" class="md:hidden w-10 h-10 -mr-2 flex items-center justify-center" aria-label="Open menu" aria-expanded="false" aria-controls="nav-mobile">
+      <button id="nav-toggle" class="md:hidden w-11 h-11 -mr-2 flex items-center justify-center" aria-label="Open menu" aria-expanded="false" aria-controls="nav-mobile">
         <span class="block w-5 h-px bg-ink relative before:absolute before:left-0 before:-top-1.5 before:w-5 before:h-px before:bg-ink after:absolute after:left-0 after:top-1.5 after:w-5 after:h-px after:bg-ink"></span>
       </button>
     </div>
@@ -92,11 +101,11 @@
 
   <div id="nav-mobile" class="md:hidden hidden border-t border-rule bg-bone">
     <ul class="px-6 py-4 font-mono text-xs tracking-mn uppercase text-slate space-y-3">
-      <li><a href="/method" class="block py-2">Method</a></li>
-      <li><a href="/coaches" class="block py-2">Coaches</a></li>
-      <li><a href="/results" class="block py-2">Results</a></li>
-      <li><a href="/faq" class="block py-2">FAQ</a></li>
-      <li><a href="/apply" class="block py-2 text-ink font-semibold">Apply →</a></li>
+      <li><a href="/method" class="block py-3 min-h-[44px] flex items-center">Method</a></li>
+      <li><a href="/coaches" class="block py-3 min-h-[44px] flex items-center">Coaches</a></li>
+      <li><a href="/results" class="block py-3 min-h-[44px] flex items-center">Results</a></li>
+      <li><a href="/faq" class="block py-3 min-h-[44px] flex items-center">FAQ</a></li>
+      <li><a href="/apply" class="block py-3 min-h-[44px] flex items-center text-ink font-semibold">Apply →</a></li>
     </ul>
   </div>
 </header>
