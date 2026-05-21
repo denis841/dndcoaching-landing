@@ -1,99 +1,80 @@
-// Form Validation & Qualification Logic
+// Qualification form for /apply.
+// Disqualified → /not-a-fit. Qualified → Tally full application URL.
 
-const form = document.getElementById('qualifying-form');
-const emailInput = document.getElementById('email');
-const emailError = document.getElementById('email-error');
-const privacyCheckbox = document.getElementById('privacy_consent');
-const privacyError = document.getElementById('privacy-error');
+const TALLY_URL = 'https://tally.so/r/REPLACE_ME'; // TODO: Denis supplies the live Tally form URL before launch
 
-// Email validation function
-function validateEmail(email) {
-  const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  return re.test(email);
-}
+(function () {
+  const form = document.getElementById('qualifying-form');
+  if (!form) return;
 
-// Form submission handler
-form.addEventListener('submit', function(e) {
-  e.preventDefault();
+  const emailInput = document.getElementById('email');
+  const emailError = document.getElementById('email-error');
+  const privacyCheckbox = document.getElementById('privacy_consent');
+  const privacyError = document.getElementById('privacy-error');
 
-  // Get form data
-  const formData = new FormData(form);
-  const trainingExperience = formData.get('training-experience');
-  const trainingFrequency = formData.get('training-frequency');
-  const commitment = formData.get('commitment');
-  const email = formData.get('email');
-
-  // Validate email
-  if (!validateEmail(email)) {
-    emailError.style.display = 'block';
-    emailInput.classList.add('error');
-    emailInput.focus();
-    return;
-  } else {
-    emailError.style.display = 'none';
-    emailInput.classList.remove('error');
+  function validateEmail(v) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
   }
 
-  // Validate privacy consent checkbox
-  if (!privacyCheckbox.checked) {
-    privacyError.style.display = 'block';
-    privacyCheckbox.focus();
-    return;
-  } else {
+  function qualify(experience, frequency, commitment) {
+    if (experience === 'beginner') return false;
+    if (frequency === 'inconsistent' || frequency === 'low') return false;
+    if (commitment !== 'yes') return false;
+    return true;
+  }
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    const data = new FormData(form);
+    const email = data.get('email') || '';
+
+    if (!validateEmail(email)) {
+      emailError.style.display = 'block';
+      emailInput.classList.add('error');
+      emailInput.focus();
+      return;
+    }
+    emailError.style.display = 'none';
+    emailInput.classList.remove('error');
+
+    if (!privacyCheckbox.checked) {
+      privacyError.style.display = 'block';
+      privacyCheckbox.focus();
+      return;
+    }
     privacyError.style.display = 'none';
-  }
 
-  // Qualification logic
-  const isQualified = qualifyApplicant(trainingExperience, trainingFrequency, commitment);
+    const isQualified = qualify(
+      data.get('training-experience'),
+      data.get('training-frequency'),
+      data.get('commitment')
+    );
 
-  // Store email in session storage for thank you page (optional)
-  sessionStorage.setItem('applicantEmail', email);
+    try { sessionStorage.setItem('applicantEmail', email); } catch (_) { /* ignore */ }
 
-  // Redirect based on qualification
-  if (isQualified) {
-    window.location.href = 'thank-you.html';
-  } else {
-    window.location.href = 'not-a-fit.html';
-  }
-});
+    if (isQualified) {
+      const u = new URL(TALLY_URL);
+      u.searchParams.set('email', email);
+      window.location.href = u.toString();
+    } else {
+      window.location.href = '/not-a-fit';
+    }
+  });
 
-// Qualification function
-function qualifyApplicant(experience, frequency, commitment) {
-  // Filter out complete beginners (less than 6 months)
-  if (experience === 'beginner') {
-    return false;
-  }
-
-  // Filter out inconsistent trainers
-  if (frequency === 'inconsistent' || frequency === 'low') {
-    return false;
-  }
-
-  // Filter out those not committed to 12 weeks
-  if (commitment !== 'yes') {
-    return false;
-  }
-
-  // If all checks pass, they're qualified
-  return true;
-}
-
-// Real-time email validation
-emailInput.addEventListener('blur', function() {
-  if (emailInput.value && !validateEmail(emailInput.value)) {
-    emailError.style.display = 'block';
-    emailInput.classList.add('error');
-  } else {
-    emailError.style.display = 'none';
-    emailInput.classList.remove('error');
-  }
-});
-
-emailInput.addEventListener('input', function() {
-  if (emailError.style.display === 'block') {
-    if (validateEmail(emailInput.value)) {
+  emailInput.addEventListener('blur', function () {
+    if (emailInput.value && !validateEmail(emailInput.value)) {
+      emailError.style.display = 'block';
+      emailInput.classList.add('error');
+    } else {
       emailError.style.display = 'none';
       emailInput.classList.remove('error');
     }
-  }
-});
+  });
+
+  emailInput.addEventListener('input', function () {
+    if (emailError.style.display === 'block' && validateEmail(emailInput.value)) {
+      emailError.style.display = 'none';
+      emailInput.classList.remove('error');
+    }
+  });
+})();
