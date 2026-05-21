@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48" fill="none" aria-label="DND Coaching mark">
+  <rect x="0" y="0" width="48" height="48" rx="6" fill="#0E0E0E"/>
+  <path d="M11 13h7c5 0 9 4 9 11s-4 11-9 11h-7V13z" stroke="#FAFAF7" stroke-width="2.5" fill="none"/>
+  <path d="M37 35h-7c-5 0-9-4-9-11s4-11 9-11h7v22z" stroke="#FAFAF7" stroke-width="2.5" fill="none"/>
+</svg>
