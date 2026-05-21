@@ -3,516 +3,427 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Break through your training plateau in 12 weeks. Structured coaching for experienced gym-goers stuck with inconsistent results.">
-  <title>DND Coaching - Break Through Your Plateau in 12 Weeks</title>
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="assets/images/favicon-192.png">
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/variables.css">
-  <link rel="stylesheet" href="css/typography.css">
-  <link rel="stylesheet" href="css/components.css">
-  <link rel="stylesheet" href="css/sections.css">
-  <link rel="stylesheet" href="css/responsive.css">
-
-  <!-- Open Graph for social sharing -->
-  <meta property="og:title" content="DND Coaching - Break Through Your Plateau">
-  <meta property="og:description" content="Lose 10-15 lbs in 12 weeks without giving up the foods you love.">
-  <meta property="og:url" content="https://dndcoaching.com">
+  <title>Finally break through your training plateau — DND Coaching</title>
+  <meta name="description" content="A 12-week diagnosis-first reset for men stuck on the same body for years. Online 1:1 coaching by Denis & Darius. Cohort Nº 03 — May 2026.">
+  <link rel="icon" type="image/png" href="/assets/favicon-32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            bone: '#FAFAF7',
+            ink: '#0E0E0E',
+            slate: '#4A5568',
+            paper: '#FFFFFF',
+            'status-green': '#16a34a',
+            rule: 'rgba(14,14,14,0.12)'
+          },
+          fontFamily: {
+            serif: ['"Source Serif 4"', 'ui-serif', 'Georgia', 'serif'],
+            mono: ['"IBM Plex Mono"', 'ui-monospace', 'monospace'],
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif']
+          },
+          letterSpacing: {
+            mw: '0.22em',
+            mn: '0.16em',
+            st: '-0.025em',
+            sx: '-0.038em'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background: #FAFAF7; color: #0E0E0E; -webkit-font-smoothing: antialiased; }
+    .eyebrow { font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: #4A5568; }
+    .hairline { height: 1px; background: rgba(14,14,14,0.12); }
+    .pill { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.25rem; border-radius: 9999px; background: #0E0E0E; color: #FAFAF7; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; transition: transform 0.2s ease-out, background-color 0.2s ease-out; }
+    .pill:hover { transform: translateY(-1px); background: #1a1a1a; }
+    .pill:focus-visible { outline: 2px solid #16a34a; outline-offset: 3px; }
+    .pill-outline { background: transparent; color: #0E0E0E; border: 1px solid rgba(14,14,14,0.18); }
+    .pill-outline:hover { background: rgba(14,14,14,0.05); }
+    @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+    .marquee-track { animation: marquee 45s linear infinite; }
+    @media (prefers-reduced-motion: reduce) {
+      .marquee-track { animation: none; }
+      html { scroll-behavior: auto; }
+    }
+    /* Before/after slider */
+    .ba-slider { position: relative; width: 100%; overflow: hidden; user-select: none; background: #0E0E0E; aspect-ratio: 4/5; }
+    .ba-slider img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+    .ba-img-after { clip-path: inset(0 0 0 50%); }
+    .ba-rule { position: absolute; top: 0; bottom: 0; left: 50%; width: 1px; background: #FAFAF7; pointer-events: none; }
+    .ba-handle { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 36px; height: 36px; border-radius: 9999px; background: #FAFAF7; border: 1px solid rgba(14,14,14,0.2); cursor: ew-resize; }
+    .ba-handle::before { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, transparent 47%, #0E0E0E 47% 53%, transparent 53%); border-radius: inherit; }
+    .ba-tag { position: absolute; top: 14px; font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: #FAFAF7; mix-blend-mode: difference; }
+    .ba-tag-before { left: 14px; }
+    .ba-tag-after  { right: 14px; }
+  </style>
 </head>
 <body>
-  <!-- Header -->
-  <header>
-    <div class="container">
-      <img src="THE LOGO.png" alt="DND Coaching Logo" class="logo">
+
+<header id="site-nav" class="sticky top-0 z-50 bg-bone/85 backdrop-blur-md border-b border-rule">
+  <nav class="max-w-7xl mx-auto px-6 lg:px-10 h-16 flex items-center justify-between">
+    <a href="/" class="flex items-center gap-2.5 text-ink no-underline">
+      <img src="/assets/logo.svg" alt="" class="w-7 h-7" aria-hidden="true">
+      <span class="font-serif text-lg leading-none tracking-st">DND<span class="italic font-normal text-slate">/Coaching</span></span>
+      <span class="hidden md:inline-block ml-3 pl-3 border-l border-rule font-mono text-[10px] tracking-mn uppercase text-slate">Online · 1:1</span>
+    </a>
+
+    <ul class="hidden md:flex items-center gap-8 font-mono text-[11px] tracking-mn uppercase text-slate">
+      <li><a href="/method" class="hover:text-ink transition-colors">Method</a></li>
+      <li><a href="/coaches" class="hover:text-ink transition-colors">Coaches</a></li>
+      <li><a href="/results" class="hover:text-ink transition-colors">Results</a></li>
+      <li><a href="/faq" class="hover:text-ink transition-colors">FAQ</a></li>
+    </ul>
+
+    <div class="flex items-center gap-3">
+      <a href="/apply" class="pill text-[11px] py-2 px-4">Apply <span aria-hidden="true">→</span></a>
+      <button id="nav-toggle" class="md:hidden w-10 h-10 -mr-2 flex items-center justify-center" aria-label="Open menu" aria-expanded="false" aria-controls="nav-mobile">
+        <span class="block w-5 h-px bg-ink relative before:absolute before:left-0 before:-top-1.5 before:w-5 before:h-px before:bg-ink after:absolute after:left-0 after:top-1.5 after:w-5 after:h-px after:bg-ink"></span>
+      </button>
     </div>
-  </header>
+  </nav>
 
-  <!-- Main Content -->
-  <main>
-    <!-- Hero Section -->
-    <section id="hero" class="hero visible">
-      <div class="container">
-        <span class="eyebrow">Limited Coaching Spots Available</span>
-        <h1>Finally Break Through Your Training Plateau in 12 Weeks</h1>
-        <p class="subheadline">The structured system that turns inconsistent effort into consistent results—without extreme diets, 2-hour gym sessions, or giving up the foods you love</p>
-        <a href="#application" class="btn btn-primary btn-large">See If You Qualify</a>
-        <p class="trust-signal">Currently coaching 5 clients | Denis &amp; Darius | 8+ years combined experience</p>
-        <p class="scarcity">Only working with 5-10 new clients at a time</p>
+  <div id="nav-mobile" class="md:hidden hidden border-t border-rule bg-bone">
+    <ul class="px-6 py-4 font-mono text-xs tracking-mn uppercase text-slate space-y-3">
+      <li><a href="/method" class="block py-2">Method</a></li>
+      <li><a href="/coaches" class="block py-2">Coaches</a></li>
+      <li><a href="/results" class="block py-2">Results</a></li>
+      <li><a href="/faq" class="block py-2">FAQ</a></li>
+      <li><a href="/apply" class="block py-2 text-ink font-semibold">Apply →</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+
+<!-- 1. Hero -->
+<section class="border-b border-rule">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 pt-16 pb-20 lg:pt-24 lg:pb-28 grid grid-cols-1 lg:grid-cols-[1fr_280px] gap-12 lg:gap-20">
+    <div>
+      <div class="eyebrow flex items-center gap-3 mb-8">
+        <span class="inline-block w-1.5 h-1.5 rounded-full bg-status-green shadow-[0_0_0_3px_rgba(22,163,74,0.18)]"></span>
+        Cohort Nº 03 · May 2026 · Intake open
       </div>
-    </section>
-
-    <!-- Problem Section -->
-    <section id="problem" class="problem">
-      <div class="container">
-        <p class="opening-hook">You're doing everything right... so why aren't you seeing results?</p>
-
-        <div class="pain-point">
-          <p>You train 3-5 times a week. You've tried every program, every split, every "proven system" you found online. You're putting in the work.</p>
-        </div>
-
-        <div class="pain-point">
-          <p>But your progress stopped months ago. The scale won't budge. Your lifts plateaued. Your physique looks exactly the same as it did 6 months ago, despite consistent training.</p>
-        </div>
-
-        <div class="pain-point">
-          <p>You're stuck in an endless loop: get motivated, train hard for 4-6 weeks, see minimal results, lose motivation, repeat. Meanwhile, you see other people transforming their bodies and think "what am I doing wrong?"</p>
-        </div>
-
-        <p class="real-problem">Here's the truth: It's not your fault. You don't lack discipline or willpower. You lack direction.</p>
-
-        <p>Every day you stay on this path is another day of wasted effort. Another week of feeling frustrated in the mirror. Another month wondering if you'll ever actually achieve the physique you're capable of.</p>
-
-        <p class="fear">What if you look back a year from now and you're still exactly where you are today—still stuck, still confused, still wishing you had just found the right guidance?</p>
+      <h1 class="font-serif font-normal tracking-st text-5xl md:text-6xl lg:text-7xl leading-[1.02]">Finally break through your training plateau.</h1>
+      <p class="mt-7 text-lg leading-relaxed text-slate max-w-xl">A 12-week diagnosis-first reset for men stuck on the same body for years — without extreme diets or 2-hour gym sessions.</p>
+      <div class="mt-10 flex flex-wrap items-center gap-4">
+        <a href="/apply" class="pill">See if you qualify <span aria-hidden="true">→</span></a>
+        <a href="/method" class="font-mono text-[12px] tracking-mn uppercase text-slate hover:text-ink transition-colors">How it works →</a>
       </div>
-    </section>
+    </div>
 
-    <!-- Solution Section -->
-    <section id="solution" class="solution">
-      <div class="container">
-        <h2>I've Been Exactly Where You Are</h2>
-        <p>I'm Denis. I've been training for 8 years, and I've lived the exact struggle you're facing right now.</p>
-        <p>I wasted years jumping from program to program, trying every diet trend, reading endless conflicting advice online. I trained consistently but saw inconsistent results. I felt stuck, frustrated, and confused.</p>
-        <p>It took me 8 years to figure out what actually works. The secret? It's not about more information—it's about the RIGHT information applied to YOUR specific situation.</p>
+    <aside class="lg:border-l lg:border-rule lg:pl-7">
+      <div class="eyebrow mb-5">Program brief</div>
+      <dl class="font-mono text-[11px] tracking-mn uppercase">
+        <div class="flex justify-between items-baseline py-3 border-b border-dashed border-rule"><dt class="text-slate">Duration</dt><dd>12 weeks</dd></div>
+        <div class="flex justify-between items-baseline py-3 border-b border-dashed border-rule"><dt class="text-slate">Method</dt><dd>Diagnosis-first</dd></div>
+        <div class="flex justify-between items-baseline py-3 border-b border-dashed border-rule"><dt class="text-slate">Target</dt><dd>10–15 lbs</dd></div>
+        <div class="flex justify-between items-baseline py-3 border-b border-dashed border-rule"><dt class="text-slate">Coaches</dt><dd>Denis &amp; Darius</dd></div>
+        <div class="flex justify-between items-baseline py-3"><dt class="text-slate">Cap</dt><dd>5 clients</dd></div>
+      </dl>
+      <a href="/apply" class="mt-6 block bg-ink text-bone p-5 rounded-md no-underline group">
+        <div class="font-serif text-3xl tracking-st leading-none">05<span class="text-slate">/10</span></div>
+        <div class="mt-2 font-mono text-[10px] tracking-mn uppercase text-bone/70">Spots remaining · Apply →</div>
+      </a>
+    </aside>
+  </div>
+</section>
 
-        <div class="method">
-          <h3>The Diagnosis-First Approach</h3>
-          <p>Most programs give you a generic plan and hope it works. I do the opposite.</p>
-          <ul>
-            <li>Understand your specific blockers (why past attempts failed)</li>
-            <li>Remove what doesn't work (simplify, eliminate variables)</li>
-            <li>Build sustainable habits (standards, not motivation)</li>
-            <li>Track and adjust weekly (accountability without micromanagement)</li>
-          </ul>
-          <p><strong>Why this works:</strong> Because you're not following someone else's template—you're following a proven framework customized to your reality.</p>
-        </div>
+<!-- 2. Trust ribbon marquee -->
+<section class="border-b border-rule overflow-hidden bg-bone" aria-hidden="true">
+  <div class="marquee-track flex whitespace-nowrap py-5 font-mono text-[10.5px] tracking-mn uppercase text-slate">
+    <span class="px-8">// Est. 2026</span>
+    <span class="px-8">// Online · Worldwide</span>
+    <span class="px-8">// 11.4 lbs avg · 12 wks</span>
+    <span class="px-8">// 90% compliance · Ironclad</span>
+    <span class="px-8">// 5 clients max</span>
+    <span class="px-8">// Diagnosis-first</span>
+    <span class="px-8">// Est. 2026</span>
+    <span class="px-8">// Online · Worldwide</span>
+    <span class="px-8">// 11.4 lbs avg · 12 wks</span>
+    <span class="px-8">// 90% compliance · Ironclad</span>
+    <span class="px-8">// 5 clients max</span>
+    <span class="px-8">// Diagnosis-first</span>
+  </div>
+</section>
+
+<!-- 3. Problem block -->
+<section class="border-b border-rule">
+  <div class="max-w-3xl mx-auto px-6 lg:px-10 py-24 lg:py-32">
+    <div class="eyebrow mb-6">Fig. 01 — The problem</div>
+    <h2 class="font-serif font-normal tracking-st text-4xl md:text-5xl leading-[1.05]">You're not lacking discipline.<br>You're lacking direction.</h2>
+    <div class="mt-10 grid gap-7 text-lg leading-relaxed text-slate">
+      <p>You've been in the gym for years. You've tried the bro splits, the PPL, the meal plans from Instagram. You're still looking at the same body in the mirror.</p>
+      <p>The problem isn't that you're not trying hard enough. The problem is that nobody ever stopped to figure out what's actually broken — your sleep, your training stimulus, the gap between what you eat and what you think you eat, the recovery you're not getting.</p>
+      <p>You don't need another program. You need a diagnosis.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 4. Method preview -->
+<section class="border-b border-rule">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 py-24 lg:py-32">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-16">
+      <div class="lg:col-span-5">
+        <div class="eyebrow mb-6">Fig. 02 — The method</div>
+        <h2 class="font-serif font-normal tracking-st text-4xl md:text-5xl leading-[1.05]">Diagnosis-first,<br>in three steps.</h2>
       </div>
-    </section>
-
-    <!-- Transformation Timeline Section -->
-    <section id="transformation" class="transformation">
-      <div class="container">
-        <h2>The 12-Week Transformation Journey</h2>
-
-        <div class="timeline">
-          <div class="timeline-item milestone">
-            <h3>Week 1-2: Diagnosis & Foundation</h3>
-            <ul>
-              <li>We identify exactly what's been holding you back—diet inconsistencies, training gaps, recovery issues, or hidden habits</li>
-              <li>You'll understand WHY previous attempts didn't work</li>
-              <li>We establish your baseline (minimum standard) that you'll never fall below</li>
-            </ul>
-          </div>
-
-          <div class="timeline-item milestone">
-            <h3>Month 1: The Scale Starts Moving</h3>
-            <ul>
-              <li>You see consistent progress week-over-week</li>
-              <li>No more yo-yo cycle—upward trajectory becomes your new normal</li>
-              <li>You're eating foods you enjoy while losing weight (no meal prep misery)</li>
-            </ul>
-          </div>
-
-          <div class="timeline-item milestone">
-            <h3>Month 2: People Start Noticing</h3>
-            <ul>
-              <li>Clothes fit better. Energy's up. Lifts are improving.</li>
-              <li>Friends and coworkers ask: "What are you doing differently?"</li>
-              <li>You have a system that works, not just temporary motivation</li>
-            </ul>
-          </div>
-
-          <div class="timeline-item milestone">
-            <h3>Week 12: 10-15 lbs Lighter—For Good</h3>
-            <ul>
-              <li>You've lost 10-15 lbs of fat</li>
-              <li>You have sustainable habits that don't require willpower</li>
-              <li>You understand how to progress—you're not dependent on a coach forever</li>
-              <li>Compound effects: confidence, discipline, and momentum that carries into work and personal life</li>
-            </ul>
-          </div>
-        </div>
+      <div class="lg:col-span-6 lg:col-start-7 self-end">
+        <p class="text-lg leading-relaxed text-slate">No templates. No "30-day shred." Every program starts with a 60-minute call where we map what's actually broken before we prescribe anything.</p>
       </div>
-    </section>
+    </div>
 
-    <!-- Why Work With Me Section -->
-    <section id="positioning" class="positioning">
-      <div class="container">
-        <h2>Why We Only Work With 5-10 Clients at a Time</h2>
-        <p>We're not trying to scale to 100 clients. We're focused on delivering real, lasting transformations for a small group of committed individuals.</p>
-        <p><strong>Here's why:</strong> We've both lived every struggle you're facing — years of training, plateaus, failed programs. We're currently coaching 5 clients through the exact system we built and tested on ourselves. This isn't a mass-produced program — it's hands-on, personalised guidance.</p>
-        <p><strong>What makes this work:</strong> We diagnose YOUR specific blockers (why past attempts failed), remove what doesn't work, and build sustainable habits. It's structured, but it's tailored.</p>
+    <ol class="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-14 border-t border-rule pt-14">
+      <li>
+        <div class="font-mono text-[10px] tracking-mn uppercase text-slate mb-4">Pillar 01</div>
+        <h3 class="font-serif text-2xl tracking-st mb-3">Diagnose</h3>
+        <p class="text-slate leading-relaxed">A deep diagnostic call — training history, recovery, sleep, nutrition, stress, blockers. We find what's actually getting in your way before we change anything.</p>
+      </li>
+      <li>
+        <div class="font-mono text-[10px] tracking-mn uppercase text-slate mb-4">Pillar 02</div>
+        <h3 class="font-serif text-2xl tracking-st mb-3">Prescribe</h3>
+        <p class="text-slate leading-relaxed">A program built around your diagnosis. Training, nutrition, and recovery prescribed at the dose you can actually take — not the one that sounds heroic.</p>
+      </li>
+      <li>
+        <div class="font-mono text-[10px] tracking-mn uppercase text-slate mb-4">Pillar 03</div>
+        <h3 class="font-serif text-2xl tracking-st mb-3">Track</h3>
+        <p class="text-slate leading-relaxed">Weekly check-ins, daily access via WhatsApp. We adjust the prescription as your body and life change. You don't ride it out — we course-correct in real time.</p>
+      </li>
+    </ol>
 
-        <div class="criteria">
-          <h3>What I'm Looking For:</h3>
-          <ul class="checklist">
-            <li>You train consistently but feel stuck (2-5x/week)</li>
-            <li>You're frustrated by inconsistent results despite effort</li>
-            <li>You're overwhelmed by conflicting information and need clear direction</li>
-            <li>You're willing to commit to 12 weeks and actually do the work</li>
-          </ul>
+    <div class="mt-14">
+      <a href="/method" class="font-mono text-[12px] tracking-mn uppercase text-ink underline-offset-8 hover:underline">Read the full method →</a>
+    </div>
+  </div>
+</section>
+
+<!-- 5. Mid-page CTA -->
+<section class="border-b border-rule bg-ink text-bone">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 py-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+    <div>
+      <div class="font-mono text-[10px] tracking-mn uppercase text-bone/60 mb-2">05/10 spots taken · Cohort Nº 03</div>
+      <p class="font-serif text-2xl md:text-3xl tracking-st">Five spots left. Intake closes when full.</p>
+    </div>
+    <a href="/apply" class="pill bg-bone text-ink hover:bg-white">See if you qualify <span aria-hidden="true">→</span></a>
+  </div>
+</section>
+
+<!-- 6. Coaches preview -->
+<section class="border-b border-rule">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 py-24 lg:py-32">
+    <div class="eyebrow mb-6">Fig. 03 — The coaches</div>
+    <h2 class="font-serif font-normal tracking-st text-4xl md:text-5xl leading-[1.05] mb-14">Two brothers. One method.</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16">
+      <article>
+        <div class="aspect-[4/5] bg-ink overflow-hidden">
+          <img src="https://placehold.co/600x750/0E0E0E/FAFAF7?text=DENIS" alt="Denis, head coach" class="w-full h-full object-cover" style="mix-blend-mode: multiply;">
         </div>
-
-        <div class="criteria mt-xl">
-          <h3>What You Can Expect:</h3>
-          <ul class="checklist">
-            <li>Weekly 1-on-1 coaching calls to review progress and adjust strategy</li>
-            <li>Custom training program based on exercises YOU respond to</li>
-            <li>Flexible nutrition framework (no meal prep hell, no banned foods)</li>
-            <li>Direct message access for real-time adjustments</li>
-            <li>A guarantee that protects you if you show up and do the work (more below)</li>
-          </ul>
+        <div class="mt-5">
+          <h3 class="font-serif text-2xl tracking-st">Denis</h3>
+          <p class="font-mono text-[11px] tracking-mn uppercase text-slate mt-1">Training Systems Lead</p>
         </div>
+      </article>
+      <article>
+        <div class="aspect-[4/5] bg-ink overflow-hidden">
+          <img src="https://placehold.co/600x750/0E0E0E/FAFAF7?text=DARIUS" alt="Darius, coach" class="w-full h-full object-cover" style="mix-blend-mode: multiply;">
+        </div>
+        <div class="mt-5">
+          <h3 class="font-serif text-2xl tracking-st">Darius</h3>
+          <p class="font-mono text-[11px] tracking-mn uppercase text-slate mt-1">Nutrition &amp; Recovery Lead</p>
+        </div>
+      </article>
+    </div>
+    <div class="mt-12">
+      <a href="/coaches" class="font-mono text-[12px] tracking-mn uppercase text-ink underline-offset-8 hover:underline">Meet the coaches →</a>
+    </div>
+  </div>
+</section>
 
-        <p class="mt-xl"><strong>The Application Process:</strong> This isn't a "click to buy" transaction. We'll have a 25-minute discovery call to see if we're a good fit. Investment and program details discussed on the call.</p>
+<!-- 7. Transformations preview -->
+<section class="border-b border-rule bg-paper">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 py-24 lg:py-32">
+    <div class="eyebrow mb-6">Fig. 04 — Transformations</div>
+    <h2 class="font-serif font-normal tracking-st text-4xl md:text-5xl leading-[1.05] mb-14 max-w-2xl">What 12 weeks looks like.</h2>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+      <div>
+        <div class="ba-slider" data-ba-slider>
+          <img class="ba-img-before" src="https://placehold.co/600x750/0E0E0E/FAFAF7?text=BEFORE" alt="Client before, week 0">
+          <img class="ba-img-after"  src="https://placehold.co/600x750/FAFAF7/0E0E0E?text=AFTER"  alt="Client after, week 12">
+          <div class="ba-rule" aria-hidden="true"></div>
+          <button class="ba-handle" type="button" aria-label="Drag to compare before and after"></button>
+          <span class="ba-tag ba-tag-before">Before</span>
+          <span class="ba-tag ba-tag-after">After</span>
+        </div>
+        <p class="mt-4 font-mono text-[11px] tracking-mn uppercase text-slate">M.K. · Glasgow · 13 lbs / 14 wks</p>
       </div>
-    </section>
 
-    <!-- What's Included Section -->
-    <section id="whats-included" class="whats-included">
-      <div class="container">
-        <h2>The 12-Week Transformation Program</h2>
-
-        <div class="program-component">
-          <h3>Weekly 1-on-1 Video Calls</h3>
-          <p>Progress review and strategy adjustment. Direct coaching on training form, nutrition, and mindset. Real-time problem solving (not scripted advice).</p>
-        </div>
-
-        <div class="program-component">
-          <h3>Custom Training Program</h3>
-          <p>Built around exercises YOU respond to (based on detailed onboarding). Progressive overload tracking. Adjusted weekly based on your results (not set-and-forget).</p>
-        </div>
-
-        <div class="program-component">
-          <h3>Flexible Nutrition Framework</h3>
-          <p>No meal plans, no food restrictions. Macro targets that fit YOUR lifestyle. Weekly view (not daily) for maximum flexibility. Eat the foods you enjoy while losing weight.</p>
-        </div>
-
-        <div class="program-component">
-          <h3>Direct Message Access</h3>
-          <p>WhatsApp/Telegram support. 24-hour response time. Questions answered, adjustments made in real-time. No "wait until next week" for urgent issues.</p>
-        </div>
-
-        <div class="program-component">
-          <h3>Weekly Check-Ins & Accountability</h3>
-          <p>Progress photos + weigh-ins every Sunday. Compliance tracking (transparent, data-driven). Immediate feedback and course corrections. You'll know exactly where you stand.</p>
-        </div>
-
-        <div class="program-component">
-          <h3>The 90% Compliance Guarantee</h3>
-          <p>If you hit 90% compliance and don't see results, you get refunded. Clear accountability: I deliver the system, you deliver the effort. More details in the guarantee section below.</p>
-        </div>
-
-        <div class="investment">
-          <p><strong>Investment:</strong> Discussed on discovery call (not a one-size-fits-all price)</p>
-          <p class="mt-sm"><strong>Payment:</strong> Secure payment via Stripe after we agree to work together</p>
-        </div>
+      <div class="space-y-12">
+        <blockquote>
+          <p class="font-serif italic text-2xl md:text-3xl leading-[1.25] tracking-st">"I'd been training five years and still hated how I looked. Twelve weeks later, I'm down 13 lbs and finally see the lines I used to chase."</p>
+          <footer class="mt-5 font-mono text-[11px] tracking-mn uppercase text-slate">— M.K. · 13 lbs lost / 14 wks · Glasgow</footer>
+        </blockquote>
+        <hr class="hairline">
+        <blockquote>
+          <p class="font-serif italic text-2xl md:text-3xl leading-[1.25] tracking-st">"The diagnosis call alone was worth more than the last two coaches I paid. They actually found why I'd been stuck."</p>
+          <footer class="mt-5 font-mono text-[11px] tracking-mn uppercase text-slate">— J.R. · 9 lbs lost / 12 wks · Dublin</footer>
+        </blockquote>
       </div>
-    </section>
+    </div>
 
-    <!-- Credibility Section -->
-    <section id="credibility" class="credibility">
-      <div class="container">
-        <h2>Why We Understand Your Struggle</h2>
-        <p>Between us, we've accumulated years of the exact frustration you're going through — every plateau, every failed program, every phase where you're training hard and seeing nothing.</p>
-        <p>We know what it's like to show up consistently and feel like you're spinning your wheels. We've both wasted time jumping between programs, diet trends, and conflicting advice online.</p>
-        <p><strong>We figured out what actually works. Our goal is to get you there in 12 weeks.</strong></p>
-        <p class="mt-xl">Currently coaching 5 clients through this exact system — the same Diagnosis-First approach we built from our own combined experience.</p>
-        <p class="mt-xl"><strong>What makes this different:</strong> We're not selling you a program. We're diagnosing YOUR specific blockers and building a system around YOUR life. No cookie-cutter meal plans. No generic training splits. Just structured guidance from two people who've been exactly where you are.</p>
+    <div class="mt-14">
+      <a href="/results" class="font-mono text-[12px] tracking-mn uppercase text-ink underline-offset-8 hover:underline">See all results →</a>
+    </div>
+  </div>
+</section>
+
+<!-- 8. Stat counter row -->
+<section class="border-b border-rule">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 py-24 lg:py-32">
+    <div class="eyebrow mb-6">Fig. 05 — By the numbers</div>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-12">
+      <div>
+        <span class="font-serif text-5xl md:text-6xl leading-none tracking-st block" data-count-to="11.4" data-decimals="1">0.0</span>
+        <span class="eyebrow block mt-3">lbs lost avg</span>
       </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about">
-      <div class="container">
-        <span class="about-eyebrow">The Team Behind DND</span>
-        <h2>Denis &amp; Darius.<br>Two Brothers. One System.</h2>
-        <p class="about-intro">DND isn't an acronym. It's us — Denis and Darius. Two brothers who spent years stuck in the same frustrated loop you're in now, until we built a system that actually worked. Now we coach others through it.</p>
-
-        <div class="coach-grid">
-          <div class="coach-card">
-            <div class="coach-photo">
-              <img src="assets/images/denis.jpg" alt="Denis — Co-Founder, DND Coaching">
-            </div>
-            <div class="coach-info">
-              <h3>Denis</h3>
-              <p class="coach-focus">Bodybuilding &amp; Hypertrophy</p>
-              <p>8 years of training. Lived every plateau, every failed program, every frustrating phase you're going through right now. My background is in bodybuilding — optimising physique, understanding how nutrition and training interact, and building the kind of visible results that actually last.</p>
-            </div>
-          </div>
-
-          <div class="coach-card">
-            <div class="coach-photo">
-              <img src="assets/images/darius.jpg" alt="Darius — Co-Founder, DND Coaching">
-            </div>
-            <div class="coach-info">
-              <h3>Darius</h3>
-              <p class="coach-focus">Powerlifting &amp; Strength</p>
-              <p>A strength and performance background that covers what bodybuilding doesn't. Where Denis focuses on hypertrophy and aesthetics, I come from powerlifting — building real strength, moving well, and developing a body that performs as good as it looks. Same Diagnosis-First approach. Different lens.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="about-bottom">
-          <p>One of us comes from bodybuilding. The other from powerlifting. Between us, every angle of your training is covered — aesthetics, strength, and the habits that make both stick.</p>
-          <p class="about-method">Two sets of eyes on your progress. One clear system.</p>
-        </div>
+      <div>
+        <span class="font-serif text-5xl md:text-6xl leading-none tracking-st block" data-count-to="12">0</span>
+        <span class="eyebrow block mt-3">weeks</span>
       </div>
-    </section>
-
-    <!-- Who This Is For / Not For Section -->
-    <section id="who-for" class="who-for">
-      <div class="container">
-        <h2>Is This For You?</h2>
-
-        <div class="for-you">
-          <h3>This Program Is For You If:</h3>
-          <ul class="checklist">
-            <li>You train 2-5x per week but feel stuck or plateaued</li>
-            <li>You've tried multiple programs/diets without lasting results</li>
-            <li>You're overwhelmed by conflicting information and need clear direction</li>
-            <li>You're willing to commit to 12 weeks of consistent tracking and accountability</li>
-            <li>You want results without extreme diets or spending 2+ hours in the gym</li>
-            <li>You're ready to invest in yourself</li>
-          </ul>
-        </div>
-
-        <div class="not-for mt-2xl">
-          <h3>This Program Is NOT For You If:</h3>
-          <ul class="checklist negative">
-            <li>You're looking for a quick fix or 30-day transformation</li>
-            <li>You're not willing to track your nutrition (even with flexible macros)</li>
-            <li>You want a "magic pill" or effortless results</li>
-            <li>You're not ready to commit to 12 weeks minimum</li>
-            <li>You expect me to do the work for you (this is done-WITH-you, not done-FOR-you)</li>
-          </ul>
-        </div>
+      <div>
+        <span class="font-serif text-5xl md:text-6xl leading-none tracking-st block" data-count-to="90">0</span>
+        <span class="eyebrow block mt-3">% compliance</span>
       </div>
-    </section>
-
-    <!-- How It Works Section -->
-    <section id="how-it-works" class="how-it-works">
-      <div class="container">
-        <h2>How It Works</h2>
-
-        <div class="timeline">
-          <div class="timeline-item step">
-            <h3>Step 1: Apply</h3>
-            <p>Fill out the quick qualification form below (2 minutes). Tell me about your training background and biggest frustration. I'll review within 24 hours.</p>
-          </div>
-
-          <div class="timeline-item step">
-            <h3>Step 2: Discovery Call (25 minutes)</h3>
-            <p>We'll diagnose what's been holding you back. I'll determine if we're a good fit (mutual assessment). If yes, you'll get onboarding instructions and payment details.</p>
-          </div>
-
-          <div class="timeline-item step">
-            <h3>Step 3: Onboarding (Week 1)</h3>
-            <p>Complete detailed training assessment (voice note format - speak freely about your training). Identify exercises that work for YOU and remove what doesn't. Set up tracking systems and establish your baseline standards. First coaching call: build your custom program.</p>
-          </div>
-
-          <div class="timeline-item step">
-            <h3>Step 4: Execute & Transform (12 Weeks)</h3>
-            <p>Weekly 1-on-1 coaching calls. Daily accountability via messaging. Weekly check-ins (photos + weigh-ins). Continuous adjustments based on your results. End goal: 10-15 lbs lighter with habits that stick.</p>
-          </div>
-        </div>
-
-        <p class="mt-2xl text-center"><strong>What happens after 12 weeks?</strong> You'll have the knowledge and system to maintain results independently. Ongoing coaching available at €30/week if you want continued support.</p>
+      <div>
+        <span class="font-serif text-5xl md:text-6xl leading-none tracking-st block" data-count-to="5">0</span>
+        <span class="eyebrow block mt-3">clients max</span>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
 
-    <!-- Guarantee Section -->
-    <section id="guarantee" class="guarantee">
-      <div class="container">
-        <h2>The 90% Compliance Guarantee</h2>
+<!-- 9. FAQ preview -->
+<section class="border-b border-rule bg-paper">
+  <div class="max-w-3xl mx-auto px-6 lg:px-10 py-24 lg:py-32">
+    <div class="eyebrow mb-6">Fig. 06 — Frequently asked</div>
+    <h2 class="font-serif font-normal tracking-st text-4xl md:text-5xl leading-[1.05] mb-12">Common questions.</h2>
 
-        <div class="guarantee-box">
-          <p><strong>Here's my guarantee:</strong> Hit 90% compliance on everything I prescribe—workouts, nutrition tracking, cardio, check-ins, calls—and if you STILL don't lose at least 8 lbs and see visible physique improvements in 12 weeks, I'll refund every penny.</p>
-          <p class="mt-md">Miss the 90% threshold? The guarantee doesn't apply. Because I can only guarantee results for people who actually show up and do the work.</p>
-          <p class="mt-md"><strong>This protects us both:</strong> You're guaranteed results if you commit, and I'm only accountable for clients who are truly invested.</p>
-        </div>
-
-        <div class="compliance-list">
-          <h3>What 90% Compliance Means:</h3>
-          <ul class="checklist">
-            <li>Complete 90% of assigned workouts (11 out of 12 weeks on track)</li>
-            <li>Track nutrition 6+ days per week</li>
-            <li>Submit weekly check-ins (photos + weigh-ins) on time</li>
-            <li>Attend all scheduled coaching calls</li>
-            <li>Complete prescribed cardio sessions</li>
-          </ul>
-        </div>
-
-        <p class="mt-xl"><strong>Why I can offer this:</strong> I've lived this system for 8 years. I know it works when applied consistently. I'm building my business on results, not empty promises.</p>
+    <div class="border-t border-rule">
+      <div data-accordion>
+        <button class="accordion-item w-full flex items-center justify-between text-left py-6 border-b border-rule" type="button" aria-expanded="false">
+          <span class="font-serif text-xl md:text-2xl tracking-st pr-4">How is this different from free programs online?</span>
+          <span class="accordion-chevron w-5 h-5 flex-none transition-transform"><svg viewBox="0 0 20 20" fill="none" class="w-full h-full"><path d="M5 8l5 5 5-5" stroke="#0E0E0E" stroke-width="1.5"/></svg></span>
+        </button>
+        <div class="accordion-panel grid grid-rows-[0fr] transition-[grid-template-rows] duration-300 ease-out border-b border-rule"><div class="overflow-hidden"><p class="py-5 text-slate leading-relaxed">Free programs are templates. Our method starts with a 60-minute diagnosis call where we map your current state, history, blockers, and goals before prescribing anything. The plan is built from the diagnosis — not pulled off a shelf.</p></div></div>
       </div>
-    </section>
 
-    <!-- FAQ Section -->
-    <section id="faq" class="faq">
-      <div class="container">
-        <h2>Frequently Asked Questions</h2>
-
-        <div class="faq-item">
-          <h3>How is this different from free programs online?</h3>
-          <p>Free programs are generic templates. This is customized diagnosis: I identify YOUR specific blockers, remove what doesn't work for YOU, and adjust weekly based on YOUR results. Plus, you have direct access to me for accountability and real-time adjustments.</p>
-        </div>
-
-        <div class="faq-item">
-          <h3>I've tried coaching before and it didn't work. Why will this be different?</h3>
-          <p>Most coaches sell you a program and hope it works. I diagnose first—we figure out exactly why past attempts failed before prescribing anything. Plus, this isn't a "set it and forget it" program. We're working together weekly to troubleshoot and optimize.</p>
-        </div>
-
-        <div class="faq-item">
-          <h3>Do I have to meal prep and eat chicken and broccoli every day?</h3>
-          <p>Absolutely not. You'll track macros (calories and protein primarily), but you choose what foods fit those targets. Want pizza on Saturday? Budget for it. Flexible nutrition, not food prison.</p>
-        </div>
-
-        <div class="faq-item">
-          <h3>What if I miss a workout or mess up my diet one day?</h3>
-          <p>Life happens. The goal is 90% compliance—that means you can have "off" days. We track weekly averages, not daily perfection. One bad day doesn't ruin progress if the system is solid.</p>
-        </div>
-
-        <div class="faq-item">
-          <h3>What happens after 12 weeks?</h3>
-          <p>You'll have the knowledge and habits to maintain results independently. If you want continued coaching, there's an option to stay on at €30/week. But the goal is for you to not need me forever.</p>
-        </div>
-
-        <div class="faq-item">
-          <h3>How much time does this require per week?</h3>
-          <p>Training: 3-5 hours (your current schedule). Tracking nutrition: 5-10 minutes per day. Check-ins: 5 minutes on Sundays. Coaching calls: 25 minutes weekly. Total additional time: ~1 hour per week for tracking and calls.</p>
-        </div>
+      <div data-accordion>
+        <button class="accordion-item w-full flex items-center justify-between text-left py-6 border-b border-rule" type="button" aria-expanded="false">
+          <span class="font-serif text-xl md:text-2xl tracking-st pr-4">How much time does this require per week?</span>
+          <span class="accordion-chevron w-5 h-5 flex-none transition-transform"><svg viewBox="0 0 20 20" fill="none" class="w-full h-full"><path d="M5 8l5 5 5-5" stroke="#0E0E0E" stroke-width="1.5"/></svg></span>
+        </button>
+        <div class="accordion-panel grid grid-rows-[0fr] transition-[grid-template-rows] duration-300 ease-out border-b border-rule"><div class="overflow-hidden"><p class="py-5 text-slate leading-relaxed">Training takes 3–4 hours per week across 3–4 sessions. Add 30 minutes for a weekly check-in and a few minutes a day for logging and messaging. Nothing else. The program is built for people with jobs and lives.</p></div></div>
       </div>
-    </section>
 
-    <!-- Final CTA Section -->
-    <section id="final-cta" class="final-cta">
-      <div class="container">
-        <h2>Ready to Finally Break Through?</h2>
-        <p class="restatement">In 12 weeks, you could be 10-15 lbs lighter with a system that actually works. Or you could be exactly where you are today—still stuck, still frustrated, still wondering "what if?"</p>
-        <a href="#application" class="btn btn-primary btn-large">See If You Qualify</a>
-        <p class="urgency mt-md">Only working with 5-10 clients at this level of intensity</p>
-        <p class="urgency">Applications reviewed within 24 hours</p>
+      <div data-accordion>
+        <button class="accordion-item w-full flex items-center justify-between text-left py-6 border-b border-rule" type="button" aria-expanded="false">
+          <span class="font-serif text-xl md:text-2xl tracking-st pr-4">What does the 90% compliance guarantee mean?</span>
+          <span class="accordion-chevron w-5 h-5 flex-none transition-transform"><svg viewBox="0 0 20 20" fill="none" class="w-full h-full"><path d="M5 8l5 5 5-5" stroke="#0E0E0E" stroke-width="1.5"/></svg></span>
+        </button>
+        <div class="accordion-panel grid grid-rows-[0fr] transition-[grid-template-rows] duration-300 ease-out border-b border-rule"><div class="overflow-hidden"><p class="py-5 text-slate leading-relaxed">If you hit at least 90% of the prescribed training and nutrition targets over 12 weeks and don't see meaningful body composition change, we refund the program. The bar is on you and on us — we both have to do our jobs.</p></div></div>
       </div>
-    </section>
 
-    <!-- Application Form Section -->
-    <section id="application" class="application">
-      <div class="container">
-        <h2>See If You Qualify - Quick Assessment</h2>
-        <p class="online-note">📍 This is 100% online coaching — all calls, check-ins, and communication are done remotely. No in-person sessions.</p>
-
-        <form id="qualifying-form">
-          <div class="form-group">
-            <label for="training-experience">How long have you been training?</label>
-            <div class="radio-group">
-              <label class="radio-option">
-                <input type="radio" name="training-experience" value="beginner" required>
-                <span>Less than 6 months</span>
-              </label>
-              <label class="radio-option">
-                <input type="radio" name="training-experience" value="intermediate" required>
-                <span>6 months - 2 years</span>
-              </label>
-              <label class="radio-option">
-                <input type="radio" name="training-experience" value="experienced" required>
-                <span>2-5 years</span>
-              </label>
-              <label class="radio-option">
-                <input type="radio" name="training-experience" value="advanced" required>
-                <span>5+ years</span>
-              </label>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label for="training-frequency">How many times per week do you currently train?</label>
-            <div class="radio-group">
-              <label class="radio-option">
-                <input type="radio" name="training-frequency" value="low" required>
-                <span>1-2x</span>
-              </label>
-              <label class="radio-option">
-                <input type="radio" name="training-frequency" value="moderate" required>
-                <span>3-4x</span>
-              </label>
-              <label class="radio-option">
-                <input type="radio" name="training-frequency" value="high" required>
-                <span>5+x</span>
-              </label>
-              <label class="radio-option">
-                <input type="radio" name="training-frequency" value="inconsistent" required>
-                <span>0</span>
-              </label>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label for="frustration">What's your biggest frustration right now?</label>
-            <select id="frustration" name="frustration" required>
-              <option value="">Select one...</option>
-              <option value="plateau">I'm stuck at the same weight/physique for months</option>
-              <option value="inconsistent">Results are inconsistent despite training regularly</option>
-              <option value="information">Too much conflicting information, need clear direction</option>
-              <option value="confused">I don't know what I'm doing wrong</option>
-              <option value="other">Other</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label for="commitment">Are you willing to commit to 12 weeks of consistent work?</label>
-            <div class="radio-group radio-group-commitment">
-              <label class="radio-option radio-option-full">
-                <input type="radio" name="commitment" value="yes" required>
-                <span>Yes, I'm ready</span>
-              </label>
-              <label class="radio-option">
-                <input type="radio" name="commitment" value="unsure" required>
-                <span>Not sure</span>
-              </label>
-              <label class="radio-option">
-                <input type="radio" name="commitment" value="no" required>
-                <span>No, looking for something shorter</span>
-              </label>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label for="email">Email address (required for next step)</label>
-            <input type="email" id="email" name="email" placeholder="your@email.com" required>
-            <p class="error-message" id="email-error" style="display: none;">Please enter a valid email address</p>
-          </div>
-
-          <div class="form-group">
-            <label class="checkbox-label" style="display: flex; align-items: flex-start; gap: var(--space-sm); cursor: pointer;">
-              <input type="checkbox" id="privacy_consent" name="privacy_consent" required style="margin-top: 4px; cursor: pointer;">
-              <span style="flex: 1;">I agree to the <a href="privacy-policy.html" target="_blank" style="color: var(--color-black); text-decoration: underline;">Privacy Policy</a> and consent to DND Coaching storing and processing my personal data for the purpose of this application.</span>
-            </label>
-            <p class="error-message" id="privacy-error" style="display: none;">You must agree to the Privacy Policy to continue</p>
-          </div>
-
-          <button type="submit" class="btn btn-primary btn-large" style="width: 100%;">Continue to Full Application</button>
-        </form>
+      <div data-accordion>
+        <button class="accordion-item w-full flex items-center justify-between text-left py-6 border-b border-rule" type="button" aria-expanded="false">
+          <span class="font-serif text-xl md:text-2xl tracking-st pr-4">Do I need a gym membership?</span>
+          <span class="accordion-chevron w-5 h-5 flex-none transition-transform"><svg viewBox="0 0 20 20" fill="none" class="w-full h-full"><path d="M5 8l5 5 5-5" stroke="#0E0E0E" stroke-width="1.5"/></svg></span>
+        </button>
+        <div class="accordion-panel grid grid-rows-[0fr] transition-[grid-template-rows] duration-300 ease-out border-b border-rule"><div class="overflow-hidden"><p class="py-5 text-slate leading-relaxed">A standard commercial gym is ideal. We can adapt to a home gym with adjustable dumbbells and a bench if needed — but the program is designed for full equipment access.</p></div></div>
       </div>
-    </section>
-  </main>
+    </div>
 
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <p>&copy; 2026 DND Coaching. All rights reserved.</p>
-      <p>
-        <a href="mailto:contact@dndcoaching.com">contact@dndcoaching.com</a> |
-        <a href="privacy-policy.html">Privacy Policy</a> |
-        <a href="terms-of-service.html">Terms of Service</a>
+    <div class="mt-12">
+      <a href="/faq" class="font-mono text-[12px] tracking-mn uppercase text-ink underline-offset-8 hover:underline">All questions →</a>
+    </div>
+  </div>
+</section>
+
+<!-- 10. Final CTA -->
+<section>
+  <div class="max-w-4xl mx-auto px-6 lg:px-10 py-28 lg:py-36 text-center">
+    <div class="eyebrow mb-6">Cohort Nº 03 · 05/10 spots taken</div>
+    <h2 class="font-serif font-normal tracking-st text-5xl md:text-6xl lg:text-7xl leading-[1.02]">Ready to apply?</h2>
+    <p class="mt-7 text-lg leading-relaxed text-slate max-w-xl mx-auto">Six minutes to fill in the qualifier. If we're a fit, you'll get a Calendly link to book the diagnosis call.</p>
+    <div class="mt-10">
+      <a href="/apply" class="pill text-sm py-3.5 px-6">See if you qualify <span aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="border-t border-rule bg-bone">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 py-16 grid grid-cols-1 md:grid-cols-12 gap-10">
+
+    <div class="md:col-span-4">
+      <a href="/" class="flex items-center gap-2.5 text-ink no-underline">
+        <img src="/assets/logo.svg" alt="" class="w-8 h-8">
+        <span class="font-serif text-xl leading-none tracking-st">DND<span class="italic font-normal text-slate">/Coaching</span></span>
+      </a>
+      <p class="mt-5 text-sm leading-relaxed text-slate max-w-xs">A 12-week diagnosis-first reset for men stuck on the same body for years. Online · worldwide.</p>
+    </div>
+
+    <div class="md:col-span-2">
+      <h3 class="eyebrow mb-4">Site</h3>
+      <ul class="font-mono text-[12px] tracking-mn uppercase text-slate space-y-2">
+        <li><a href="/method" class="hover:text-ink transition-colors">Method</a></li>
+        <li><a href="/coaches" class="hover:text-ink transition-colors">Coaches</a></li>
+        <li><a href="/results" class="hover:text-ink transition-colors">Results</a></li>
+        <li><a href="/faq" class="hover:text-ink transition-colors">FAQ</a></li>
+        <li><a href="/apply" class="hover:text-ink transition-colors">Apply</a></li>
+      </ul>
+    </div>
+
+    <div class="md:col-span-2">
+      <h3 class="eyebrow mb-4">Legal</h3>
+      <ul class="font-mono text-[12px] tracking-mn uppercase text-slate space-y-2">
+        <li><a href="/privacy" class="hover:text-ink transition-colors">Privacy</a></li>
+        <li><a href="/terms" class="hover:text-ink transition-colors">Terms</a></li>
+      </ul>
+    </div>
+
+    <div class="md:col-span-4">
+      <h3 class="eyebrow mb-4">Contact</h3>
+      <p class="font-mono text-[12px] tracking-mn uppercase text-slate">
+        <a href="mailto:hello@dndcoaching.com" class="hover:text-ink transition-colors">hello@dndcoaching.com</a>
       </p>
+      <div class="mt-6 flex items-center gap-2 font-mono text-[10px] tracking-mn uppercase text-slate">
+        <span class="inline-block w-1.5 h-1.5 rounded-full bg-status-green"></span>
+        Intake open · Cohort Nº 03
+      </div>
     </div>
-  </footer>
 
-  <!-- JavaScript -->
-  <script src="js/main.js"></script>
-  <script src="js/form.js"></script>
+  </div>
+
+  <div class="border-t border-rule">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10 py-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-3 font-mono text-[10px] tracking-mn uppercase text-slate">
+      <span>Est. 2026 · DND Coaching Ltd.</span>
+      <span>Built in Ireland · Serving worldwide</span>
+    </div>
+  </div>
+</footer>
+
+<script src="/js/nav.js" defer></script>
+<script src="/js/counter.js" defer></script>
+<script src="/js/accordion.js" defer></script>
+<script src="/js/slider.js" defer></script>
+
 </body>
 </html>
