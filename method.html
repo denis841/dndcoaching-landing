@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The method — DND Coaching</title>
+  <meta name="description" content="Our diagnosis-first method, in four pillars. A 12-week timeline. What's included, what it isn't, and the 90% compliance guarantee.">
+  <link rel="icon" type="image/png" href="/assets/favicon-32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            bone: '#FAFAF7',
+            ink: '#0E0E0E',
+            slate: '#4A5568',
+            paper: '#FFFFFF',
+            'status-green': '#16a34a',
+            rule: 'rgba(14,14,14,0.12)'
+          },
+          fontFamily: {
+            serif: ['"Source Serif 4"', 'ui-serif', 'Georgia', 'serif'],
+            mono: ['"IBM Plex Mono"', 'ui-monospace', 'monospace'],
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif']
+          },
+          letterSpacing: {
+            mw: '0.22em',
+            mn: '0.16em',
+            st: '-0.025em',
+            sx: '-0.038em'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background: #FAFAF7; color: #0E0E0E; -webkit-font-smoothing: antialiased; }
+    .eyebrow { font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: #4A5568; }
+    .hairline { height: 1px; background: rgba(14,14,14,0.12); }
+    .pill { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.25rem; border-radius: 9999px; background: #0E0E0E; color: #FAFAF7; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; transition: transform 0.2s ease-out, background-color 0.2s ease-out; }
+    .pill:hover { transform: translateY(-1px); background: #1a1a1a; }
+    .pill:focus-visible { outline: 2px solid #16a34a; outline-offset: 3px; }
+    .pill-outline { background: transparent; color: #0E0E0E; border: 1px solid rgba(14,14,14,0.18); }
+    .pill-outline:hover { background: rgba(14,14,14,0.05); }
+    @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+    .marquee-track { animation: marquee 45s linear infinite; }
+    @media (prefers-reduced-motion: reduce) {
+      .marquee-track { animation: none; }
+      html { scroll-behavior: auto; }
+    }
+  </style>
+</head>
+<body>
+
+<header id="site-nav" class="sticky top-0 z-50 bg-bone/85 backdrop-blur-md border-b border-rule">
+  <nav class="max-w-7xl mx-auto px-6 lg:px-10 h-16 flex items-center justify-between">
+    <a href="/" class="flex items-center gap-2.5 text-ink no-underline">
+      <img src="/assets/logo.svg" alt="" class="w-7 h-7" aria-hidden="true">
+      <span class="font-serif text-lg leading-none tracking-st">DND<span class="italic font-normal text-slate">/Coaching</span></span>
+      <span class="hidden md:inline-block ml-3 pl-3 border-l border-rule font-mono text-[10px] tracking-mn uppercase text-slate">Online · 1:1</span>
+    </a>
+
+    <ul class="hidden md:flex items-center gap-8 font-mono text-[11px] tracking-mn uppercase text-slate">
+      <li><a href="/method" aria-current="page" class="text-ink transition-colors">Method</a></li>
+      <li><a href="/coaches" class="hover:text-ink transition-colors">Coaches</a></li>
+      <li><a href="/results" class="hover:text-ink transition-colors">Results</a></li>
+      <li><a href="/faq" class="hover:text-ink transition-colors">FAQ</a></li>
+    </ul>
+
+    <div class="flex items-center gap-3">
+      <a href="/apply" class="pill text-[11px] py-2 px-4">Apply <span aria-hidden="true">→</span></a>
+      <button id="nav-toggle" class="md:hidden w-10 h-10 -mr-2 flex items-center justify-center" aria-label="Open menu" aria-expanded="false" aria-controls="nav-mobile">
+        <span class="block w-5 h-px bg-ink relative before:absolute before:left-0 before:-top-1.5 before:w-5 before:h-px before:bg-ink after:absolute after:left-0 after:top-1.5 after:w-5 after:h-px after:bg-ink"></span>
+      </button>
+    </div>
+  </nav>
+
+  <div id="nav-mobile" class="md:hidden hidden border-t border-rule bg-bone">
+    <ul class="px-6 py-4 font-mono text-xs tracking-mn uppercase text-slate space-y-3">
+      <li><a href="/method" aria-current="page" class="block py-2 text-ink">Method</a></li>
+      <li><a href="/coaches" class="block py-2">Coaches</a></li>
+      <li><a href="/results" class="block py-2">Results</a></li>
+      <li><a href="/faq" class="block py-2">FAQ</a></li>
+      <li><a href="/apply" class="block py-2 text-ink font-semibold">Apply →</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+
+<!-- 1. Hero -->
+<section class="border-b border-rule">
+  <div class="max-w-5xl mx-auto px-6 lg:px-10 pt-20 pb-16 lg:pt-28 lg:pb-24">
+    <div class="eyebrow mb-6">Fig. 00 — The method</div>
+    <h1 class="font-serif font-normal tracking-st text-5xl md:text-6xl lg:text-7xl leading-[1.02]">The diagnosis-first method.</h1>
+    <p class="mt-7 text-lg leading-relaxed text-slate max-w-2xl">Every program template you've tried failed because it skipped the part where someone figures out what's actually wrong. We don't skip it. The diagnosis is the program.</p>
+  </div>
+</section>
+
+<!-- 2. Four pillars -->
+<section class="border-b border-rule">
+  <div class="max-w-6xl mx-auto px-6 lg:px-10 py-24 lg:py-32 space-y-20">
+
+    <article class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+      <div class="lg:col-span-3"><div class="font-serif font-normal text-7xl tracking-st leading-none text-ink/85">01</div><div class="eyebrow mt-3">Pillar</div></div>
+      <div class="lg:col-span-9">
+        <h2 class="font-serif text-3xl md:text-4xl tracking-st mb-5">Diagnose</h2>
+        <p class="text-lg text-slate leading-relaxed mb-4">A 60-minute call. We map training history, recovery, sleep, nutrition, stress, blockers — every system that has to be working for body composition to change. Most coaches skip this step and prescribe a template. We don't.</p>
+        <ul class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-2 mt-6 font-mono text-[11px] tracking-mn uppercase text-slate">
+          <li>· Training history audit</li>
+          <li>· Sleep + recovery review</li>
+          <li>· Nutrition pattern mapping</li>
+          <li>· Stress + lifestyle blockers</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+      <div class="lg:col-span-3"><div class="font-serif font-normal text-7xl tracking-st leading-none text-ink/85">02</div><div class="eyebrow mt-3">Pillar</div></div>
+      <div class="lg:col-span-9">
+        <h2 class="font-serif text-3xl md:text-4xl tracking-st mb-5">Remove what doesn't work</h2>
+        <p class="text-lg text-slate leading-relaxed">Before adding anything new, we strip out the things that have been holding back progress. Junk volume in the gym. Sneaky calories. Training programs that don't match your recovery capacity. The "hacks" that aren't actually moving the needle.</p>
+      </div>
+    </article>
+
+    <article class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+      <div class="lg:col-span-3"><div class="font-serif font-normal text-7xl tracking-st leading-none text-ink/85">03</div><div class="eyebrow mt-3">Pillar</div></div>
+      <div class="lg:col-span-9">
+        <h2 class="font-serif text-3xl md:text-4xl tracking-st mb-5">Build sustainable standards</h2>
+        <p class="text-lg text-slate leading-relaxed">A program you can stick to for 12 weeks beats a program that's "optimal" for 6 days. We prescribe at the dose you can actually take — training, nutrition, recovery — and we keep adjusting until adherence is high without willpower being the bottleneck.</p>
+      </div>
+    </article>
+
+    <article class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+      <div class="lg:col-span-3"><div class="font-serif font-normal text-7xl tracking-st leading-none text-ink/85">04</div><div class="eyebrow mt-3">Pillar</div></div>
+      <div class="lg:col-span-9">
+        <h2 class="font-serif text-3xl md:text-4xl tracking-st mb-5">Track + adjust weekly</h2>
+        <p class="text-lg text-slate leading-relaxed">Weekly check-ins. Daily access via WhatsApp. Numbers in, prescription out. The plan changes as your body and your life change — not after the program is over, but inside the same week the change is needed.</p>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- 3. 12-week timeline -->
+<section class="border-b border-rule bg-paper">
+  <div class="max-w-6xl mx-auto px-6 lg:px-10 py-24 lg:py-32">
+    <div class="eyebrow mb-6">Fig. 05 — Timeline</div>
+    <h2 class="font-serif font-normal tracking-st text-4xl md:text-5xl leading-[1.05] mb-14 max-w-2xl">What the 12 weeks looks like.</h2>
+
+    <ol class="space-y-8 border-l border-rule pl-8">
+      <li>
+        <div class="font-mono text-[10px] tracking-mn uppercase text-slate mb-2">Weeks 1–2 · Onboarding</div>
+        <h3 class="font-serif text-xl md:text-2xl tracking-st mb-2">Diagnosis call + baseline measurements.</h3>
+        <p class="text-slate leading-relaxed">60-minute video call. Initial body composition + photos. Program v1 written based on what we find.</p>
+      </li>
+      <li>
+        <div class="font-mono text-[10px] tracking-mn uppercase text-slate mb-2">Month 1 · Calibration</div>
+        <h3 class="font-serif text-xl md:text-2xl tracking-st mb-2">First adjustments to training + nutrition.</h3>
+        <p class="text-slate leading-relaxed">Weekly check-ins to see what's landing and what isn't. First wave of adjustments. Adherence patterns start emerging.</p>
+      </li>
+      <li>
+        <div class="font-mono text-[10px] tracking-mn uppercase text-slate mb-2">Month 2 · Acceleration</div>
+        <h3 class="font-serif text-xl md:text-2xl tracking-st mb-2">Visible body composition shifts.</h3>
+        <p class="text-slate leading-relaxed">By now the program is tuned. Body composition is moving. Lifts are climbing. The wins reinforce the standards.</p>
+      </li>
+      <li>
+        <div class="font-mono text-[10px] tracking-mn uppercase text-slate mb-2">Week 12 · Handoff</div>
+        <h3 class="font-serif text-xl md:text-2xl tracking-st mb-2">Final review + your own program from here.</h3>
+        <p class="text-slate leading-relaxed">Final measurements + photos. A self-directed program written specifically for what worked for you, so you can keep going without us.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- 4. What's included / What it isn't -->
+<section class="border-b border-rule">
+  <div class="max-w-6xl mx-auto px-6 lg:px-10 py-24 lg:py-32 grid grid-cols-1 md:grid-cols-2 gap-14 lg:gap-20">
+
+    <div>
+      <div class="eyebrow mb-6">Fig. 06 — Included</div>
+      <h2 class="font-serif font-normal tracking-st text-3xl md:text-4xl leading-[1.05] mb-8">What's in the stack.</h2>
+      <dl class="font-mono text-[12px] tracking-mn uppercase">
+        <div class="flex justify-between items-baseline py-4 border-b border-dashed border-rule"><dt class="text-slate">Training plan</dt><dd>3–4×/wk</dd></div>
+        <div class="flex justify-between items-baseline py-4 border-b border-dashed border-rule"><dt class="text-slate">Nutrition framework</dt><dd>Macro + flexible</dd></div>
+        <div class="flex justify-between items-baseline py-4 border-b border-dashed border-rule"><dt class="text-slate">Weekly video check-in</dt><dd>1×/wk · 30 min</dd></div>
+        <div class="flex justify-between items-baseline py-4 border-b border-dashed border-rule"><dt class="text-slate">Daily WhatsApp access</dt><dd>Same-day reply</dd></div>
+        <div class="flex justify-between items-baseline py-4 border-b border-dashed border-rule"><dt class="text-slate">Recovery + sleep audit</dt><dd>Ongoing</dd></div>
+        <div class="flex justify-between items-baseline py-4"><dt class="text-slate">12-wk graduation plan</dt><dd>Yours to keep</dd></div>
+      </dl>
+    </div>
+
+    <div>
+      <div class="eyebrow mb-6">Fig. 07 — Not included</div>
+      <h2 class="font-serif font-normal tracking-st text-3xl md:text-4xl leading-[1.05] mb-8">What it isn't.</h2>
+      <dl class="font-mono text-[12px] tracking-mn uppercase">
+        <div class="flex justify-between items-baseline py-4 border-b border-dashed border-rule"><dt class="text-slate">Done-for-you</dt><dd>You still have to do it</dd></div>
+        <div class="flex justify-between items-baseline py-4 border-b border-dashed border-rule"><dt class="text-slate">Meal plan generator</dt><dd>You eat real food</dd></div>
+        <div class="flex justify-between items-baseline py-4 border-b border-dashed border-rule"><dt class="text-slate">For beginners</dt><dd>Min. 1 yr training</dd></div>
+        <div class="flex justify-between items-baseline py-4 border-b border-dashed border-rule"><dt class="text-slate">Pay-then-figure-out</dt><dd>Application first</dd></div>
+        <div class="flex justify-between items-baseline py-4 border-b border-dashed border-rule"><dt class="text-slate">"30-day shred"</dt><dd>12 weeks minimum</dd></div>
+        <div class="flex justify-between items-baseline py-4"><dt class="text-slate">Endless upsells</dt><dd>One price, full stack</dd></div>
+      </dl>
+    </div>
+
+  </div>
+</section>
+
+<!-- 5. 90% compliance guarantee -->
+<section class="border-b border-rule bg-ink text-bone">
+  <div class="max-w-4xl mx-auto px-6 lg:px-10 py-24 lg:py-32">
+    <div class="font-mono text-[10px] tracking-mn uppercase text-bone/60 mb-6">Fig. 08 — The guarantee</div>
+    <h2 class="font-serif font-normal tracking-st text-4xl md:text-5xl leading-[1.05] mb-8">The 90% compliance guarantee.</h2>
+    <p class="text-lg leading-relaxed text-bone/80 mb-5">If you hit at least 90% of the prescribed training and nutrition targets across the 12 weeks and don't see meaningful body composition change, we refund the program in full.</p>
+    <p class="text-lg leading-relaxed text-bone/80 mb-5">The bar isn't only on you. The diagnosis has to be right, the prescription has to land, the adjustments have to be honest. If we fail at our part, you don't pay for it.</p>
+    <p class="text-lg leading-relaxed text-bone/80">No one offers this because it forces both sides to actually do the work. That's the point.</p>
+  </div>
+</section>
+
+<!-- 6a. Mid-page CTA -->
+<section class="border-b border-rule bg-ink text-bone">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 py-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+    <div>
+      <div class="font-mono text-[10px] tracking-mn uppercase text-bone/60 mb-2">05/10 spots taken · Cohort Nº 03</div>
+      <p class="font-serif text-2xl md:text-3xl tracking-st">Five spots left. Intake closes when full.</p>
+    </div>
+    <a href="/apply" class="pill bg-bone text-ink hover:bg-white">See if you qualify <span aria-hidden="true">→</span></a>
+  </div>
+</section>
+
+<!-- 6b. Final CTA -->
+<section>
+  <div class="max-w-4xl mx-auto px-6 lg:px-10 py-28 lg:py-36 text-center">
+    <div class="eyebrow mb-6">Cohort Nº 03 · 05/10 spots taken</div>
+    <h2 class="font-serif font-normal tracking-st text-5xl md:text-6xl lg:text-7xl leading-[1.02]">Ready to apply?</h2>
+    <p class="mt-7 text-lg leading-relaxed text-slate max-w-xl mx-auto">Six minutes to fill in the qualifier. If we're a fit, you'll get a Calendly link to book the diagnosis call.</p>
+    <div class="mt-10">
+      <a href="/apply" class="pill text-sm py-3.5 px-6">See if you qualify <span aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="border-t border-rule bg-bone">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 py-16 grid grid-cols-1 md:grid-cols-12 gap-10">
+
+    <div class="md:col-span-4">
+      <a href="/" class="flex items-center gap-2.5 text-ink no-underline">
+        <img src="/assets/logo.svg" alt="" class="w-8 h-8">
+        <span class="font-serif text-xl leading-none tracking-st">DND<span class="italic font-normal text-slate">/Coaching</span></span>
+      </a>
+      <p class="mt-5 text-sm leading-relaxed text-slate max-w-xs">A 12-week diagnosis-first reset for men stuck on the same body for years. Online · worldwide.</p>
+    </div>
+
+    <div class="md:col-span-2">
+      <h3 class="eyebrow mb-4">Site</h3>
+      <ul class="font-mono text-[12px] tracking-mn uppercase text-slate space-y-2">
+        <li><a href="/method" class="hover:text-ink transition-colors">Method</a></li>
+        <li><a href="/coaches" class="hover:text-ink transition-colors">Coaches</a></li>
+        <li><a href="/results" class="hover:text-ink transition-colors">Results</a></li>
+        <li><a href="/faq" class="hover:text-ink transition-colors">FAQ</a></li>
+        <li><a href="/apply" class="hover:text-ink transition-colors">Apply</a></li>
+      </ul>
+    </div>
+
+    <div class="md:col-span-2">
+      <h3 class="eyebrow mb-4">Legal</h3>
+      <ul class="font-mono text-[12px] tracking-mn uppercase text-slate space-y-2">
+        <li><a href="/privacy" class="hover:text-ink transition-colors">Privacy</a></li>
+        <li><a href="/terms" class="hover:text-ink transition-colors">Terms</a></li>
+      </ul>
+    </div>
+
+    <div class="md:col-span-4">
+      <h3 class="eyebrow mb-4">Contact</h3>
+      <p class="font-mono text-[12px] tracking-mn uppercase text-slate">
+        <a href="mailto:hello@dndcoaching.com" class="hover:text-ink transition-colors">hello@dndcoaching.com</a>
+      </p>
+      <div class="mt-6 flex items-center gap-2 font-mono text-[10px] tracking-mn uppercase text-slate">
+        <span class="inline-block w-1.5 h-1.5 rounded-full bg-status-green"></span>
+        Intake open · Cohort Nº 03
+      </div>
+    </div>
+
+  </div>
+
+  <div class="border-t border-rule">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10 py-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-3 font-mono text-[10px] tracking-mn uppercase text-slate">
+      <span>Est. 2026 · DND Coaching Ltd.</span>
+      <span>Built in Ireland · Serving worldwide</span>
+    </div>
+  </div>
+</footer>
+
+<script src="/js/nav.js" defer></script>
+<script src="/js/accordion.js" defer></script>
+
+</body>
+</html>
