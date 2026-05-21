@@ -2,76 +2,97 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>You're Qualified! - DND Coaching</title>
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/variables.css">
-  <link rel="stylesheet" href="css/typography.css">
-  <link rel="stylesheet" href="css/components.css">
-  <link rel="stylesheet" href="css/sections.css">
-  <link rel="stylesheet" href="css/responsive.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="format-detection" content="telephone=no">
+  <title>Application received — DND Coaching</title>
+  <meta name="description" content="Book your diagnosis call.">
+  <link rel="icon" type="image/png" href="/assets/favicon-32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            bone: '#FAFAF7',
+            ink: '#0E0E0E',
+            slate: '#4A5568',
+            paper: '#FFFFFF',
+            'status-green': '#16a34a',
+            rule: 'rgba(14,14,14,0.12)'
+          },
+          fontFamily: {
+            serif: ['"Source Serif 4"', 'ui-serif', 'Georgia', 'serif'],
+            mono: ['"IBM Plex Mono"', 'ui-monospace', 'monospace'],
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif']
+          },
+          letterSpacing: {
+            mw: '0.22em',
+            mn: '0.16em',
+            st: '-0.025em',
+            sx: '-0.038em'
+          }
+        }
+      }
+    }
+  </script>
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+  <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+  <style>
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    body { font-family: 'Inter', sans-serif; background: #FAFAF7; color: #0E0E0E; -webkit-font-smoothing: antialiased; -webkit-tap-highlight-color: transparent; }
+    /* Inputs at ≥16px so iOS Safari doesn't auto-zoom on focus */
+    input, select, textarea { font-size: 16px; }
+    .eyebrow { font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: #4A5568; }
+    .hairline { height: 1px; background: rgba(14,14,14,0.12); }
+    @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+    .marquee-track { animation: marquee 45s linear infinite; }
+    @media (prefers-reduced-motion: reduce) {
+      .marquee-track { animation: none; }
+      html { scroll-behavior: auto; }
+    }
+  </style>
 </head>
 <body>
-  <!-- Header -->
-  <header>
-    <div class="container">
-      <img src="THE LOGO.png" alt="DND Coaching Logo" class="logo">
-    </div>
-  </header>
+<main class="min-h-screen flex flex-col">
 
-  <!-- Main Content -->
-  <main>
-    <section class="hero visible" style="min-height: 70vh; display: flex; align-items: center;">
-      <div class="container" style="max-width: 800px;">
-        <span class="eyebrow">✓ You're Qualified</span>
-        <h1>Great! Let's Take the Next Step</h1>
-        <p class="subheadline">Based on your responses, you're a great fit for the 12-Week Transformation Program.</p>
-
-        <div class="card mt-2xl">
-          <h3 class="mb-md">What Happens Next:</h3>
-          <ol style="list-style: decimal; padding-left: var(--space-lg); line-height: var(--leading-relaxed);">
-            <li style="margin-bottom: var(--space-md);"><strong>Complete the full application below</strong> (takes 3-5 minutes). This helps me understand your specific situation and goals.</li>
-            <li style="margin-bottom: var(--space-md);"><strong>I'll review your application within 24 hours</strong> and determine if we're a mutual fit.</li>
-            <li style="margin-bottom: var(--space-md);"><strong>If we're a good fit,</strong> I'll email you a link to schedule a 25-minute discovery call where we'll discuss your specific goals, challenges, and how the program works.</li>
-          </ol>
-        </div>
-
-        <div class="mt-2xl text-center">
-          <a href="https://tally.so/r/81zvKP" target="_blank" class="btn btn-primary btn-large">Complete Your Full Application</a>
-          <p class="mt-md" style="font-size: var(--text-sm); color: var(--color-grey-medium);">Opens in new window • Takes 3-5 minutes</p>
-          <p class="mt-md" style="font-size: var(--text-sm); color: var(--color-grey-medium);">
-            By completing the application, you agree to our
-            <a href="terms-of-service.html" target="_blank" style="color: var(--color-black); text-decoration: underline;">Terms of Service</a>
-            and
-            <a href="privacy-policy.html" target="_blank" style="color: var(--color-black); text-decoration: underline;">Privacy Policy</a>.
-          </p>
-        </div>
-
-        <div class="card mt-2xl" style="background-color: var(--color-grey-lightest); border-left: 4px solid var(--color-black);">
-          <p><strong>Important:</strong> Please complete the full application as soon as possible. Spots are limited to 5-10 clients at a time, and applications are reviewed on a first-come, first-served basis.</p>
-        </div>
+  <section class="border-b border-rule">
+    <div class="max-w-4xl mx-auto px-6 lg:px-10 pt-20 pb-12 lg:pt-28 lg:pb-16 text-center">
+      <div class="eyebrow flex items-center justify-center gap-3 mb-6">
+        <span class="inline-block w-1.5 h-1.5 rounded-full bg-status-green shadow-[0_0_0_3px_rgba(22,163,74,0.18)]"></span>
+        Application received
       </div>
-    </section>
-  </main>
-
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <p>&copy; 2026 DND Coaching. All rights reserved.</p>
-      <p>
-        <a href="mailto:contact@dndcoaching.com">contact@dndcoaching.com</a> |
-        <a href="privacy-policy.html">Privacy Policy</a> |
-        <a href="terms-of-service.html">Terms of Service</a>
-      </p>
+      <h1 class="font-serif font-normal tracking-st text-5xl md:text-6xl leading-[1.02]">Now let's book your call.</h1>
+      <p class="mt-7 text-lg leading-relaxed text-slate max-w-xl mx-auto">Pick a time below. The diagnosis call is 60 minutes, via Google Meet. No pre-work — just show up with the day-to-day truth of your training, eating, and recovery.</p>
     </div>
-  </footer>
+  </section>
 
-  <!-- JavaScript -->
-  <script src="js/main.js"></script>
+  <section class="border-b border-rule">
+    <div class="max-w-5xl mx-auto px-6 lg:px-10 py-12 lg:py-16">
+      <!-- Calendly inline widget. Replace data-url with the actual Calendly event link before launch. -->
+      <div class="calendly-inline-widget"
+           data-url="https://calendly.com/dndcoaching/diagnosis-call?hide_event_type_details=1&hide_gdpr_banner=1&background_color=fafaf7&text_color=0e0e0e&primary_color=0e0e0e"
+           style="min-width:320px;height:720px;"></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="max-w-3xl mx-auto px-6 lg:px-10 py-16 text-center">
+      <h2 class="font-serif text-2xl md:text-3xl tracking-st mb-6">What to bring to the call.</h2>
+      <ul class="font-mono text-[12px] tracking-mn uppercase text-slate space-y-3 max-w-md mx-auto">
+        <li>· Recent training log (any format)</li>
+        <li>· Typical daily eating pattern</li>
+        <li>· Avg. sleep + how you feel rested</li>
+        <li>· Honest answer about what's been blocking you</li>
+      </ul>
+      <p class="mt-10 font-mono text-[10px] tracking-mn uppercase text-slate">Trouble booking? Email <a href="mailto:hello@dndcoaching.com" class="underline">hello@dndcoaching.com</a>.</p>
+    </div>
+  </section>
+
+</main>
 </body>
 </html>
