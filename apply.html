@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="format-detection" content="telephone=no">
+  <title>Apply — DND Coaching</title>
+  <meta name="description" content="Six minutes to apply. Three minutes to know if you qualify.">
+  <link rel="icon" type="image/png" href="/assets/favicon-32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            bone: '#FAFAF7',
+            ink: '#0E0E0E',
+            slate: '#4A5568',
+            paper: '#FFFFFF',
+            'status-green': '#16a34a',
+            rule: 'rgba(14,14,14,0.12)'
+          },
+          fontFamily: {
+            serif: ['"Source Serif 4"', 'ui-serif', 'Georgia', 'serif'],
+            mono: ['"IBM Plex Mono"', 'ui-monospace', 'monospace'],
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif']
+          },
+          letterSpacing: {
+            mw: '0.22em',
+            mn: '0.16em',
+            st: '-0.025em',
+            sx: '-0.038em'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    body { font-family: 'Inter', sans-serif; background: #FAFAF7; color: #0E0E0E; -webkit-font-smoothing: antialiased; -webkit-tap-highlight-color: transparent; }
+    /* Respect notched-device safe areas */
+    #site-nav { padding-left: env(safe-area-inset-left); padding-right: env(safe-area-inset-right); }
+    /* Touch targets: ≥44px on mobile per Apple HIG / Material */
+    @media (max-width: 767px) { .pill { min-height: 44px; padding-top: 0.9rem; padding-bottom: 0.9rem; } }
+    /* Inputs at ≥16px so iOS Safari doesn't auto-zoom on focus */
+    input, select, textarea { font-size: 16px; }
+    .eyebrow { font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: #4A5568; }
+    .hairline { height: 1px; background: rgba(14,14,14,0.12); }
+    .pill { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.25rem; border-radius: 9999px; background: #0E0E0E; color: #FAFAF7; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; transition: transform 0.2s ease-out, background-color 0.2s ease-out; }
+    .pill:hover { transform: translateY(-1px); background: #1a1a1a; }
+    .pill:focus-visible { outline: 2px solid #16a34a; outline-offset: 3px; }
+    .pill-outline { background: transparent; color: #0E0E0E; border: 1px solid rgba(14,14,14,0.18); }
+    .pill-outline:hover { background: rgba(14,14,14,0.05); }
+    @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+    .marquee-track { animation: marquee 45s linear infinite; }
+    @media (prefers-reduced-motion: reduce) {
+      .marquee-track { animation: none; }
+      html { scroll-behavior: auto; }
+    }
+    /* Form input states (apply page) */
+    .form-input { width: 100%; padding: 1rem; border: 1px solid rgba(14,14,14,0.18); background: #FAFAF7; font-family: 'Inter', sans-serif; font-size: 16px; color: #0E0E0E; transition: border-color 0.2s ease-out; }
+    .form-input:focus { outline: none; border-color: #0E0E0E; }
+    .form-input.error { border-color: #dc2626; }
+    .form-radio { width: 1.125rem; height: 1.125rem; accent-color: #0E0E0E; flex-shrink: 0; }
+    .form-checkbox { width: 1.125rem; height: 1.125rem; margin-top: 0.25rem; accent-color: #0E0E0E; flex-shrink: 0; }
+    .form-radio-label { display: flex; align-items: center; gap: 1rem; cursor: pointer; min-height: 44px; padding: 0.5rem 0; }
+    .form-error { margin-top: 0.5rem; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: #dc2626; }
+  </style>
+</head>
+<body>
+
+<header id="site-nav" class="sticky top-0 z-50 bg-bone/85 backdrop-blur-md border-b border-rule">
+  <nav class="max-w-7xl mx-auto px-6 lg:px-10 h-16 flex items-center justify-between">
+    <a href="/" class="flex items-center gap-2.5 text-ink no-underline">
+      <img src="/assets/logo.svg" alt="" class="w-7 h-7" aria-hidden="true">
+      <span class="font-serif text-lg leading-none tracking-st">DND<span class="italic font-normal text-slate">/Coaching</span></span>
+      <span class="hidden md:inline-block ml-3 pl-3 border-l border-rule font-mono text-[10px] tracking-mn uppercase text-slate">Online · 1:1</span>
+    </a>
+
+    <ul class="hidden md:flex items-center gap-8 font-mono text-[11px] tracking-mn uppercase text-slate">
+      <li><a href="/method" class="hover:text-ink transition-colors">Method</a></li>
+      <li><a href="/coaches" class="hover:text-ink transition-colors">Coaches</a></li>
+      <li><a href="/results" class="hover:text-ink transition-colors">Results</a></li>
+      <li><a href="/faq" class="hover:text-ink transition-colors">FAQ</a></li>
+    </ul>
+
+    <div class="flex items-center gap-3">
+      <a href="/apply" class="pill text-[11px] py-2 px-4">Apply <span aria-hidden="true">→</span></a>
+      <button id="nav-toggle" class="md:hidden w-11 h-11 -mr-2 flex items-center justify-center" aria-label="Open menu" aria-expanded="false" aria-controls="nav-mobile">
+        <span class="block w-5 h-px bg-ink relative before:absolute before:left-0 before:-top-1.5 before:w-5 before:h-px before:bg-ink after:absolute after:left-0 after:top-1.5 after:w-5 after:h-px after:bg-ink"></span>
+      </button>
+    </div>
+  </nav>
+
+  <div id="nav-mobile" class="md:hidden hidden border-t border-rule bg-bone">
+    <ul class="px-6 py-4 font-mono text-xs tracking-mn uppercase text-slate space-y-3">
+      <li><a href="/method" class="block py-3 min-h-[44px] flex items-center">Method</a></li>
+      <li><a href="/coaches" class="block py-3 min-h-[44px] flex items-center">Coaches</a></li>
+      <li><a href="/results" class="block py-3 min-h-[44px] flex items-center">Results</a></li>
+      <li><a href="/faq" class="block py-3 min-h-[44px] flex items-center">FAQ</a></li>
+      <li><a href="/apply" class="block py-3 min-h-[44px] flex items-center text-ink font-semibold">Apply →</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+
+<!-- 1. Hero + Spots-remaining card -->
+<section class="border-b border-rule">
+  <div class="max-w-5xl mx-auto px-6 lg:px-10 pt-20 pb-12 lg:pt-28 lg:pb-16">
+    <div class="eyebrow flex items-center gap-3 mb-6">
+      <span class="inline-block w-1.5 h-1.5 rounded-full bg-status-green shadow-[0_0_0_3px_rgba(22,163,74,0.18)]"></span>
+      Cohort Nº 03 · Intake open
+    </div>
+    <h1 class="font-serif font-normal tracking-st text-5xl md:text-6xl leading-[1.02]">Apply for coaching.</h1>
+    <p class="mt-6 text-lg leading-relaxed text-slate max-w-2xl">Six questions. Three minutes. If we're a fit, you'll get a Calendly link to book the diagnosis call.</p>
+
+    <div class="mt-10 inline-flex items-center gap-5 bg-ink text-bone p-6 rounded-md">
+      <div>
+        <div class="font-serif text-4xl tracking-st leading-none">05<span class="text-bone/50">/10</span></div>
+        <div class="mt-1 font-mono text-[10px] tracking-mn uppercase text-bone/70">Spots remaining</div>
+      </div>
+      <div class="h-10 w-px bg-bone/20"></div>
+      <div class="font-mono text-[11px] tracking-mn uppercase text-bone/80 max-w-[16ch]">Intake closes when full</div>
+    </div>
+  </div>
+</section>
+
+<!-- 2. Qualification form -->
+<section class="border-b border-rule bg-paper">
+  <div class="max-w-3xl mx-auto px-6 lg:px-10 py-20 lg:py-24">
+
+    <form id="qualifying-form" class="space-y-14" novalidate>
+
+      <fieldset>
+        <legend class="eyebrow mb-5">Question 01 · Training experience</legend>
+        <p class="font-serif text-2xl md:text-3xl tracking-st mb-6">How long have you been training consistently?</p>
+        <div class="space-y-1">
+          <label class="form-radio-label font-mono text-[12px] tracking-mn uppercase"><input type="radio" name="training-experience" value="beginner" required class="form-radio"> Less than 1 year</label>
+          <label class="form-radio-label font-mono text-[12px] tracking-mn uppercase"><input type="radio" name="training-experience" value="intermediate" required class="form-radio"> 1–3 years</label>
+          <label class="form-radio-label font-mono text-[12px] tracking-mn uppercase"><input type="radio" name="training-experience" value="advanced" required class="form-radio"> 3+ years</label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend class="eyebrow mb-5">Question 02 · Frequency</legend>
+        <p class="font-serif text-2xl md:text-3xl tracking-st mb-6">How often do you train right now?</p>
+        <div class="space-y-1">
+          <label class="form-radio-label font-mono text-[12px] tracking-mn uppercase"><input type="radio" name="training-frequency" value="inconsistent" required class="form-radio"> Inconsistent — comes and goes</label>
+          <label class="form-radio-label font-mono text-[12px] tracking-mn uppercase"><input type="radio" name="training-frequency" value="low" required class="form-radio"> 1–2 sessions / week</label>
+          <label class="form-radio-label font-mono text-[12px] tracking-mn uppercase"><input type="radio" name="training-frequency" value="mid" required class="form-radio"> 3 sessions / week</label>
+          <label class="form-radio-label font-mono text-[12px] tracking-mn uppercase"><input type="radio" name="training-frequency" value="high" required class="form-radio"> 4+ sessions / week</label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend class="eyebrow mb-5">Question 03 · Frustration</legend>
+        <p class="font-serif text-2xl md:text-3xl tracking-st mb-6">What's the single biggest thing holding you back right now?</p>
+        <textarea name="biggest-frustration" rows="4" required placeholder="Be specific. The more honest, the better the diagnosis." class="form-input"></textarea>
+      </fieldset>
+
+      <fieldset>
+        <legend class="eyebrow mb-5">Question 04 · Commitment</legend>
+        <p class="font-serif text-2xl md:text-3xl tracking-st mb-6">Can you commit to 12 weeks of consistent work?</p>
+        <div class="space-y-1">
+          <label class="form-radio-label font-mono text-[12px] tracking-mn uppercase"><input type="radio" name="commitment" value="yes" required class="form-radio"> Yes — 12 weeks, in</label>
+          <label class="form-radio-label font-mono text-[12px] tracking-mn uppercase"><input type="radio" name="commitment" value="unsure" required class="form-radio"> Not sure</label>
+          <label class="form-radio-label font-mono text-[12px] tracking-mn uppercase"><input type="radio" name="commitment" value="no" required class="form-radio"> No — looking for something shorter</label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend class="eyebrow mb-5">Question 05 · Contact</legend>
+        <p class="font-serif text-2xl md:text-3xl tracking-st mb-6">Where do we send the next step?</p>
+        <input type="email" id="email" name="email" required placeholder="you@email.com" class="form-input" autocomplete="email" inputmode="email">
+        <p id="email-error" class="form-error" style="display:none;">Please enter a valid email address.</p>
+      </fieldset>
+
+      <fieldset>
+        <label class="flex items-start gap-4 cursor-pointer">
+          <input type="checkbox" id="privacy_consent" name="privacy_consent" required class="form-checkbox">
+          <span class="font-mono text-[11px] tracking-mn uppercase text-slate leading-relaxed">I agree to DND Coaching contacting me about my application and have read the <a href="/privacy" class="underline">privacy policy</a>.</span>
+        </label>
+        <p id="privacy-error" class="form-error" style="display:none;">Please agree to be contacted before submitting.</p>
+      </fieldset>
+
+      <div class="pt-4">
+        <button type="submit" class="pill text-sm py-3.5 px-7">Submit application <span aria-hidden="true">→</span></button>
+        <p class="mt-5 font-mono text-[10px] tracking-mn uppercase text-slate">We reply within 24 hours, weekdays.</p>
+      </div>
+
+    </form>
+  </div>
+</section>
+
+<!-- 3. What happens next -->
+<section class="border-b border-rule">
+  <div class="max-w-5xl mx-auto px-6 lg:px-10 py-20">
+    <div class="eyebrow mb-8">What happens next</div>
+    <ol class="grid grid-cols-1 md:grid-cols-3 gap-8 border-t border-rule pt-8">
+      <li>
+        <div class="font-mono text-[10px] tracking-mn uppercase text-slate mb-3">Step 01</div>
+        <h3 class="font-serif text-xl md:text-2xl tracking-st mb-2">You apply.</h3>
+        <p class="text-slate leading-relaxed">Six questions. Three minutes. Submit the form above.</p>
+      </li>
+      <li>
+        <div class="font-mono text-[10px] tracking-mn uppercase text-slate mb-3">Step 02</div>
+        <h3 class="font-serif text-xl md:text-2xl tracking-st mb-2">We review + book a call.</h3>
+        <p class="text-slate leading-relaxed">If we're a fit, you'll get a Calendly link within 24 hours to book the 60-minute diagnosis call.</p>
+      </li>
+      <li>
+        <div class="font-mono text-[10px] tracking-mn uppercase text-slate mb-3">Step 03</div>
+        <h3 class="font-serif text-xl md:text-2xl tracking-st mb-2">Onboarding starts.</h3>
+        <p class="text-slate leading-relaxed">After the call, if both sides want to move forward, we build your program v1 within 5 working days.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- 4. Privacy note -->
+<section>
+  <div class="max-w-3xl mx-auto px-6 lg:px-10 py-12 font-mono text-[10px] tracking-mn uppercase text-slate text-center">
+    Your application is private. We never share or sell your information. <a href="/privacy" class="underline">Privacy policy</a>.
+  </div>
+</section>
+
+</main>
+
+<footer class="border-t border-rule bg-bone">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 py-16 grid grid-cols-1 md:grid-cols-12 gap-10">
+
+    <div class="md:col-span-4">
+      <a href="/" class="flex items-center gap-2.5 text-ink no-underline">
+        <img src="/assets/logo.svg" alt="" class="w-8 h-8">
+        <span class="font-serif text-xl leading-none tracking-st">DND<span class="italic font-normal text-slate">/Coaching</span></span>
+      </a>
+      <p class="mt-5 text-sm leading-relaxed text-slate max-w-xs">A 12-week diagnosis-first reset for men stuck on the same body for years. Online · worldwide.</p>
+    </div>
+
+    <div class="md:col-span-2">
+      <h3 class="eyebrow mb-4">Site</h3>
+      <ul class="font-mono text-[12px] tracking-mn uppercase text-slate space-y-2">
+        <li><a href="/method" class="hover:text-ink transition-colors">Method</a></li>
+        <li><a href="/coaches" class="hover:text-ink transition-colors">Coaches</a></li>
+        <li><a href="/results" class="hover:text-ink transition-colors">Results</a></li>
+        <li><a href="/faq" class="hover:text-ink transition-colors">FAQ</a></li>
+        <li><a href="/apply" class="hover:text-ink transition-colors">Apply</a></li>
+      </ul>
+    </div>
+
+    <div class="md:col-span-2">
+      <h3 class="eyebrow mb-4">Legal</h3>
+      <ul class="font-mono text-[12px] tracking-mn uppercase text-slate space-y-2">
+        <li><a href="/privacy" class="hover:text-ink transition-colors">Privacy</a></li>
+        <li><a href="/terms" class="hover:text-ink transition-colors">Terms</a></li>
+      </ul>
+    </div>
+
+    <div class="md:col-span-4">
+      <h3 class="eyebrow mb-4">Contact</h3>
+      <p class="font-mono text-[12px] tracking-mn uppercase text-slate">
+        <a href="mailto:hello@dndcoaching.com" class="hover:text-ink transition-colors">hello@dndcoaching.com</a>
+      </p>
+      <div class="mt-6 flex items-center gap-2 font-mono text-[10px] tracking-mn uppercase text-slate">
+        <span class="inline-block w-1.5 h-1.5 rounded-full bg-status-green"></span>
+        Intake open · Cohort Nº 03
+      </div>
+    </div>
+
+  </div>
+
+  <div class="border-t border-rule">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10 py-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-3 font-mono text-[10px] tracking-mn uppercase text-slate">
+      <span>Est. 2026 · DND Coaching Ltd.</span>
+      <span>Built in Ireland · Serving worldwide</span>
+    </div>
+  </div>
+</footer>
+
+<script src="/js/nav.js" defer></script>
+<script src="/js/form.js" defer></script>
+
+</body>
+</html>
