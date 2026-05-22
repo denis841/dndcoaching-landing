@@ -4,6 +4,7 @@
   function animate(el) {
     const target = parseFloat(el.dataset.countTo);
     const decimals = parseInt(el.dataset.decimals || '0', 10);
+    const suffix = el.dataset.suffix || '';
     const duration = 1400;
     const start = performance.now();
 
@@ -11,16 +12,18 @@
       const elapsed = now - start;
       const progress = Math.min(1, elapsed / duration);
       const value = target * easeOutCubic(progress);
-      el.textContent = value.toFixed(decimals);
+      el.textContent = value.toFixed(decimals) + (progress >= 1 ? suffix : '');
       if (progress < 1) requestAnimationFrame(step);
-      else el.textContent = target.toFixed(decimals);
+      else el.textContent = target.toFixed(decimals) + suffix;
     }
     requestAnimationFrame(step);
   }
 
   if (!('IntersectionObserver' in window)) {
     document.querySelectorAll('[data-count-to]').forEach(el => {
-      el.textContent = parseFloat(el.dataset.countTo).toFixed(parseInt(el.dataset.decimals || '0', 10));
+      const decimals = parseInt(el.dataset.decimals || '0', 10);
+      const suffix = el.dataset.suffix || '';
+      el.textContent = parseFloat(el.dataset.countTo).toFixed(decimals) + suffix;
     });
     return;
   }

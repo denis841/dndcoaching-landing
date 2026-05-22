@@ -7,11 +7,154 @@ Tracks every meaningful change across iterations. Each version section lives unt
 **Status:**
 - `v1` — original landing page, frozen on `main` @ `d8c05f9`
 - `v2` — editorial redesign + 10-page expansion, frozen on `redesign-v2` @ `7603d24` (LIVE Vercel preview, fallback)
-- `v3` — copy rewrite driven by foundational docs **(in progress on `redesign-v3` worktree — local only, not yet pushed)**
+- `v3` — copy rewrite driven by foundational docs (frozen 2026-05-21 @ `f2c8a5f`, pushed to `origin/redesign-v3`)
+- `v3.1` — punch-list revision after Denis preview review **(in progress on `redesign-v3` worktree — local only, not yet pushed)**
 
 ---
 
-## v3 (in progress) — Copy rewrite driven by foundational docs
+## v3.1 — 2026-05-22 — Punch-list revision after Denis preview review
+
+**Branch:** `redesign-v3` (worktree edits, single commit on top of `f2c8a5f`)
+**Worktree:** `.claude/worktrees/redesign-v3/`
+**Preview URL:** v3 Vercel preview will update on push (push gated on Denis approval).
+**Why:** Denis reviewed the v3 preview and returned a punch list covering hero copy, guarantee wording, fake-urgency theatrics, the "diagnose" terminology (too clinical), coach-role framing (no role split), pricing visibility, image framing on coaches, navigation reloads, and FAQ deletions. This pass executes that list without changing the visual system.
+
+### Decisions locked during this pass
+
+- **Terminology:** `diagnose / diagnosis / diagnostic` → `assess / assessment` across the entire site. Includes product name (`The Diagnosis Program` → `The Assessment Program`), pillar 1, the call name (`diagnosis call` → `assessment call`), and the UMS strap (`Diagnose. Remove. Build. Track.` → `Assess. Remove. Build. Track. Adjust.`). Reason: "diagnosis" was reading as doctor's-office, too medical.
+- **Pillars: 4 → 5.** `Track + adjust` split into separate `Track` and `Adjust` pillars on both `index.html` (method preview) and `method.html` (long-form).
+- **Cohort framing removed.** Every `Cohort Nº 02` / `Cohort Nº 03` label, every `5 clients per cohort` / `cap at 5` / `five men per cohort` sentence, every `Five spots left. Intake closes when full.` / `05/10 spots taken` widget — stripped across all 10 HTML files. Replacement framing: `Intake open · May 2026 start`.
+- **Coach role split removed.** `Training Systems Lead` / `Nutrition & Recovery Lead` → `Coach · Training + nutrition` for both. Bios rewritten so each brother's entry point is personal history but present-tense framing says "both of us work both sides."
+- **Pricing kept visible** ($2,500–$3,500 range stays on `faq.html` + `method.html` for now). Memory saved noting Denis is considering private reveal as a future option.
+- **Detailed guarantee text removed from landing.** Lives on `/method#guarantee` and `/terms#section-6` only. Landing keeps a one-line `Guarantee · Refund if we miss the target` row in the hero sidebar.
+
+### `index.html` changes
+
+- **Hero subhead** (line 124): *"…still can't see the body in the mirror. We diagnose what's actually broken — then prescribe."* → *"…still don't see the body the work should have built. We assess what's actually getting in the way — then prescribe."* Reason: factual accuracy (Denis flagged the "can't see the body" line) + softer than "broken."
+- **Hero eyebrow:** `Cohort Nº 03 · May 2026 · Intake open` → `Intake open · May 2026 start`.
+- **Program brief sidebar:** `Method · Diagnosis-first` → `Method · Assessment-first`. `Guarantee · 90% compliance refund` → `Guarantee · Refund if we miss the target` (kills the "money back just for doing the work" misread). `Cap · 5 clients` row deleted. The `05/10 Spots remaining` widget deleted; replaced with a plain `Apply · See if you qualify →` card (no fake counter).
+- **Marquee:** `Diagnose → Remove → Build → Track` → `Assess → Remove → Build → Track → Adjust`. `5 clients per cohort` line deleted.
+- **Problem block (Fig. 01):**
+  - "what's actually broken about your situation" → "what's actually getting in the way of your situation" (softer; doesn't insinuate the client is broken).
+  - **`0.6 × 0.6 × 0.6 = 22%` equation removed.** Replaced with: *"Most coaches solve one variable. You're stuck because you have three running at sixty percent at the same time. Each one looks fine on its own. Together they're why nothing moves — and why the program that 'should work' doesn't work for you."*
+  - Punch line: *"You don't need another program. You need a diagnosis."* → *"You don't need another program. You've possibly been doing the right things — the execution has been wrong."* (Adds Denis's execution-vs-concept reframe from the punch list.)
+- **Method preview (Fig. 02):** H2 swapped to 5-word UMS. Intro paragraph rewritten — dropped the doctor analogy in favour of `The call is the program. The program is built from the call.` Pillar grid changed from `lg:grid-cols-4` to `lg:grid-cols-5`. New `Track` pillar (data-as-honest-signal copy) + new `Adjust` pillar (static-program-vs-prescription copy).
+- **Mid-page urgency strip deleted entirely.** Was `Five spots left. Intake closes when full.` between method and coaches sections.
+- **Coaches preview (Fig. 03):** role labels unified to `Coach · Training + nutrition`. Image wrappers gained `max-h-[520px]` to prevent vertical overflow on 13" MacBook (Denis flagged names cut off on desktop). `Meet the coaches →` underlined link replaced with a large centered black pill button.
+- **Transformations (Fig. 04):** single before/after slider + 2 testimonials replaced with **8-card carousel** (4 cols × 2 rows on lg, 2 cols × 4 rows on mobile). Each card: before/after image pair + `Client 0X · NN lbs / NN wks · City` caption. Cohort labels stripped. Disclaimer simplified.
+- **Fig. 05 (By the numbers) section deleted entirely.** Duplicated data already in the hero sidebar; removed for vertical space.
+- **Fig. 06 (Guarantee strip) section deleted entirely from landing.** Long-form guarantee detail lives on `/method` and `/terms` instead.
+- **FAQ preview:** `How much does it cost?` accordion deleted (pricing moves off landing entirely).
+- **Final CTA eyebrow:** `Cohort Nº 03 · 05/10 spots taken` → `Intake open · May 2026 start`. Body copy: `diagnosis call` → `assessment call`.
+- **Footer status:** `Intake open · Cohort Nº 03` → `Intake open`.
+
+### `coaches.html` changes
+
+- Hero p2 rewrite: dropped `We coach five men per cohort` framing. Replaced with `We don't run templates at a thousand-client scale. Every client gets named, tracked, and adjusted weekly.`
+- Denis bio: role label → `Coach · Training + nutrition`. Closing paragraph rewrites the "my job is the training side" claim into "I came at coaching from the training side — but in DND we both work both halves."
+- Darius bio: role label → `Coach · Training + nutrition`. Closing paragraph rewrites the "everything-outside-the-gym" claim into "in DND we both work both sides. My entry point was nutrition and adherence."
+- Both portrait wrappers: added `max-h-[520px]` to fix the desktop cut-off Denis flagged.
+- "Why two brothers" section: `the same diagnosis you'd get from a second opinion` → `the same second opinion you'd pay another coach for`.
+- "Who we say no to" section: dropped the `We cap at five clients per cohort` lead-in.
+- Mid-page urgency strip deleted.
+- Final CTA + footer: cohort stripped, `diagnosis call` → `assessment call`.
+
+### `method.html` changes
+
+- Title + meta: `The Diagnosis Program` → `The Assessment Program`. Description updated to five-pillar.
+- Hero H1: `Diagnose. Remove. Build. Track.` → `Assess. Remove. Build. Track. Adjust.` Intro rewritten — dropped doctor analogy; added Denis's `You've possibly been doing the right things — the execution has been wrong` reframe (training hard is the right concept; doing the four exercises wrong is the difference).
+- Pillar 01: `Diagnose` → `Assess`.
+- Pillar 04: `Track + adjust weekly` split into pillar 04 `Track weekly` (data-only signal) + new pillar 05 `Adjust the plan` (prescription vs static).
+- Pillar 05 also drops the `Denis on training, Darius on nutrition + recovery` split-roles language; replaced with `Both coaches work both sides — training, nutrition, recovery, behavioural.`
+- Timeline phase 1: `Diagnosis call + baseline` → `Assessment call + baseline`. Video assessment, etc.
+- Value stack: `60-min diagnosis call` → `60-min assessment call`; `program written from the diagnosis` → `from the assessment`; `Two coaches, every plan` dd rewritten to drop role split; investment paragraph diagnosis → assessment.
+- Guarantee section kept as canonical long-form (one of two surviving guarantee locations). `diagnosis` references inside it → `assessment`.
+- Mid-page urgency strip deleted.
+- Final CTA + footer: cohort stripped, `diagnosis call` → `assessment call`.
+
+### `results.html` changes
+
+- Hero p1: cohort reference replaced with `Real client photos, weight + lift deltas, and full case studies publish here as graduates opt in.`
+- Program targets row: was 4 stats (10–15 lbs / 90 days / 90% / 5 clients), now 3 stats — `5 clients per cohort` removed. The `10–15 lbs` stat now uses the counter's `data-suffix` support added in `js/counter.js` so it animates from `0` to `10` then appends `–15`.
+- Transformations grid: all `Cohort Nº 02` mentions stripped from before/after labels, alt text, and figcaptions. Disclaimer copy reworked.
+- "What we hear at week 12": all 5 testimonial footers' `Cohort Nº 02 · check-in week NN` → `Client · check-in week NN`. Two testimonials (sleep-heavy) rewritten so the variety isn't all-sleep — replaced with a macro-framework testimonial and a three-exercises-swap testimonial.
+- "Anatomy" section: `Cohort Nº 02 below` → `below`. `diagnosis` → `assessment` was not needed here (no occurrence).
+- Mid CTA deleted.
+- Final CTA + footer: cohort stripped, `diagnosis call` → `assessment call`.
+
+### `faq.html` changes
+
+- **Deleted entirely:** `Aren't most online coaches scams?` accordion (Methodology section).
+- "What if my schedule is brutal" answer: stripped the closing `If we genuinely can't make it work, we'll tell you and send you to the not-a-fit page.` sentence per Denis (if they aren't a fit, they won't make it to the call anyway).
+- "What's the refund policy" answer: stripped the `we cap at 5 clients per cohort` clause.
+- All other `diagnosis` mentions → `assessment` (free-programs Q, tried-coaching Q, equipment Q, cost Q, compliance-guarantee Q, brutal-schedule Q, still-have-questions CTA).
+- `Some clients re-up for another cohort` → `another round`.
+- Final CTA + footer: cohort stripped.
+
+### `apply.html` changes
+
+- Hero eyebrow: `Cohort Nº 03 · Intake open` → `Intake open · May 2026 start`.
+- H1: `Apply for the Diagnosis Program.` → `Apply for the Assessment Program.`
+- Body copy: `60-minute diagnosis call` → `60-minute assessment call` (twice).
+- "Spots remaining" widget (10-spot counter + `Intake closes when full`) deleted.
+- Question 3 helper: `This question runs the diagnosis. Answer like you'd tell a doctor — honestly.` → `This question runs the assessment. Answer honestly — no curation.`
+- Footer status: cohort stripped.
+
+### `thank-you.html` changes
+
+- Meta description, hero subhead, "What to bring to the call" closing paragraph: `diagnosis` → `assessment`.
+- Closing paragraph: `we cap at five clients per cohort and we have to say no to most of the calls anyway` → `we have to say no to most of the calls anyway`. `We diagnose` → `We assess`. `what's broken` → `what's getting in the way`.
+- **Deferred:** Calendly URL slug at line 78 (`/dndcoaching/diagnosis-call`) left unchanged — Denis must rename on calendly.com directly before this URL can be updated.
+
+### `not-a-fit.html` changes
+
+- Email-list section: `next cohort opens` → `next intake opens`.
+
+### `privacy.html` + `terms.html` changes
+
+- Footer status strip: cohort stripped.
+- `terms.html` Section 6 (Guarantee + Refund Policy) untouched — canonical legal version stays.
+- `terms.html:354` medical disclaimer ("medical care, diagnosis, or treatment") kept as-is — boilerplate medical language, not branded terminology.
+
+### JS changes
+
+- **`js/nav.js`:** added a global click handler that intercepts every internal anchor whose `href` resolves to the current page and prevents the reload — replacing it with a smooth scroll to top. Fixes the `Online · 1:1` / logo / nav-link reload Denis flagged.
+- **`js/counter.js`:** added `data-suffix` attribute support. The hero "10–15" stat on `/results` now animates from `0` to `10` then appends the `–15` suffix instead of just displaying `10`. Same fix applies anywhere else `data-suffix` is used.
+
+### Files modified (13 total)
+
+```
+.claude/worktrees/redesign-v3/index.html
+.claude/worktrees/redesign-v3/coaches.html
+.claude/worktrees/redesign-v3/method.html
+.claude/worktrees/redesign-v3/results.html
+.claude/worktrees/redesign-v3/faq.html
+.claude/worktrees/redesign-v3/apply.html
+.claude/worktrees/redesign-v3/thank-you.html
+.claude/worktrees/redesign-v3/not-a-fit.html
+.claude/worktrees/redesign-v3/privacy.html
+.claude/worktrees/redesign-v3/terms.html
+.claude/worktrees/redesign-v3/js/nav.js
+.claude/worktrees/redesign-v3/js/counter.js
+.claude/worktrees/redesign-v3/CHANGELOG.md
+```
+
+No new files. No CSS changes (visual system untouched). No image swaps (placeholders stay).
+
+### Screenshot verification
+
+Captured at `screenshots/v3-punch-list/` — 2 iteration rounds across 5 pages × 2 viewports (1280 / 375). Round 1 confirmed all spot-checks pass (hero subhead clean, equation gone, 5 pillars rendering, no urgency strips, coach photos capped, 8-card carousel rendering, Fig 05/06 absent, FAQ deletions visible, footers clean). Round 2 captured `landing_*_iter2.png` + `coaches_1280_iter2.png` as confirmation. JS-driven animations (counter, accordion) don't fire via `file://` because absolute `/js/` paths don't resolve, but the static structure is correct and JS works in production (Vercel) where paths resolve.
+
+### Deferred (still pending Denis)
+
+- Calendly event slug rename (`diagnosis-call` → `assessment-call`).
+- Real client photos for transformations grid + coach portraits.
+- Tally form URL still placeholder in `js/form.js`.
+- Pricing visibility — Denis considering private reveal as a future move; memory saved for that decision point.
+
+---
+
+## v3 (frozen 2026-05-21) — Copy rewrite driven by foundational docs
 
 **Branch:** `redesign-v3` cut from `redesign-v2` @ `7603d24`
 **Worktree:** `.claude/worktrees/redesign-v3/`
