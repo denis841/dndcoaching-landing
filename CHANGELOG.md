@@ -9,7 +9,27 @@ Tracks every meaningful change across iterations. Each version section lives unt
 - `v2` — editorial redesign + 10-page expansion, frozen on `redesign-v2` @ `7603d24` (LIVE Vercel preview, fallback)
 - `v3` — copy rewrite driven by foundational docs (frozen 2026-05-21 @ `f2c8a5f`, pushed to `origin/redesign-v3`)
 - `v3.1` — punch-list revision after Denis preview review (frozen 2026-05-22 @ `69243e0`, pushed to `origin/redesign-v3`)
-- `v3.2` — section padding bloat fix **(in progress on `redesign-v3` worktree)**
+- `v3.2` — section padding bloat fix (frozen 2026-05-23 @ `origin/redesign-v3`)
+- `v3.3` — viewport rhythm pass + Chrome DevTools MCP setup (frozen 2026-05-23 on `redesign-v3`)
+
+---
+
+## v3.3 — 2026-05-23 — Viewport rhythm pass + DevTools evidence
+
+**Branch:** `redesign-v3`
+**Why:** Follow-up to the v3.2 padding pass. Denis flagged remaining awkward first-viewport transitions where the next section entered as a thin, partial slab instead of a deliberate scroll cue.
+
+**Fix:**
+
+- Added clean first-viewport rhythm to the main subpage heroes (`method`, `coaches`, `results`, `faq`, `apply`) using `min-h-[calc(100svh-4rem)]` with centered vertical alignment.
+- Tuned the landing hero desktop height so the viewport resolves on the trust marquee instead of a partial problem-section entry.
+- Made the `not-a-fit` opening answer a full viewport so the recommendation cards no longer peek in halfway.
+- Tightened short utility bands: FAQ categories, application form spacing, results stat row, final CTAs, legal content padding, and thank-you Calendly spacing.
+- Installed Chrome DevTools MCP for Codex in `/Users/denis/.codex/config.toml` and verified it in-session for DOM measurements and screenshots.
+
+**Affected files (10):** `index.html`, `coaches.html`, `method.html`, `results.html`, `faq.html`, `apply.html`, `thank-you.html`, `not-a-fit.html`, `privacy.html`, `terms.html`.
+
+**Verification:** `screenshots/v3-spacing-audit/*_iter2.png` captured at `375x812` and `1280x900` for all 10 pages via Chrome DevTools MCP. Metrics saved as `section-metrics_iter2.json`; contact sheets saved as `contact_mobile_iter2.png` and `contact_desktop_iter2.png`.
 
 ---
 
