@@ -8,7 +8,26 @@ Tracks every meaningful change across iterations. Each version section lives unt
 - `v1` — original landing page, frozen on `main` @ `d8c05f9`
 - `v2` — editorial redesign + 10-page expansion, frozen on `redesign-v2` @ `7603d24` (LIVE Vercel preview, fallback)
 - `v3` — copy rewrite driven by foundational docs (frozen 2026-05-21 @ `f2c8a5f`, pushed to `origin/redesign-v3`)
-- `v3.1` — punch-list revision after Denis preview review **(in progress on `redesign-v3` worktree — local only, not yet pushed)**
+- `v3.1` — punch-list revision after Denis preview review (frozen 2026-05-22 @ `69243e0`, pushed to `origin/redesign-v3`)
+- `v3.2` — section padding bloat fix **(in progress on `redesign-v3` worktree)**
+
+---
+
+## v3.2 — 2026-05-23 — Section padding bloat fix
+
+**Branch:** `redesign-v3` (single commit on top of `69243e0`)
+**Why:** Denis flagged "dead zone" gaps between sections — bottom of one section ends, then a long stretch of empty white space, then the thin section divider, then more empty space, then the next section barely peeking in. Reads as a broken / unfinished layout instead of intentional rest. Term for it: **section padding bloat** (also: "vertical rhythm break" or "transition dead zone"). Root cause: consecutive sections each used `py-24 lg:py-32` (≈128px top + 128px bottom at lg) which compounded to ~256px of empty space between content blocks.
+
+**Fix:** Global Tailwind padding token swap across all 10 HTML files:
+
+- `py-24 lg:py-32` → `py-16 lg:py-20` (19 occurrences — main content sections, ~38% reduction)
+- `py-28 lg:py-36` → `py-20 lg:py-24` (6 occurrences — final-CTA sections, ~30% reduction)
+
+Hero asymmetric paddings (`pt-20 pb-16 lg:pt-28 lg:pb-24` etc.) left as-is — they need top breathing room from the sticky header. Sections already at `py-20 lg:py-24` or smaller untouched.
+
+**Affected files (10):** `index.html`, `coaches.html`, `method.html`, `results.html`, `faq.html`, `apply.html`, `thank-you.html`, `not-a-fit.html`, `privacy.html`, `terms.html`.
+
+**Verification:** `screenshots/v3-punch-list/*_iter3.png` — captured landing/coaches/method/results/faq at 1280 + landing/coaches at 375. Confirmed section transitions now read as deliberate spacing instead of dead zones. Mobile flow tighter without losing readability.
 
 ---
 
